@@ -64,7 +64,7 @@ button:disabled{opacity:.6;cursor:wait}
   <h1>הוספת ספר למאגר</h1>
   <p class="lead">ארבעה שדות חובה וקצת פרטים נוספים אם יש לכם. בפלאפון אפשר גם לסרוק את הברקוד מהמצלמה.</p>
 
-  <form id="f" novalidate>
+  <form id="f" novalidate autocomplete="off">
     <label for="isbn">ISBN <small>(13 ספרות בגב הספר מתחת לברקוד)</small></label>
     <div class="input-with-btn">
       <input id="isbn" class="ltr" inputmode="numeric" autocomplete="off" required placeholder="9789655747683">
@@ -332,6 +332,9 @@ function resetForm() {
   $('isbn').removeAttribute('aria-invalid');
   $('e-isbn').textContent = '';
 }
+
+// ריענון או חזרה לדף: מנקים את הטופס (הדפדפן משחזר שדות מהביקור הקודם)
+window.addEventListener('pageshow', () => { resetForm(); $('msg').replaceChildren(); });
 
 // --- שליחה לשרת ---
 $('f').addEventListener('submit', async (e) => {
