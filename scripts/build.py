@@ -7,9 +7,8 @@ import json, sys, re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-REQUIRED = {"isbn": str, "title": str, "authors": list, "publisher": str,
-            "publication_year": int, "language": str}
-OPTIONAL = {"danacode": str, "subtitle": str, "translators": list, "pages": int,
+REQUIRED = {"isbn": str, "title": str, "authors": list, "language": str}
+OPTIONAL = {"publisher": str, "publication_year": int, "danacode": str, "subtitle": str, "translators": list, "pages": int,
             "genres": list, "summary": str, "cover_url": str,
             "series": str, "series_number": int, "original_title": str}
 DANACODE = re.compile(r"^\d{3}-\d{4}$")
@@ -37,7 +36,7 @@ def validate(path):
         if path.stem != data["isbn"]: errs.append("שם הקובץ חייב להיות ה-ISBN")
         if not data["authors"]: errs.append("חייב מחבר אחד לפחות")
         if data.get("danacode") and not DANACODE.match(data["danacode"]): errs.append("דאנאקוד בפורמט NNN-NNNN")
-        if not 1400 <= data["publication_year"] <= 2100: errs.append("שנת הוצאה לא סבירה")
+        if "publication_year" in data and not 1400 <= data["publication_year"] <= 2100: errs.append("שנת הוצאה לא סבירה")
     return data, errs
 
 def main():
@@ -50,7 +49,7 @@ def main():
         if data and not errs:
             books.append({
                 "isbn": data["isbn"], "title": data["title"], "authors": data["authors"],
-                "publisher": data["publisher"], "publication_year": data["publication_year"],
+                "publisher": data.get("publisher", ""), "publication_year": data.get("publication_year"),
                 "language": data["language"], "genres": data.get("genres", []),
                 "series": data.get("series", ""), "series_number": data.get("series_number"),
                 "has_cover": (ROOT / "covers" / f"{data['isbn']}.webp").exists(),

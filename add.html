@@ -38,16 +38,16 @@ input.is-valid{border-color:var(--ok);background:var(--ok-bg)}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 button,.btn{font:inherit;font-weight:700;padding:11px 20px;border-radius:6px;border:2px solid var(--ink);background:none;color:var(--ink);cursor:pointer;text-decoration:none}
 button.primary{background:var(--ink);color:var(--bg)}
+button:disabled{opacity:.6;cursor:wait}
 #msg{margin-top:16px}
+#msg p{margin:0;font-size:16px}
 .hp{position:absolute;inset-inline-start:-9999px}
 .input-with-btn{display:flex;gap:10px}
 .input-with-btn input{flex:1}
 .action-btn{padding:10px 14px;font-size:15px;white-space:nowrap;display:flex;align-items:center;gap:6px}
-/* תמונת כריכה */
 .cover-box{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
 .cover-box input[type=file]{width:auto;flex:1;min-width:200px;padding:8px}
 #coverPreview{width:110px;height:auto;border:1px solid var(--line);border-radius:4px;box-shadow:3px 3px 0 var(--line)}
-/* סורק */
 #scanner-modal{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px}
 .scanner-box{background:var(--surface);padding:24px;border-radius:8px;max-width:500px;width:100%;text-align:center}
 #reader{width:100%;margin:16px 0;border-radius:6px;overflow:hidden}
@@ -102,10 +102,9 @@ button.primary{background:var(--ink);color:var(--bg)}
 
     <input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="btns">
-      <button type="submit" class="primary">שליחה דרך GitHub</button>
-      <button type="button" id="copy">העתקת JSON</button>
+      <button type="submit" class="primary" id="submitBtn">הוספה למאגר</button>
     </div>
-    <p class="hint" id="hint">השליחה פותחת Issue מוכן ב-GitHub. תמונת הכריכה מועתקת ללוח, ובעמוד שייפתח מדביקים אותה בתיבת הטקסט לפני השליחה.</p>
+    <p class="hint">בלחיצה על "הוספה למאגר" אני מאשר/ת שיש לי זכות להעלות את תמונת הכריכה (למשל, צילמתי אותה בעצמי).</p>
     <div id="msg" role="status"></div>
   </form>
 </div>
@@ -120,6 +119,9 @@ button.primary{background:var(--ink);color:var(--bg)}
 </div>
 
 <script>
+// כתובת ה-Worker מ-Cloudflare (בלי / בסוף). להחליף אחרי היצירה:
+const API_URL = 'https://hebooksapi.aamizii.workers.dev/';
+
 const $ = id => document.getElementById(id);
 
 // --- מצב תצוגה ---
@@ -169,10 +171,10 @@ function checkIsbn() {
 }
 $('isbn').addEventListener('input', checkIsbn);
 
-// --- תמונת כריכה: הקטנה ל-PNG (מקסימום 1000 פיקסלים בצלע הארוכה) ---
+// --- תמונת כריכה: הקטנה לפני ההעלאה (השרת ימיר ל-WebP) ---
 let coverBlob = null;
 
-function toPngBlob(file) {
+function toJpegBlob(file) {
   return new Promise((resolve, reject) => {
     const url = URL.createObjectURL(file);
     const img = new Image();
@@ -182,26 +184,43 @@ function toPngBlob(file) {
       const c = document.createElement('canvas');
       c.width = Math.round(img.naturalWidth * scale);
       c.height = Math.round(img.naturalHeight * scale);
-      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      const ctx = c.getContext('2d');
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, c.width, c.height);
+      ctx.drawImage(img, 0, 0, c.width, c.height);
       URL.revokeObjectURL(url);
-      c.toBlob(b => b ? resolve(b) : reject(new Error('המרה נכשלה')), 'image/png');
+      c.toBlob(b => b ? resolve(b) : reject(new Error('המרת התמונה נכשלה')), 'image/jpeg', 0.88);
     };
     img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('לא ניתן לקרוא את התמונה')); };
     img.src = url;
   });
 }
 
+function blobToBase64(blob) {
+  return new Promise((resolve, reject) => {
+    const r = new FileReader();
+    r.onload = () => resolve(String(r.result).split(',')[1]);
+    r.onerror = () => reject(new Error('קריאת התמונה נכשלה'));
+    r.readAsDataURL(blob);
+  });
+}
+
+function resetPreview() {
+  const old = $('coverPreview').src;
+  if (old && old.startsWith('blob:')) URL.revokeObjectURL(old);
+  $('coverPreview').removeAttribute('src');
+  $('coverPreview').hidden = true;
+}
+
 $('cover').addEventListener('change', async () => {
   const file = $('cover').files[0];
   coverBlob = null;
-  $('coverPreview').hidden = true;
+  resetPreview();
   $('e-cover').textContent = '';
   if (!file) return;
   if (!file.type.startsWith('image/')) { $('e-cover').textContent = 'יש לבחור קובץ תמונה'; return; }
   try {
-    coverBlob = await toPngBlob(file);
-    const old = $('coverPreview').src;
-    if (old && old.startsWith('blob:')) URL.revokeObjectURL(old);
+    coverBlob = await toJpegBlob(file);
     $('coverPreview').src = URL.createObjectURL(coverBlob);
     $('coverPreview').hidden = false;
   } catch (e) {
@@ -247,13 +266,9 @@ function stopScanner() {
 }
 $('closeScannerBtn').addEventListener('click', stopScanner);
 
-// --- ולידציה ובניית אובייקט ספר ---
-function clearErrors() {
+// --- ולידציה ---
+function buildPayload() {
   ['e-title', 'e-authors', 'e-cover', 'e-year'].forEach(id => $(id).textContent = '');
-}
-
-function buildPayload({ needCover }) {
-  clearErrors();
   let firstBad = null;
   const fail = (errId, text, fieldId) => {
     $(errId).className = 'err';
@@ -262,7 +277,12 @@ function buildPayload({ needCover }) {
   };
 
   const isbn = $('isbn').value.replace(/[-\s]/g, '');
-  if (!isbn13Ok(isbn)) { checkIsbn(); if (!$('e-isbn').textContent) $('e-isbn').textContent = 'יש להזין ISBN תקין'; $('e-isbn').className = 'err'; firstBad = 'isbn'; }
+  if (!isbn13Ok(isbn)) {
+    checkIsbn();
+    if (!$('e-isbn').textContent) $('e-isbn').textContent = 'יש להזין ISBN תקין';
+    $('e-isbn').className = 'err';
+    firstBad = 'isbn';
+  }
 
   const title = $('title').value.trim();
   if (!title) fail('e-title', 'שם הספר הוא שדה חובה', 'title');
@@ -270,7 +290,7 @@ function buildPayload({ needCover }) {
   const authors = $('authors').value.split(/[,،;\n]/).map(s => s.trim()).filter(Boolean);
   if (!authors.length) fail('e-authors', 'יש להזין לפחות מחבר אחד', 'authors');
 
-  if (needCover && !coverBlob) fail('e-cover', 'יש להוסיף תמונת כריכה', 'cover');
+  if (!coverBlob) fail('e-cover', 'יש להוסיף תמונת כריכה', 'cover');
 
   const yearRaw = $('year').value.trim();
   let year = null;
@@ -279,81 +299,78 @@ function buildPayload({ needCover }) {
     if (!year || year < 1400 || year > 2100) fail('e-year', 'שנת הוצאה אינה תקינה', 'year');
   }
 
-  if (firstBad) {
-    $(firstBad).focus();
-    throw new Error('validation');
-  }
+  if (firstBad) { $(firstBad).focus(); throw new Error('validation'); }
 
-  // מבנה זהה לרשומות הקיימות במאגר (books.json)
+  // שדות ריקים פשוט לא נשלחים
+  const book = { isbn, title, authors, language: 'he' };
+  const publisher = $('publisher').value.trim();
+  if (publisher) book.publisher = publisher;
+  if (year) book.publication_year = year;
   const series = $('series').value.trim();
-  const n = parseInt($('series_number').value.trim(), 10);
-  const b = {
-    isbn,
-    title,
-    authors,
-    publisher: $('publisher').value.trim(),
-    publication_year: year,
-    language: 'he',
-    genres: [],
-    series,
-    series_number: series && !isNaN(n) && n > 0 ? n : null,
-    has_cover: true
-  };
+  if (series) {
+    book.series = series;
+    const n = parseInt($('series_number').value.trim(), 10);
+    if (!isNaN(n) && n > 0) book.series_number = n;
+  }
   const summary = $('summary').value.trim();
-  if (summary) b.summary = summary;
-  return b;
+  if (summary) book.summary = summary;
+  return book;
 }
 
-// העתקת JSON
-$('copy').addEventListener('click', () => {
-  try {
-    const data = buildPayload({ needCover: false });
-    navigator.clipboard.writeText(JSON.stringify(data, null, 2));
-    $('msg').innerHTML = '<p class="ok-msg">✓ ה-JSON הועתק ללוח</p>';
-  } catch (err) {
-    if (err.message !== 'validation') alert(err.message);
-  }
-});
+function showMsg(text, ok) {
+  const p = document.createElement('p');
+  p.className = ok ? 'ok-msg' : 'err';
+  p.textContent = text;
+  $('msg').replaceChildren(p);
+}
 
-// שליחה דרך GitHub Issue
-$('f').addEventListener('submit', (e) => {
+function resetForm() {
+  $('f').reset();
+  coverBlob = null;
+  resetPreview();
+  $('isbn').className = 'ltr';
+  $('isbn').removeAttribute('aria-invalid');
+  $('e-isbn').textContent = '';
+}
+
+// --- שליחה לשרת ---
+$('f').addEventListener('submit', async (e) => {
   e.preventDefault();
-  if ($('website').value) return; // honeypot
-  let data;
-  try {
-    data = buildPayload({ needCover: true });
-  } catch (err) {
-    if (err.message !== 'validation') alert(err.message);
+  $('msg').replaceChildren();
+
+  if ($('website').value) { showMsg('✓ הספר נוסף למאגר!', true); return; } // honeypot
+
+  let book;
+  try { book = buildPayload(); }
+  catch (err) { if (err.message !== 'validation') showMsg(err.message, false); return; }
+
+  if (API_URL.includes('REPLACE-ME')) {
+    showMsg('השליחה עדיין לא הוגדרה באתר (חסרה כתובת שרת).', false);
     return;
   }
 
-  const body = "```json\n" + JSON.stringify(data, null, 2) + "\n```\n\n### תמונת כריכה\n👇 הדביקו כאן את תמונת הכריכה (הדבקה בלחיצה ארוכה, או Ctrl+V)\n\n";
-  const repoMatch = location.hostname.match(/^(.+)\.github\.io$/);
-  const repoPath = (repoMatch ? location.pathname.split('/')[1] : '') || 'HEBookAPI';
-  const repoOwner = (repoMatch ? repoMatch[1] : '') || 'Amizi312';
-  const issueUrl = `https://github.com/${repoOwner}/${repoPath}/issues/new?title=${encodeURIComponent('הוספת ספר: ' + data.title)}&body=${encodeURIComponent(body)}&labels=book-submission`;
-
-  // מעתיקים את התמונה ללוח לפני פתיחת הלשונית (בתוך אותה לחיצה)
-  let copied = null;
+  const btn = $('submitBtn');
+  btn.disabled = true;
+  btn.textContent = '⏳ שולח...';
   try {
-    if (navigator.clipboard && window.ClipboardItem) {
-      copied = navigator.clipboard.write([new ClipboardItem({ 'image/png': coverBlob })]);
+    const cover = await blobToBase64(coverBlob);
+    const res = await fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...book, cover, cover_rights: true, website: '' })
+    });
+    const out = await res.json().catch(() => ({}));
+    if (res.ok) {
+      resetForm();
+      showMsg('✓ הספר נוסף למאגר! הוא יופיע בקטלוג תוך דקה או שתיים.', true);
+    } else {
+      showMsg(out.message || 'אירעה שגיאה. נסו שוב מאוחר יותר.', false);
     }
-  } catch (_) { copied = null; }
-
-  window.open(issueUrl, '_blank');
-
-  const showFallback = () => {
-    const url = URL.createObjectURL(coverBlob);
-    $('msg').innerHTML = '<p class="hint">לא הצלחנו להעתיק את התמונה ללוח. שמרו אותה כאן וצרפו אותה ידנית בעמוד GitHub (גרירה או כפתור הצירוף):</p>' +
-      `<p><a class="btn" href="${url}" download="${data.isbn}.png">⬇ שמירת תמונת הכריכה</a></p>`;
-  };
-  if (copied) {
-    copied.then(() => {
-      $('msg').innerHTML = '<p class="ok-msg">✓ התמונה הועתקה ללוח. בעמוד GitHub שנפתח, הדביקו אותה בתיבת הטקסט ושלחו.</p>';
-    }).catch(showFallback);
-  } else {
-    showFallback();
+  } catch (err) {
+    showMsg('לא ניתן להתחבר לשרת. בדקו את החיבור ונסו שוב.', false);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'הוספה למאגר';
   }
 });
 </script>
