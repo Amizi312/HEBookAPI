@@ -7,12 +7,14 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&family=Heebo:wght@400;500;700&display=swap">
 <!-- ספריית סריקת ברקוד קלילה ומהירה -->
-<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 <style>
 :root{--bg:#f2f4f0;--surface:#fbfcfa;--ink:#172026;--muted:#5b6770;--line:#cfd6d0;--accent:#1f3a93;--tab:#e8c547;--err:#a4161a;--ok:#166534;--ok-bg:#f0fdf4}
 [data-theme="dark"]{--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--err:#ff8a80;--ok:#4ade80;--ok-bg:#052e16}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--err:#ff8a80;--ok:#4ade80;--ok-bg:#052e16}}
 *{box-sizing:border-box}
+/* תיקון: אטריבוט hidden תמיד מסתיר, גם כשיש display מפורש */
+[hidden]{display:none !important}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 Heebo,system-ui,sans-serif;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);transition:background .2s,color .2s}
 a{color:var(--accent)} :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .wrap{max-width:760px;margin:0 auto;padding:24px 20px 60px}
@@ -59,15 +61,16 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
     <a href="./">← חזרה לקטלוג הספרים</a>
     <button class="theme-btn" id="themeBtn" aria-label="שינוי מצב תצוגה">🌙</button>
   </div>
-  
+
   <h1>הוספת ספר למאגר</h1>
-  <p class="lead">ממלאים את פרטי הספר. ניתן להקליד ISBN, לסרוק ברקוד מהמצלמה או למשוך את הפרטים אוטומטית ברגע.</p>
+  <p class="lead">ממלאים את פרטי הספר. ניתן להקליד ISBN ולמשוך את הפרטים אוטומטית, ובפלאפון גם לסרוק ברקוד מהמצלמה.</p>
 
   <form id="f" novalidate>
     <label for="isbn">ISBN-13 <small>(13 ספרות בגב הספר מתחת לברקוד)</small></label>
     <div class="input-with-btn">
       <input id="isbn" class="ltr" inputmode="numeric" autocomplete="off" required placeholder="9789655747683">
-      <button type="button" id="scanBtn" class="action-btn">📷 סרוק ברקוד</button>
+      <!-- מוסתר כברירת מחדל; מוצג בסקריפט רק במכשיר מגע עם מצלמה -->
+      <button type="button" id="scanBtn" class="action-btn" hidden>📷 סרוק ברקוד</button>
       <button type="button" id="lookupBtn" class="action-btn">🔍 משוך פרטים</button>
     </div>
     <p class="err" id="e-isbn" role="alert"></p>
@@ -113,7 +116,7 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
   </form>
 </div>
 
-<!-- חלון סורק הברקוד -->
+<!-- חלון סורק הברקוד (מוסתר עד לחיצה על "סרוק ברקוד") -->
 <div id="scanner-modal" hidden>
   <div class="scanner-box">
     <h3>סריקת ברקוד מהמצלמה</h3>
@@ -128,17 +131,23 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
 const themeBtn = document.getElementById('themeBtn');
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
+  try { localStorage.setItem('theme', theme); } catch (e) {}
   themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
 }
-const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-setTheme(savedTheme);
+let savedTheme = null;
+try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
+setTheme(savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 themeBtn.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme') || 'light';
   setTheme(current === 'dark' ? 'light' : 'dark');
 });
 
 const $ = id => document.getElementById(id);
+
+// --- כפתור סריקה: מוצג רק במכשיר מגע (פלאפון/טאבלט) עם גישה למצלמה ---
+const isTouchDevice = window.matchMedia('(pointer:coarse)').matches;
+const hasCamera = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+if (isTouchDevice && hasCamera) $('scanBtn').hidden = false;
 
 function isbn13Ok(s) {
   s = s.replace(/[-\s]/g, '');
@@ -153,11 +162,13 @@ function checkIsbn() {
   const err = $('e-isbn');
   if (!raw) {
     $('isbn').className = 'ltr';
+    $('isbn').removeAttribute('aria-invalid');
     err.textContent = '';
     return false;
   }
   if (isbn13Ok(raw)) {
     $('isbn').className = 'ltr is-valid';
+    $('isbn').removeAttribute('aria-invalid');
     err.className = 'ok-msg';
     err.textContent = '✓ מספר ISBN-13 תקין ומאומת!';
     return true;
@@ -219,6 +230,10 @@ $('lookupBtn').addEventListener('click', async () => {
 let html5QrcodeScanner = null;
 
 $('scanBtn').addEventListener('click', () => {
+  if (typeof Html5Qrcode === 'undefined') {
+    alert('ספריית הסריקה לא נטענה. בדוק חיבור לאינטרנט ורענן את הדף.');
+    return;
+  }
   $('scanner-modal').hidden = false;
   html5QrcodeScanner = new Html5Qrcode("reader");
   html5QrcodeScanner.start(
