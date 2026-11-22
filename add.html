@@ -48,6 +48,9 @@ button:disabled{opacity:.6;cursor:wait}
 .cover-box{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
 .cover-box input[type=file]{width:auto;flex:1;min-width:200px;padding:8px}
 #coverPreview{width:110px;height:auto;border:1px solid var(--line);border-radius:4px;box-shadow:3px 3px 0 var(--line)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.chip{font-weight:500;font-size:15px;padding:5px 14px;border:2px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 #scanner-modal{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px}
 .scanner-box{background:var(--surface);padding:24px;border-radius:8px;max-width:500px;width:100%;text-align:center}
 #reader{width:100%;margin:16px 0;border-radius:6px;overflow:hidden}
@@ -88,6 +91,14 @@ button:disabled{opacity:.6;cursor:wait}
 
     <div class="optional">
       <h2>פרטים נוספים <small style="font-weight:400;color:var(--muted)">(לא חובה)</small></h2>
+
+    <label id="genres-label">ז'אנר <small>(בחרו אחד או יותר, עד 5)</small></label>
+    <div id="genreChips" class="chips" role="group" aria-labelledby="genres-label"></div>
+    <div class="input-with-btn" style="margin-top:10px">
+      <input id="genreOther" maxlength="40" placeholder="ז'אנר אחר? הקלידו והוסיפו">
+      <button type="button" id="genreAdd" class="action-btn">הוספה</button>
+    </div>
+    <p class="err" id="e-genres" role="alert"></p>
       <div class="row">
         <div><label for="publisher">הוצאה לאור</label><input id="publisher" maxlength="100" placeholder="כנרת, זמורה-ביתן, דביר"></div>
         <div><label for="year">שנת הוצאה</label><input id="year" class="ltr" inputmode="numeric" maxlength="4" placeholder="2023"><p class="err" id="e-year" role="alert"></p></div>
@@ -104,7 +115,6 @@ button:disabled{opacity:.6;cursor:wait}
     <div class="btns">
       <button type="submit" class="primary" id="submitBtn">הוספה למאגר</button>
     </div>
-    <p class="hint">בלחיצה על "הוספה למאגר" אני מאשר/ת שיש לי זכות להעלות את תמונת הכריכה (למשל, צילמתי אותה בעצמי).</p>
     <div id="msg" role="status"></div>
   </form>
 </div>
@@ -120,7 +130,7 @@ button:disabled{opacity:.6;cursor:wait}
 
 <script>
 // כתובת ה-Worker מ-Cloudflare (בלי / בסוף). להחליף אחרי היצירה:
-const API_URL = 'https://hebooksapi.aamizii.workers.dev/';
+const API_URL = 'https://REPLACE-ME.workers.dev';
 
 const $ = id => document.getElementById(id);
 
@@ -266,9 +276,59 @@ function stopScanner() {
 }
 $('closeScannerBtn').addEventListener('click', stopScanner);
 
+// --- ז'אנרים ---
+const MAX_GENRES = 5;
+const selectedGenres = new Set();
+let genreOptions = ['פרוזה', 'קומדיה רומנטית', 'רומנטזי', 'נוער', 'פנטזיה', 'מיתולוגיה יוונית', 'דיסטופיה', 'מדע בדיוני', 'מתח'];
+
+function renderGenres() {
+  const all = [...new Set([...genreOptions, ...selectedGenres])];
+  $('genreChips').replaceChildren(...all.map(g => {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'chip';
+    b.textContent = g;
+    b.setAttribute('aria-pressed', selectedGenres.has(g) ? 'true' : 'false');
+    b.addEventListener('click', () => toggleGenre(g));
+    return b;
+  }));
+}
+
+function toggleGenre(g) {
+  $('e-genres').textContent = '';
+  if (selectedGenres.has(g)) selectedGenres.delete(g);
+  else if (selectedGenres.size >= MAX_GENRES) {
+    $('e-genres').className = 'err';
+    $('e-genres').textContent = `אפשר לבחור עד ${MAX_GENRES} ז'אנרים`;
+    return;
+  } else selectedGenres.add(g);
+  renderGenres();
+}
+
+function addCustomGenre() {
+  const g = $('genreOther').value.replace(/\s+/g, ' ').trim().slice(0, 40);
+  if (!g) return;
+  const existing = [...new Set([...genreOptions, ...selectedGenres])].find(x => x.toLowerCase() === g.toLowerCase());
+  const name = existing || g;
+  if (!existing) genreOptions.push(name);
+  $('genreOther').value = '';
+  if (!selectedGenres.has(name)) toggleGenre(name); else renderGenres();
+}
+$('genreAdd').addEventListener('click', addCustomGenre);
+$('genreOther').addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); addCustomGenre(); } });
+renderGenres();
+
+// מושכים את הז'אנרים הנפוצים מהקטלוג עצמו, כדי שהשמות יהיו אחידים
+fetch('books.json').then(r => r.ok ? r.json() : Promise.reject()).then(data => {
+  const count = {};
+  (data.books || []).forEach(b => (b.genres || []).forEach(g => { count[g] = (count[g] || 0) + 1; }));
+  const top = Object.keys(count).sort((a, b) => count[b] - count[a]).slice(0, 14);
+  if (top.length) { genreOptions = top; renderGenres(); }
+}).catch(() => {});
+
 // --- ולידציה ---
 function buildPayload() {
-  ['e-title', 'e-authors', 'e-cover', 'e-year'].forEach(id => $(id).textContent = '');
+  ['e-title', 'e-authors', 'e-genres', 'e-cover', 'e-year'].forEach(id => $(id).textContent = '');
   let firstBad = null;
   const fail = (errId, text, fieldId) => {
     $(errId).className = 'err';
@@ -303,6 +363,7 @@ function buildPayload() {
 
   // שדות ריקים פשוט לא נשלחים
   const book = { isbn, title, authors, language: 'he' };
+  if (selectedGenres.size) book.genres = [...selectedGenres];
   const publisher = $('publisher').value.trim();
   if (publisher) book.publisher = publisher;
   if (year) book.publication_year = year;
@@ -326,6 +387,9 @@ function showMsg(text, ok) {
 
 function resetForm() {
   $('f').reset();
+  selectedGenres.clear();
+  renderGenres();
+  $('e-genres').textContent = '';
   coverBlob = null;
   resetPreview();
   $('isbn').className = 'ltr';
