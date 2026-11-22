@@ -6,14 +6,12 @@
 <title>הוספת ספר למאגר</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&family=Heebo:wght@400;500;700&display=swap">
-<!-- ספריית סריקת ברקוד קלילה ומהירה -->
 <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 <style>
 :root{--bg:#f2f4f0;--surface:#fbfcfa;--ink:#172026;--muted:#5b6770;--line:#cfd6d0;--accent:#1f3a93;--tab:#e8c547;--err:#a4161a;--ok:#166534;--ok-bg:#f0fdf4}
 [data-theme="dark"]{--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--err:#ff8a80;--ok:#4ade80;--ok-bg:#052e16}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--err:#ff8a80;--ok:#4ade80;--ok-bg:#052e16}}
 *{box-sizing:border-box}
-/* תיקון: אטריבוט hidden תמיד מסתיר, גם כשיש display מפורש */
 [hidden]{display:none !important}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 Heebo,system-ui,sans-serif;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0);transition:background .2s,color .2s}
 a{color:var(--accent)} :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
@@ -26,8 +24,8 @@ form{background:var(--surface);border:1px solid var(--line);border-radius:6px;pa
 form::before{content:"";position:absolute;top:-12px;inset-inline-start:24px;width:96px;height:22px;background:var(--tab);border-radius:4px 4px 0 0}
 label{display:block;font-weight:700;margin:18px 0 4px}
 label small{font-weight:400;color:var(--muted)}
-input,select,textarea{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
-input:focus,select:focus,textarea:focus{border-color:var(--accent);outline:none}
+input,textarea{width:100%;font:inherit;padding:10px 12px;border:2px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+input:focus,textarea:focus{border-color:var(--accent);outline:none}
 input[aria-invalid=true]{border-color:var(--err)}
 input.is-valid{border-color:var(--ok);background:var(--ok-bg)}
 .row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
@@ -35,20 +33,21 @@ input.is-valid{border-color:var(--ok);background:var(--ok-bg)}
 .hint{color:var(--muted);font-size:14px;margin:3px 0 0}
 .err{color:var(--err);font-size:14px;margin:3px 0 0;min-height:1em}
 .ok-msg{color:var(--ok);font-size:14px;margin:3px 0 0;font-weight:500}
-details{margin-top:20px;border-top:1px solid var(--line);padding-top:12px}
-summary{cursor:pointer;font-weight:700}
+.optional{margin-top:28px;border-top:1px solid var(--line);padding-top:6px}
+.optional h2{font-size:18px;margin:14px 0 0}
 .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 button,.btn{font:inherit;font-weight:700;padding:11px 20px;border-radius:6px;border:2px solid var(--ink);background:none;color:var(--ink);cursor:pointer;text-decoration:none}
 button.primary{background:var(--ink);color:var(--bg)}
 #msg{margin-top:16px}
-pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;border-radius:6px;overflow-x:auto;font-size:13px}
-.chk{display:flex;gap:10px;align-items:flex-start;font-weight:400}.chk input{width:auto;margin-top:7px}
-#preview{max-height:150px;margin-top:8px;border:1px solid var(--line);border-radius:4px}
 .hp{position:absolute;inset-inline-start:-9999px}
-/* סורק ברקוד */
 .input-with-btn{display:flex;gap:10px}
 .input-with-btn input{flex:1}
 .action-btn{padding:10px 14px;font-size:15px;white-space:nowrap;display:flex;align-items:center;gap:6px}
+/* תמונת כריכה */
+.cover-box{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.cover-box input[type=file]{width:auto;flex:1;min-width:200px;padding:8px}
+#coverPreview{width:110px;height:auto;border:1px solid var(--line);border-radius:4px;box-shadow:3px 3px 0 var(--line)}
+/* סורק */
 #scanner-modal{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px}
 .scanner-box{background:var(--surface);padding:24px;border-radius:8px;max-width:500px;width:100%;text-align:center}
 #reader{width:100%;margin:16px 0;border-radius:6px;overflow:hidden}
@@ -63,13 +62,12 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
   </div>
 
   <h1>הוספת ספר למאגר</h1>
-  <p class="lead">ממלאים את פרטי הספר. ניתן להקליד ISBN, ובפלאפון גם לסרוק ברקוד מהמצלמה.</p>
+  <p class="lead">ארבעה שדות חובה וקצת פרטים נוספים אם יש לכם. בפלאפון אפשר גם לסרוק את הברקוד מהמצלמה.</p>
 
   <form id="f" novalidate>
-    <label for="isbn">ISBN-13 <small>(13 ספרות בגב הספר מתחת לברקוד)</small></label>
+    <label for="isbn">ISBN <small>(13 ספרות בגב הספר מתחת לברקוד)</small></label>
     <div class="input-with-btn">
       <input id="isbn" class="ltr" inputmode="numeric" autocomplete="off" required placeholder="9789655747683">
-      <!-- מוסתר כברירת מחדל; מוצג בסקריפט רק במכשיר מגע עם מצלמה -->
       <button type="button" id="scanBtn" class="action-btn" hidden>📷 סרוק ברקוד</button>
     </div>
     <p class="err" id="e-isbn" role="alert"></p>
@@ -77,45 +75,41 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
     <label for="title">שם הספר</label>
     <input id="title" required maxlength="200"><p class="err" id="e-title" role="alert"></p>
 
-    <label for="authors">מחברים <small>(אחד בכל שורה, או מופרדים ב-ו')</small></label>
-    <textarea id="authors" rows="2" required placeholder="ריק ריירדן"></textarea><p class="err" id="e-authors" role="alert"></p>
+    <label for="authors">מחברים <small>(אם יש יותר מאחד, מפרידים בפסיק)</small></label>
+    <input id="authors" required placeholder="ריק ריירדן, ניל גיימן"><p class="err" id="e-authors" role="alert"></p>
 
-    <div class="row">
-      <div><label for="publisher">הוצאה לאור</label><input id="publisher" required maxlength="100" placeholder="כנרת, זמורה-ביתן, דביר"><p class="err" id="e-publisher" role="alert"></p></div>
-      <div><label for="year">שנת הוצאה</label><input id="year" class="ltr" inputmode="numeric" required maxlength="4" placeholder="2023"><p class="err" id="e-year" role="alert"></p></div>
+    <label for="cover">תמונת כריכה</label>
+    <div class="cover-box">
+      <input id="cover" type="file" accept="image/*">
+      <img id="coverPreview" alt="תצוגה מקדימה של הכריכה" hidden>
     </div>
+    <p class="hint">בפלאפון אפשר לצלם את הכריכה או לבחור תמונה מהגלריה.</p>
+    <p class="err" id="e-cover" role="alert"></p>
 
-    <label for="language">שפת הספר</label>
-    <select id="language"><option value="he">עברית</option><option value="en">אנגלית</option><option value="ar">ערבית</option><option value="ru">רוסית</option><option value="fr">צרפתית</option><option value="other">אחרת</option></select>
-
-    <details open>
-      <summary>פרטים נוספים (מומלץ)</summary>
-      <label for="subtitle">כותרת משנה</label><input id="subtitle" maxlength="200">
-      <label for="translators">מתרגמים <small>(אחד בכל שורה)</small></label><textarea id="translators" rows="2"></textarea>
+    <div class="optional">
+      <h2>פרטים נוספים <small style="font-weight:400;color:var(--muted)">(לא חובה)</small></h2>
+      <div class="row">
+        <div><label for="publisher">הוצאה לאור</label><input id="publisher" maxlength="100" placeholder="כנרת, זמורה-ביתן, דביר"></div>
+        <div><label for="year">שנת הוצאה</label><input id="year" class="ltr" inputmode="numeric" maxlength="4" placeholder="2023"><p class="err" id="e-year" role="alert"></p></div>
+      </div>
       <div class="row">
         <div><label for="series">סדרה</label><input id="series" maxlength="100" placeholder="פרסי ג'קסון והאולימפיים"></div>
         <div><label for="series_number">מספר בסדרה</label><input id="series_number" class="ltr" inputmode="numeric" maxlength="3" placeholder="1"></div>
       </div>
-      <div class="row">
-        <div><label for="pages">מספר עמודים</label><input id="pages" class="ltr" inputmode="numeric" maxlength="5" placeholder="380"></div>
-        <div><label for="danacode">דאנאקוד</label><input id="danacode" class="ltr" placeholder="676-16"><p class="err" id="e-danacode" role="alert"></p></div>
-      </div>
-      <label for="original_title">כותרת במקור <small>(לספר מתורגם)</small></label><input id="original_title" class="ltr" maxlength="200" placeholder="Percy Jackson: The Lightning Thief">
-      <label for="genres">ז'אנרים <small>(מופרדים בפסיק)</small></label><input id="genres" placeholder="פנטזיה, נוער, מיתולוגיה">
-      <label for="summary">תקציר</label><textarea id="summary" rows="3" maxlength="800" placeholder="תקציר קצר של עלילת הספר..."></textarea>
-    </details>
+      <label for="summary">תקציר</label>
+      <textarea id="summary" rows="3" maxlength="800" placeholder="תקציר קצר של עלילת הספר..."></textarea>
+    </div>
 
     <input class="hp" id="website" tabindex="-1" autocomplete="off" aria-hidden="true">
     <div class="btns">
       <button type="submit" class="primary">שליחה דרך GitHub</button>
       <button type="button" id="copy">העתקת JSON</button>
     </div>
-    <p class="hint" id="hint">השליחה פותחת Issue מוכן ב-GitHub, המומר אוטומטית לקובץ במאגר. אפשר גם להעתיק את ה-JSON ישירות.</p>
+    <p class="hint" id="hint">השליחה פותחת Issue מוכן ב-GitHub. תמונת הכריכה מועתקת ללוח, ובעמוד שייפתח מדביקים אותה בתיבת הטקסט לפני השליחה.</p>
     <div id="msg" role="status"></div>
   </form>
 </div>
 
-<!-- חלון סורק הברקוד (מוסתר עד לחיצה על "סרוק ברקוד") -->
 <div id="scanner-modal" hidden>
   <div class="scanner-box">
     <h3>סריקת ברקוד מהמצלמה</h3>
@@ -126,8 +120,10 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
 </div>
 
 <script>
+const $ = id => document.getElementById(id);
+
 // --- מצב תצוגה ---
-const themeBtn = document.getElementById('themeBtn');
+const themeBtn = $('themeBtn');
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   try { localStorage.setItem('theme', theme); } catch (e) {}
@@ -137,17 +133,15 @@ let savedTheme = null;
 try { savedTheme = localStorage.getItem('theme'); } catch (e) {}
 setTheme(savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 themeBtn.addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('data-theme') || 'light';
-  setTheme(current === 'dark' ? 'light' : 'dark');
+  setTheme((document.documentElement.getAttribute('data-theme') || 'light') === 'dark' ? 'light' : 'dark');
 });
 
-const $ = id => document.getElementById(id);
-
-// --- כפתור סריקה: מוצג רק במכשיר מגע (פלאפון/טאבלט) עם גישה למצלמה ---
+// --- כפתור סריקה: רק במכשיר מגע עם מצלמה ---
 const isTouchDevice = window.matchMedia('(pointer:coarse)').matches;
 const hasCamera = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
 if (isTouchDevice && hasCamera) $('scanBtn').hidden = false;
 
+// --- ISBN ---
 function isbn13Ok(s) {
   s = s.replace(/[-\s]/g, '');
   if (!/^\d{13}$/.test(s)) return false;
@@ -159,30 +153,63 @@ function isbn13Ok(s) {
 function checkIsbn() {
   const raw = $('isbn').value.replace(/[-\s]/g, '');
   const err = $('e-isbn');
-  if (!raw) {
-    $('isbn').className = 'ltr';
-    $('isbn').removeAttribute('aria-invalid');
-    err.textContent = '';
-    return false;
-  }
+  $('isbn').removeAttribute('aria-invalid');
+  if (!raw) { $('isbn').className = 'ltr'; err.textContent = ''; return false; }
   if (isbn13Ok(raw)) {
     $('isbn').className = 'ltr is-valid';
-    $('isbn').removeAttribute('aria-invalid');
     err.className = 'ok-msg';
-    err.textContent = '✓ מספר ISBN-13 תקין ומאומת!';
+    err.textContent = '✓ מספר ISBN תקין';
     return true;
-  } else {
-    $('isbn').className = 'ltr';
-    $('isbn').setAttribute('aria-invalid', 'true');
-    err.className = 'err';
-    err.textContent = raw.length === 13 ? 'ספרת הביקורת שגויה' : `דרושות 13 ספרות (הוזנו ${raw.length})`;
-    return false;
   }
+  $('isbn').className = 'ltr';
+  $('isbn').setAttribute('aria-invalid', 'true');
+  err.className = 'err';
+  err.textContent = raw.length === 13 ? 'ספרת הביקורת שגויה' : `דרושות 13 ספרות (הוזנו ${raw.length})`;
+  return false;
 }
-
 $('isbn').addEventListener('input', checkIsbn);
 
-// --- סורק ברקוד מהמצלמה ---
+// --- תמונת כריכה: הקטנה ל-PNG (מקסימום 1000 פיקסלים בצלע הארוכה) ---
+let coverBlob = null;
+
+function toPngBlob(file) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      const max = 1000;
+      const scale = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.naturalWidth * scale);
+      c.height = Math.round(img.naturalHeight * scale);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url);
+      c.toBlob(b => b ? resolve(b) : reject(new Error('המרה נכשלה')), 'image/png');
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('לא ניתן לקרוא את התמונה')); };
+    img.src = url;
+  });
+}
+
+$('cover').addEventListener('change', async () => {
+  const file = $('cover').files[0];
+  coverBlob = null;
+  $('coverPreview').hidden = true;
+  $('e-cover').textContent = '';
+  if (!file) return;
+  if (!file.type.startsWith('image/')) { $('e-cover').textContent = 'יש לבחור קובץ תמונה'; return; }
+  try {
+    coverBlob = await toPngBlob(file);
+    const old = $('coverPreview').src;
+    if (old && old.startsWith('blob:')) URL.revokeObjectURL(old);
+    $('coverPreview').src = URL.createObjectURL(coverBlob);
+    $('coverPreview').hidden = false;
+  } catch (e) {
+    $('e-cover').textContent = e.message;
+  }
+});
+
+// --- סורק ברקוד ---
 let html5QrcodeScanner = null;
 
 $('scanBtn').addEventListener('click', () => {
@@ -204,14 +231,13 @@ $('scanBtn').addEventListener('click', () => {
       }
     },
     () => {}
-  ).catch(err => {
+  ).catch(() => {
     alert("לא ניתן לגשת למצלמה. ודא שאישרת הרשאות מצלמה בדפדפן.");
     stopScanner();
   });
 });
 
 function stopScanner() {
-  // סוגרים את ה-modal מיד — לא מחכים ל-promise
   $('scanner-modal').hidden = true;
   if (html5QrcodeScanner) {
     const scanner = html5QrcodeScanner;
@@ -219,79 +245,115 @@ function stopScanner() {
     scanner.stop().then(() => scanner.clear()).catch(() => {});
   }
 }
-
 $('closeScannerBtn').addEventListener('click', stopScanner);
 
 // --- ולידציה ובניית אובייקט ספר ---
-function buildPayload() {
-  const isbn = $('isbn').value.replace(/[-\s]/g, '');
-  if (!isbn13Ok(isbn)) throw new Error('ISBN-13 אינו תקין');
-  const title = $('title').value.trim();
-  if (!title) throw new Error('שם הספר הוא שדה חובה');
-  const authors = $('authors').value.split('\n').map(s => s.trim()).filter(Boolean);
-  if (!authors.length) throw new Error('חייב להזין לפחות מחבר אחד');
-  const publisher = $('publisher').value.trim();
-  if (!publisher) throw new Error('הוצאה לאור היא שדה חובה');
-  const year = parseInt($('year').value.trim(), 10);
-  if (!year || year < 1400 || year > 2100) throw new Error('שנת הוצאה אינה תקינה');
+function clearErrors() {
+  ['e-title', 'e-authors', 'e-cover', 'e-year'].forEach(id => $(id).textContent = '');
+}
 
+function buildPayload({ needCover }) {
+  clearErrors();
+  let firstBad = null;
+  const fail = (errId, text, fieldId) => {
+    $(errId).className = 'err';
+    $(errId).textContent = text;
+    if (!firstBad) firstBad = fieldId;
+  };
+
+  const isbn = $('isbn').value.replace(/[-\s]/g, '');
+  if (!isbn13Ok(isbn)) { checkIsbn(); if (!$('e-isbn').textContent) $('e-isbn').textContent = 'יש להזין ISBN תקין'; $('e-isbn').className = 'err'; firstBad = 'isbn'; }
+
+  const title = $('title').value.trim();
+  if (!title) fail('e-title', 'שם הספר הוא שדה חובה', 'title');
+
+  const authors = $('authors').value.split(/[,،;\n]/).map(s => s.trim()).filter(Boolean);
+  if (!authors.length) fail('e-authors', 'יש להזין לפחות מחבר אחד', 'authors');
+
+  if (needCover && !coverBlob) fail('e-cover', 'יש להוסיף תמונת כריכה', 'cover');
+
+  const yearRaw = $('year').value.trim();
+  let year = null;
+  if (yearRaw) {
+    year = parseInt(yearRaw, 10);
+    if (!year || year < 1400 || year > 2100) fail('e-year', 'שנת הוצאה אינה תקינה', 'year');
+  }
+
+  if (firstBad) {
+    $(firstBad).focus();
+    throw new Error('validation');
+  }
+
+  // מבנה זהה לרשומות הקיימות במאגר (books.json)
+  const series = $('series').value.trim();
+  const n = parseInt($('series_number').value.trim(), 10);
   const b = {
     isbn,
     title,
     authors,
-    publisher,
+    publisher: $('publisher').value.trim(),
     publication_year: year,
-    language: $('language').value
+    language: 'he',
+    genres: [],
+    series,
+    series_number: series && !isNaN(n) && n > 0 ? n : null,
+    has_cover: true
   };
-
-  const opt = [
-    ['subtitle', $('subtitle').value.trim()],
-    ['danacode', $('danacode').value.trim()],
-    ['original_title', $('original_title').value.trim()],
-    ['series', $('series').value.trim()],
-    ['summary', $('summary').value.trim()]
-  ];
-  opt.forEach(([k, v]) => { if (v) b[k] = v; });
-
-  const numOpt = [
-    ['series_number', parseInt($('series_number').value.trim(), 10)],
-    ['pages', parseInt($('pages').value.trim(), 10)]
-  ];
-  numOpt.forEach(([k, v]) => { if (!isNaN(v) && v > 0) b[k] = v; });
-
-  const translators = $('translators').value.split('\n').map(s => s.trim()).filter(Boolean);
-  if (translators.length) b.translators = translators;
-
-  const genres = $('genres').value.split(',').map(s => s.trim()).filter(Boolean);
-  if (genres.length) b.genres = genres;
-
+  const summary = $('summary').value.trim();
+  if (summary) b.summary = summary;
   return b;
 }
 
 // העתקת JSON
 $('copy').addEventListener('click', () => {
   try {
-    const data = buildPayload();
+    const data = buildPayload({ needCover: false });
     navigator.clipboard.writeText(JSON.stringify(data, null, 2));
-    $('msg').innerHTML = '<p class="ok-msg">✓ ה-JSON הועתק ללוח בהצלחה!</p>';
+    $('msg').innerHTML = '<p class="ok-msg">✓ ה-JSON הועתק ללוח</p>';
   } catch (err) {
-    alert(err.message);
+    if (err.message !== 'validation') alert(err.message);
   }
 });
 
 // שליחה דרך GitHub Issue
 $('f').addEventListener('submit', (e) => {
   e.preventDefault();
+  if ($('website').value) return; // honeypot
+  let data;
   try {
-    const data = buildPayload();
-    const body = "```json\n" + JSON.stringify(data, null, 2) + "\n```";
-    const repoMatch = location.hostname.match(/^(.+)\.github\.io$/);
-    const repoPath = (repoMatch ? location.pathname.split('/')[1] : '') || 'HEBookAPI';
-    const repoOwner = (repoMatch ? repoMatch[1] : '') || 'Amizi312';
-    const issueUrl = `https://github.com/${repoOwner}/${repoPath}/issues/new?title=${encodeURIComponent('הוספת ספר: ' + data.title)}&body=${encodeURIComponent(body)}&labels=book-submission`;
-    window.open(issueUrl, '_blank');
+    data = buildPayload({ needCover: true });
   } catch (err) {
-    alert(err.message);
+    if (err.message !== 'validation') alert(err.message);
+    return;
+  }
+
+  const body = "```json\n" + JSON.stringify(data, null, 2) + "\n```\n\n### תמונת כריכה\n👇 הדביקו כאן את תמונת הכריכה (הדבקה בלחיצה ארוכה, או Ctrl+V)\n\n";
+  const repoMatch = location.hostname.match(/^(.+)\.github\.io$/);
+  const repoPath = (repoMatch ? location.pathname.split('/')[1] : '') || 'HEBookAPI';
+  const repoOwner = (repoMatch ? repoMatch[1] : '') || 'Amizi312';
+  const issueUrl = `https://github.com/${repoOwner}/${repoPath}/issues/new?title=${encodeURIComponent('הוספת ספר: ' + data.title)}&body=${encodeURIComponent(body)}&labels=book-submission`;
+
+  // מעתיקים את התמונה ללוח לפני פתיחת הלשונית (בתוך אותה לחיצה)
+  let copied = null;
+  try {
+    if (navigator.clipboard && window.ClipboardItem) {
+      copied = navigator.clipboard.write([new ClipboardItem({ 'image/png': coverBlob })]);
+    }
+  } catch (_) { copied = null; }
+
+  window.open(issueUrl, '_blank');
+
+  const showFallback = () => {
+    const url = URL.createObjectURL(coverBlob);
+    $('msg').innerHTML = '<p class="hint">לא הצלחנו להעתיק את התמונה ללוח. שמרו אותה כאן וצרפו אותה ידנית בעמוד GitHub (גרירה או כפתור הצירוף):</p>' +
+      `<p><a class="btn" href="${url}" download="${data.isbn}.png">⬇ שמירת תמונת הכריכה</a></p>`;
+  };
+  if (copied) {
+    copied.then(() => {
+      $('msg').innerHTML = '<p class="ok-msg">✓ התמונה הועתקה ללוח. בעמוד GitHub שנפתח, הדביקו אותה בתיבת הטקסט ושלחו.</p>';
+    }).catch(showFallback);
+  } else {
+    showFallback();
   }
 });
 </script>
