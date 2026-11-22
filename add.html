@@ -242,13 +242,13 @@ $('scanBtn').addEventListener('click', () => {
 });
 
 function stopScanner() {
-  if (html5QrcodeScanner) {
-    html5QrcodeScanner.stop().then(() => {
-      html5QrcodeScanner.clear();
-      html5QrcodeScanner = null;
-    }).catch(() => {});
-  }
+  // סוגרים את ה-modal מיד — לא מחכים ל-promise
   $('scanner-modal').hidden = true;
+  if (html5QrcodeScanner) {
+    const scanner = html5QrcodeScanner;
+    html5QrcodeScanner = null;
+    scanner.stop().then(() => scanner.clear()).catch(() => {});
+  }
 }
 
 $('closeScannerBtn').addEventListener('click', stopScanner);
