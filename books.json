@@ -1,5 +1,5 @@
 {
-  "count": 274,
+  "count": 275,
   "books": [
     {
       "isbn": "9789657001295",
@@ -3903,6 +3903,20 @@
       "series": "בית הלילה",
       "series_number": 5,
       "has_cover": false
+    },
+    {
+      "isbn": "9789655842999",
+      "title": "רוכבי שחקים",
+      "authors": [
+        "דנה זטולובסקי"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "isbn": "9789657002599",
