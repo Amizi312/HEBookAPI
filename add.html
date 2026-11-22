@@ -63,7 +63,7 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
   </div>
 
   <h1>הוספת ספר למאגר</h1>
-  <p class="lead">ממלאים את פרטי הספר. ניתן להקליד ISBN ולמשוך את הפרטים אוטומטית, ובפלאפון גם לסרוק ברקוד מהמצלמה.</p>
+  <p class="lead">ממלאים את פרטי הספר. ניתן להקליד ISBN, ובפלאפון גם לסרוק ברקוד מהמצלמה.</p>
 
   <form id="f" novalidate>
     <label for="isbn">ISBN-13 <small>(13 ספרות בגב הספר מתחת לברקוד)</small></label>
@@ -71,7 +71,6 @@ pre{direction:ltr;text-align:left;background:#172026;color:#e6ecef;padding:14px;
       <input id="isbn" class="ltr" inputmode="numeric" autocomplete="off" required placeholder="9789655747683">
       <!-- מוסתר כברירת מחדל; מוצג בסקריפט רק במכשיר מגע עם מצלמה -->
       <button type="button" id="scanBtn" class="action-btn" hidden>📷 סרוק ברקוד</button>
-      <button type="button" id="lookupBtn" class="action-btn">🔍 משוך פרטים</button>
     </div>
     <p class="err" id="e-isbn" role="alert"></p>
 
@@ -183,49 +182,6 @@ function checkIsbn() {
 
 $('isbn').addEventListener('input', checkIsbn);
 
-// --- משיכת פרטים אוטומטית (Auto-lookup) ---
-$('lookupBtn').addEventListener('click', async () => {
-  const raw = $('isbn').value.replace(/[-\s]/g, '');
-  if (!isbn13Ok(raw)) {
-    $('e-isbn').className = 'err';
-    $('e-isbn').textContent = 'נא להזין קודם ISBN-13 תקין לסריקה';
-    return;
-  }
-  const btn = $('lookupBtn');
-  btn.disabled = true;
-  btn.textContent = '⏳ מחפש...';
-  try {
-    const res = await fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${raw}`);
-    if (res.ok) {
-      const data = await res.json();
-      if (data.totalItems > 0 && data.items && data.items[0].volumeInfo) {
-        const info = data.items[0].volumeInfo;
-        if (info.title && !$('title').value) $('title').value = info.title;
-        if (info.authors && !$('authors').value) $('authors').value = info.authors.join('\n');
-        if (info.publisher && !$('publisher').value) $('publisher').value = info.publisher;
-        if (info.publishedDate && !$('year').value) {
-          const m = info.publishedDate.match(/^(\d{4})/);
-          if (m) $('year').value = m[1];
-        }
-        if (info.pageCount && !$('pages').value) $('pages').value = info.pageCount;
-        if (info.categories && !$('genres').value) $('genres').value = info.categories.join(', ');
-        if (info.description && !$('summary').value) $('summary').value = info.description.slice(0, 750);
-        $('e-isbn').className = 'ok-msg';
-        $('e-isbn').textContent = '✓ הפרטים נמשכו בהצלחה מ-Google Books!';
-      } else {
-        $('e-isbn').className = 'hint';
-        $('e-isbn').textContent = 'ה-ISBN תקין, אך לא נמצאו פרטים נוספים במאגר הציבורי.';
-      }
-    }
-  } catch (e) {
-    $('e-isbn').className = 'err';
-    $('e-isbn').textContent = 'שגיאה בחיפוש מקוון. מלא את הפרטים ידנית.';
-  } finally {
-    btn.disabled = false;
-    btn.textContent = '🔍 משוך פרטים';
-  }
-});
-
 // --- סורק ברקוד מהמצלמה ---
 let html5QrcodeScanner = null;
 
@@ -245,8 +201,6 @@ $('scanBtn').addEventListener('click', () => {
         $('isbn').value = clean;
         checkIsbn();
         stopScanner();
-        // ניסיון משיכה אוטומטית מיד לאחר הסריקה
-        $('lookupBtn').click();
       }
     },
     () => {}
