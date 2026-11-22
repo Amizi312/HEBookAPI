@@ -1,0 +1,4442 @@
+{
+  "count": 274,
+  "books": [
+    {
+      "isbn": "9789657001295",
+      "title": "9 בנובמבר",
+      "authors": [
+        "קולין הובר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002575",
+      "title": "אגדה",
+      "authors": [
+        "מארי לו"
+      ],
+      "publisher": "כנרת",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001462",
+      "title": "אדם",
+      "authors": [
+        "ג'יי שן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000915",
+      "title": "אהבה זה לא צחוק",
+      "authors": [
+        "טארה דוויט"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000953",
+      "title": "אהבה כמו בספרים",
+      "authors": [
+        "קלייר קינגסלי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000922",
+      "title": "אהבה למתחילים",
+      "authors": [
+        "מדי דוסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001233",
+      "title": "אהבה מהספרים",
+      "authors": [
+        "אמילי הנרי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000687",
+      "title": "אהבה מהעולם הבא",
+      "authors": [
+        "קירסטי גרינווד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000434",
+      "title": "אהבה קוסמית",
+      "authors": [
+        "סמנתה יאנג"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001882",
+      "title": "אוהבת לא אוהבת",
+      "authors": [
+        "אמילי גיפין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002018",
+      "title": "אור כוכבים",
+      "authors": [
+        "אוליביה",
+        "ילדנשטיין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "סדרת מלאכי אליסיום",
+      "series_number": 3,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001967",
+      "title": "אורגת הרוח",
+      "authors": [
+        "ג'ולי ג'ונסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001042",
+      "title": "אורחת לא קרואה",
+      "authors": [
+        "סופי קינסלה"
+      ],
+      "publisher": "הכורסא, מודן",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000984",
+      "title": "אותיות של אהבה",
+      "authors": [
+        "קייט קלייבורן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001264",
+      "title": "אי־סבירות האהבה",
+      "authors": [
+        "האנה רוטשילד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002674",
+      "title": "איזבלה מלכת ירושלים",
+      "authors": [
+        "נעמה בר שירה"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000519",
+      "title": "איטלקית למתחילים",
+      "authors": [
+        "קריסטין הרמל"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000199",
+      "title": "איך זה מרגיש?",
+      "authors": [
+        "ג'נין או'ריילי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000625",
+      "title": "איך לחסל אהבה",
+      "authors": [
+        "קתרין סנטר"
+      ],
+      "publisher": "תכלת",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000618",
+      "title": "איך לכתוב קומדיה רומנטית",
+      "authors": [
+        "קתרין סנטר"
+      ],
+      "publisher": "תכלת",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000892",
+      "title": "איך לסיים סיפור אהבה",
+      "authors": [
+        "יולין קואנג"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000526",
+      "title": "איך לתפוס כוכב",
+      "authors": [
+        "קריסטין הרמל"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002247",
+      "title": "אינקרסרון",
+      "authors": [
+        "קתרין פישר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000847",
+      "title": "איפשהו בשקיעה",
+      "authors": [
+        "אסטל מאסקיים"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002148",
+      "title": "אכסניה בלב היקום",
+      "authors": [
+        "אילונה אנדרוז"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655528824",
+      "title": "אלוף",
+      "authors": [
+        "מארי לו"
+      ],
+      "publisher": "כנרת",
+      "publication_year": 2015,
+      "language": "he",
+      "genres": [
+        "דיסטופיה",
+        "נוער"
+      ],
+      "series": "אגדה",
+      "series_number": 3,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002186",
+      "title": "אלף פעימות לב",
+      "authors": [
+        "קיארה קאס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000700",
+      "title": "אם יכולת לראות את השמש",
+      "authors": [
+        "אן ליאנג"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002360",
+      "title": "אמור שתזכור אותי",
+      "authors": [
+        "אבי חימנז"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001028",
+      "title": "אפשר לגלות לך סוד?",
+      "authors": [
+        "סופי קינסלה"
+      ],
+      "publisher": "הכורסא, מודן",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001592",
+      "title": "ארון היקר",
+      "authors": [
+        "מריאנה זפאטה"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001431",
+      "title": "אש עם אש",
+      "authors": [
+        "קנדיס פוקס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001653",
+      "title": "באהבה כמו בשנאה",
+      "authors": [
+        "כריסטינה לורן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001141",
+      "title": "בזמן הזה בשנה הבאה",
+      "authors": [
+        "אנאבל מונהאן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002728",
+      "title": "בחזרה לעדן",
+      "authors": [
+        "רבקה חסיד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000472",
+      "title": "בייבי, קר שם בחוץ",
+      "authors": [
+        "אמילי בל"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001912",
+      "title": "בית הדם והאדמה",
+      "authors": [
+        "שרה ג'יי מאס"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "עיר החרמש",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001929",
+      "title": "בית השמיים והאוויר",
+      "authors": [
+        "שרה ג'יי מאס"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "עיר החרמש",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655741636",
+      "title": "בית תשיעי",
+      "authors": [
+        "לי ברדוגו"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2020,
+      "language": "he",
+      "genres": [
+        "פנטזיה אפלה",
+        "מתח"
+      ],
+      "series": "אלכס שטרן",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002544",
+      "title": "בלאדונה",
+      "authors": [
+        "אדלין גרייס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002285",
+      "title": "בלי שם אמצעי",
+      "authors": [
+        "לי צ'יילד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000601",
+      "title": "בליינד דייט",
+      "authors": [
+        "קתרין סנטר"
+      ],
+      "publisher": "תכלת",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002223",
+      "title": "בלקתורן",
+      "authors": [
+        "ג'יי־טי גייסינגר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001288",
+      "title": "במקרה הלא סביר",
+      "authors": [
+        "ל.ג'יי. שן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002162",
+      "title": "ברית הוורדים",
+      "authors": [
+        "סשה פייטון סמית"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789655522785",
+      "title": "בת העשן והעצם",
+      "authors": [
+        "לייני טיילור"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2012,
+      "language": "he",
+      "genres": [
+        "פנטזיה אורבנית",
+        "נוער"
+      ],
+      "series": "בת העשן והעצם",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002681",
+      "title": "גבירה וערפל",
+      "authors": [
+        "אודליה גולדמן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655748123",
+      "title": "גורל חקוק בדם",
+      "authors": [
+        "דניאל ל' ג'נסן"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2024,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "פנטזיה"
+      ],
+      "series": "גורל חקוק בדם",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000366",
+      "title": "גורלו של מלך השמש",
+      "authors": [
+        "נישה ג'יי טולי"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 3,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001554",
+      "title": "גישה חופשית",
+      "authors": [
+        "גרייס ריילי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 3,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655661743",
+      "title": "גנב הברק",
+      "authors": [
+        "ריק ריירדן"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2016,
+      "language": "he",
+      "genres": [
+        "מיתולוגיה יוונית",
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "פרסי ג'קסון והאולימפיים",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002261",
+      "title": "דבר רודף דבר",
+      "authors": [
+        "ג'ודי טיילור"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001790",
+      "title": "דברים שלא התגברנו עליהם",
+      "authors": [
+        "לוסי סקור"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655742466",
+      "title": "דם ואפר",
+      "authors": [
+        "ג'ניפר ל' ארמנטראוט"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "פנטזיה"
+      ],
+      "series": "דם ואפר",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001868",
+      "title": "דרכים מצטלבות",
+      "authors": [
+        "דבני פרי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001257",
+      "title": "האביב של בנות ספרינג",
+      "authors": [
+        "אנה טוד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002384",
+      "title": "האגף הרביעי",
+      "authors": [
+        "רבקה יארוס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001493",
+      "title": "האותיות הקטנות",
+      "authors": [
+        "לורן אשר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "דרימלנד",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002698",
+      "title": "האנשים של הקוג'ון",
+      "authors": [
+        "יעל שרר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789654487153",
+      "title": "הארי פוטר ואבן החכמים",
+      "authors": [
+        "ג'יי. קיי. רולינג"
+      ],
+      "publisher": "ידיעות ספרים",
+      "publication_year": 2000,
+      "language": "he",
+      "genres": [
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002094",
+      "title": "הבוגדת בכס",
+      "authors": [
+        "אלווין המילטון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002766",
+      "title": "הבוקר שאחרי",
+      "authors": [
+        "נעמה טל"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "חלק",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001370",
+      "title": "הבלונדינית שחזרה מן הכפור",
+      "authors": [
+        "אלי קרטר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001189",
+      "title": "הבננה שלו",
+      "authors": [
+        "פנלופה בלום"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001196",
+      "title": "הדובדבן שלה",
+      "authors": [
+        "פנלופה בלום"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001066",
+      "title": "ההימור",
+      "authors": [
+        "קריסטן אשלי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000793",
+      "title": "ההיפותזה של האהבה",
+      "authors": [
+        "אלי הייזלווד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000816",
+      "title": "החיים הכפולים של לידיה בירד",
+      "authors": [
+        "ג'וזי סילבר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001400",
+      "title": "הטבעיים",
+      "authors": [
+        "ג'ניפר לין ברנס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001899",
+      "title": "היום יהיה שונה",
+      "authors": [
+        "מריה סמפל"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000489",
+      "title": "הייט מייל",
+      "authors": [
+        "דונה מרקטי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001011",
+      "title": "הכי לא אשת חיל",
+      "authors": [
+        "סופי קינסלה"
+      ],
+      "publisher": "הכורסא, מודן",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000878",
+      "title": "הכימיה של האהבה",
+      "authors": [
+        "סאריה",
+        "ילסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001448",
+      "title": "הכלה הלא נכונה",
+      "authors": [
+        "קתרינה מאורה"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001356",
+      "title": "הלוחש לגבישים",
+      "authors": [
+        "קמילה מונק"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 4,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000571",
+      "title": "הלילה שבו נפגשנו",
+      "authors": [
+        "ג'וזי סילבר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002469",
+      "title": "המבחן של מלכת השמש",
+      "authors": [
+        "נישה ג'יי טולי"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001677",
+      "title": "המדריך לגבירה חובבת השערוריות",
+      "authors": [
+        "סופי אירווין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000717",
+      "title": "המדריך למכשפה מהעבר לדייטים מודרניים",
+      "authors": [
+        "ססיליה אדוארד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002483",
+      "title": "המורדת מהחולות",
+      "authors": [
+        "אלווין המילטון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002612",
+      "title": "המיועד ה־21",
+      "authors": [
+        "מאטיס קוגן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000229",
+      "title": "המעגל",
+      "authors": [
+        "הרפר ל.",
+        "ודס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001004",
+      "title": "המקום שבו התחלנו",
+      "authors": [
+        "אמה מונט"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655747805",
+      "title": "הנחשה וכנפי הלילה",
+      "authors": [
+        "קאריסה ברודבנט"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2023,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "ערפדים"
+      ],
+      "series": "כתר הניקסיה",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000762",
+      "title": "הסוד",
+      "authors": [
+        "קתרין יוז"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002735",
+      "title": "העדינה מכולן",
+      "authors": [
+        "יעל פורמן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001547",
+      "title": "העסקה",
+      "authors": [
+        "אל קנדי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001219",
+      "title": "הפעם זה יהיה שונה",
+      "authors": [
+        "ג'וס ריצ'רד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000588",
+      "title": "הפתק",
+      "authors": [
+        "ג'וזי סילבר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000939",
+      "title": "הצלילים שהשארת מאחור",
+      "authors": [
+        "ליה לואיס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655743203",
+      "title": "הצללים שבינינו",
+      "authors": [
+        "טרישה לוונסלר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פנטזיה רומנטית",
+        "נוער"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002742",
+      "title": "הקו החם לאהבה",
+      "authors": [
+        "לידור דוידוב"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001752",
+      "title": "הקיץ הזה יהיה שונה",
+      "authors": [
+        "קרלי פורצ'ן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655171730",
+      "title": "הקרב על המבוך",
+      "authors": [
+        "ריק ריירדן"
+      ],
+      "publisher": "גרף צעיר",
+      "publication_year": 2009,
+      "language": "he",
+      "genres": [
+        "מיתולוגיה יוונית",
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "פרסי ג'קסון והאולימפיים",
+      "series_number": 4,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001714",
+      "title": "הרומן הסודי שלי",
+      "authors": [
+        "מייגן קווין"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001806",
+      "title": "השושבין הגרוע ביותר",
+      "authors": [
+        "לוסי סקור"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000670",
+      "title": "השותף שלי ערפד",
+      "authors": [
+        "ג'נה לוין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002667",
+      "title": "השחר של אורדין",
+      "authors": [
+        "אילת ל. דניאל"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001684",
+      "title": "השיבה הביתה",
+      "authors": [
+        "ניקולס ספארקס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000595",
+      "title": "השיר הזה יציל אותך",
+      "authors": [
+        "ליילה סיילס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000540",
+      "title": "השנה האחרונה שלי בפריז",
+      "authors": [
+        "סטפני פרקינס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000946",
+      "title": "התאמה מושלמת",
+      "authors": [
+        "קייטי פורד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655744927",
+      "title": "זה קרה קיץ אחד",
+      "authors": [
+        "טסה ביילי"
+      ],
+      "publisher": "הכורסא, מודן",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "בנות בלינגר",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002445",
+      "title": "זהב",
+      "authors": [
+        "מאריסה מאייר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "מספרת הסיפורים",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001134",
+      "title": "זהות בבלונד",
+      "authors": [
+        "אלי קרטר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789659306015",
+      "title": "זוחל המבוך קארל",
+      "authors": [
+        "מאט דינימן"
+      ],
+      "publisher": "הוצאת יניב",
+      "publication_year": 2024,
+      "language": "he",
+      "genres": [
+        "ליטרפ\"ג",
+        "מדע בדיוני"
+      ],
+      "series": "זמ\"ק",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002070",
+      "title": "זכור אותי",
+      "authors": [
+        "טהרה מאפי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 4,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001103",
+      "title": "חוות לאבלייט",
+      "authors": [
+        "ב.ק. בוריסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000724",
+      "title": "חוקי אירוסים",
+      "authors": [
+        "ג'ייני גייסינגר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000823",
+      "title": "חורף בניו יורק",
+      "authors": [
+        "ג'וזי סילבר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002636",
+      "title": "חיים חדשים",
+      "authors": [
+        "רחל טקלה"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655747188",
+      "title": "חלון אחד חשוך",
+      "authors": [
+        "רייצ'ל גיליג"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2023,
+      "language": "he",
+      "genres": [
+        "פנטזיה גותית",
+        "רומנטזי"
+      ],
+      "series": "קלפי הגורל",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001455",
+      "title": "חמש שניות לפני הסערה",
+      "authors": [
+        "ג'ודה רוז"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000977",
+      "title": "חנות ספרים על גלגלים",
+      "authors": [
+        "ג'ני קולגן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001332",
+      "title": "חניית ביניים",
+      "authors": [
+        "ט' ל' סוואן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002124",
+      "title": "חסרת לב",
+      "authors": [
+        "מאריסה מאייר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001936",
+      "title": "חצר של הרמוניה סדוקה",
+      "authors": [
+        "שרה ג'יי מאס"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 6,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000533",
+      "title": "טעות מהסוג הנכון",
+      "authors": [
+        "ליבי הארט"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001981",
+      "title": "טקסי הזרזיר",
+      "authors": [
+        "דבני פרי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789655661620",
+      "title": "יד הנחושת",
+      "authors": [
+        "הולי בלק",
+        "קסנדרה קלייר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2016,
+      "language": "he",
+      "genres": [
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "מגיסטריום",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001578",
+      "title": "יד על הלב",
+      "authors": [
+        "מריאנה זפאטה"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001080",
+      "title": "יום אחד",
+      "authors": [
+        "דייוויד ניקולס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001608",
+      "title": "יוצא מן הכלל",
+      "authors": [
+        "קריסטן קאליהן",
+        "סמנתה יאנג"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000830",
+      "title": "יוצאים לאור",
+      "authors": [
+        "אייווי אוונס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789654828116",
+      "title": "ים המפלצות",
+      "authors": [
+        "ריק ריירדן"
+      ],
+      "publisher": "גרף צעיר",
+      "publication_year": 2008,
+      "language": "he",
+      "genres": [
+        "מיתולוגיה יוונית",
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "פרסי ג'קסון והאולימפיים",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000748",
+      "title": "ירח דבש, זה לא",
+      "authors": [
+        "כריסטינה לורן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002179",
+      "title": "יריבים שמימיים",
+      "authors": [
+        "רבקה רוס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002414",
+      "title": "כבלי בלהות",
+      "authors": [
+        "שרה ג'יי מאס"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001363",
+      "title": "כוח תקיפה אפאצ'י",
+      "authors": [
+        "קמילה מונק"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "ספר 4.",
+      "series_number": 5,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001691",
+      "title": "כוחה של אהבה",
+      "authors": [
+        "ג'ודית מקנוט"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002391",
+      "title": "כישוף בין הקוצים",
+      "authors": [
+        "מרגרט רוג'רסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000663",
+      "title": "כישוף של אהבה",
+      "authors": [
+        "קייט רוב"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001387",
+      "title": "כל הדברים שלא אמרנו",
+      "authors": [
+        "סלואן הארלו"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002339",
+      "title": "כל הדרכים מובילות לרומא",
+      "authors": [
+        "שרה אדמס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000465",
+      "title": "כל טרופ שהוא לא אתה",
+      "authors": [
+        "ויקטוריה לין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001059",
+      "title": "כל מה שתבקשי",
+      "authors": [
+        "סופי קינסלה"
+      ],
+      "publisher": "הכורסא, מודן",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002629",
+      "title": "כמעט פיקסאבל",
+      "authors": [
+        "הילה דולב"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000137",
+      "title": "כסף בעצמות",
+      "authors": [
+        "אלכסנדרה בראקן"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000144",
+      "title": "כשהאפלה עמדה מלכת",
+      "authors": [
+        "א\"ב פוראוק"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000649",
+      "title": "כתוב בכוכבים",
+      "authors": [
+        "מיני דארקי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001721",
+      "title": "לא אהבה ממבט ראשון",
+      "authors": [
+        "מייגן קווין"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001745",
+      "title": "לא בדיוק שושבין למופת",
+      "authors": [
+        "מייגן קווין"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001417",
+      "title": "לא טבעי",
+      "authors": [
+        "מיה שרידן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000779",
+      "title": "לב מורד",
+      "authors": [
+        "הייזל",
+        "ולס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001905",
+      "title": "להבת הברזל",
+      "authors": [
+        "רבקה יארוס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002643",
+      "title": "לו הייתי דרור",
+      "authors": [
+        "אלמוג בן נתן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655746143",
+      "title": "לייטלארק",
+      "authors": [
+        "אלכס אסטר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2023,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "פנטזיה"
+      ],
+      "series": "לייטלארק",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002513",
+      "title": "לייטלארק: משחקי הכתר",
+      "authors": [
+        "אלכס אסטר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000809",
+      "title": "לילה אחד על האי",
+      "authors": [
+        "ג'וזי סילבר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001943",
+      "title": "לימודי קסם",
+      "authors": [
+        "מריה",
+        ". סניידר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001950",
+      "title": "לימודי רעל",
+      "authors": [
+        "מריה",
+        ". סניידר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002582",
+      "title": "לכל המכשפות והשדים!",
+      "authors": [
+        "קים בר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001394",
+      "title": "למצוא את אייבי",
+      "authors": [
+        "קלייר קינגסלי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001349",
+      "title": "לפצח את רובי",
+      "authors": [
+        "קמילה מונק"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 3,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001646",
+      "title": "לקטוף חינניות בימי ראשון",
+      "authors": [
+        "ליאנה סינקוטי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002230",
+      "title": "לקסיקון השדים",
+      "authors": [
+        "שרה ריס ברנן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001325",
+      "title": "לשחרר את העבר",
+      "authors": [
+        "ר\"ס בולדט"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000496",
+      "title": "מאחורי קווי הלב",
+      "authors": [
+        "ס.ג'. טילביס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002759",
+      "title": "מאחז הלב",
+      "authors": [
+        "דברת אוהב עמי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655740363",
+      "title": "מגדל הזהב",
+      "authors": [
+        "הולי בלק",
+        "קסנדרה קלייר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2019,
+      "language": "he",
+      "genres": [
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "מגיסטריום",
+      "series_number": 5,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002377",
+      "title": "מגן הדרורים",
+      "authors": [
+        "דבני פרי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000328",
+      "title": "מגע של אופל",
+      "authors": [
+        "סקרלט סנט קלייר"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655745818",
+      "title": "מוזהבת",
+      "authors": [
+        "רייבן קנדי"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2023,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "פנטזיה"
+      ],
+      "series": "מוזהבת",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001875",
+      "title": "מושלם על הנייר",
+      "authors": [
+        "ג'יין מלצר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001974",
+      "title": "מחולל הגלים",
+      "authors": [
+        "ג'ולי ג'ונסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002155",
+      "title": "מטר של כוכבים",
+      "authors": [
+        "לאורה סבסטיאן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "שלישיית הכתר",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001486",
+      "title": "מיינדפאק",
+      "authors": [
+        "איי. ג'יי. סמית'"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001097",
+      "title": "מירנדה בנסיגה",
+      "authors": [
+        "לורן ליין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000342",
+      "title": "מכשפה סוררת",
+      "authors": [
+        "קריסטן סיקרלי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002087",
+      "title": "מכשפה של סופה ומלח",
+      "authors": [
+        "קנדל קולפר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002353",
+      "title": "מלוקוב באהבה",
+      "authors": [
+        "מריאנה זפאטה"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000885",
+      "title": "ממלאת מקום",
+      "authors": [
+        "סאריה",
+        "ילסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000243",
+      "title": "ממלכת הדם והבגידה",
+      "authors": [
+        "הולי רנה"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002568",
+      "title": "ממלכת הכוכבים והצללים",
+      "authors": [
+        "הולי רנה"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000250",
+      "title": "ממלכת הרעל והשבועה",
+      "authors": [
+        "הולי רנה"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": 3,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001738",
+      "title": "ממש לא שידוך משמיים",
+      "authors": [
+        "מייגן קווין"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000304",
+      "title": "מן האפר",
+      "authors": [
+        "אלי מרטינז"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655667615",
+      "title": "מסכת הכסף",
+      "authors": [
+        "הולי בלק",
+        "קסנדרה קלייר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2018,
+      "language": "he",
+      "genres": [
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "מגיסטריום",
+      "series_number": 4,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655664188",
+      "title": "מפתח הארד",
+      "authors": [
+        "הולי בלק",
+        "קסנדרה קלייר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2017,
+      "language": "he",
+      "genres": [
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "מגיסטריום",
+      "series_number": 3,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000236",
+      "title": "מקוללת",
+      "authors": [
+        "הרפר ל.",
+        "ודס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001226",
+      "title": "מקום נעים",
+      "authors": [
+        "אמילי הנרי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655747683",
+      "title": "מרטאג",
+      "authors": [
+        "כריסטופר פאוליני"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2024,
+      "language": "he",
+      "genres": [
+        "פנטזיה אפית",
+        "נוער"
+      ],
+      "series": "עולמו של אראגון",
+      "series_number": 5,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000755",
+      "title": "משוואה למציאת נפש תאומה",
+      "authors": [
+        "כריסטינה לורן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001585",
+      "title": "משחק אליפות",
+      "authors": [
+        "מריאנה זפאטה"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002278",
+      "title": "משחק המשאלות",
+      "authors": [
+        "מג שייפר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001530",
+      "title": "משחק מקדים",
+      "authors": [
+        "נאבסה אלן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655743456",
+      "title": "משפצים",
+      "authors": [
+        "טסה ביילי"
+      ],
+      "publisher": "הכורסא, מודן",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001851",
+      "title": "נ\"ב, אני שונאת אותך",
+      "authors": [
+        "לורן קונולי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001301",
+      "title": "נבגדת",
+      "authors": [
+        "רבקה שארפ"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001240",
+      "title": "נדרים עם האקס",
+      "authors": [
+        "ג'סיקה ג'ויס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000908",
+      "title": "נוסחת הנשיקה",
+      "authors": [
+        "הלן הואנג"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001998",
+      "title": "נוצה",
+      "authors": [
+        "אוליביה",
+        "ילדנשטיין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "סדרת מלאכי אליסיום",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002551",
+      "title": "נחש ויונה",
+      "authors": [
+        "שלבי מהורין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000960",
+      "title": "ניפגש בשוליים",
+      "authors": [
+        "מליסה פרגוסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000861",
+      "title": "ניפגש שוב בשנה הבאה",
+      "authors": [
+        "סופי קאזנס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002308",
+      "title": "ניצוצות של אהבה",
+      "authors": [
+        "קתרין סנטר"
+      ],
+      "publisher": "תכלת",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002209",
+      "title": "נכתב באדום",
+      "authors": [
+        "אן בישופ"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002650",
+      "title": "נסיכה בספק",
+      "authors": [
+        "הילה קופרמן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001509",
+      "title": "נסיכה על הנייר",
+      "authors": [
+        "ארין",
+        "ואטס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001271",
+      "title": "נערים כמוך",
+      "authors": [
+        "ג'וליאנה סטון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002452",
+      "title": "נפץ אותי",
+      "authors": [
+        "טהרה מאפי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001561",
+      "title": "נקודת פריצה",
+      "authors": [
+        "גרייס ריילי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000502",
+      "title": "נקודת תורפה",
+      "authors": [
+        "ס.ג'. טילביס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001073",
+      "title": "נשיקה איטלקית",
+      "authors": [
+        "אדריאנה טריג'יאני"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002346",
+      "title": "נשיקה צרפתית בניו יורק",
+      "authors": [
+        "אן־סופי ז'ואנו"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001639",
+      "title": "סוף המשחק",
+      "authors": [
+        "מוניקה מרפי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001622",
+      "title": "סיבוב מסוכן",
+      "authors": [
+        "קרלי רובין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001783",
+      "title": "סיפור חיי",
+      "authors": [
+        "לוסי סקור"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000373",
+      "title": "סיפורה של מלכת הלב",
+      "authors": [
+        "נישה ג'יי טולי"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": 4,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001844",
+      "title": "סערות הקיץ",
+      "authors": [
+        "שרה מקלין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002254",
+      "title": "ספוטלס",
+      "authors": [
+        "קמילה מונק"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655745153",
+      "title": "ספר הלילה",
+      "authors": [
+        "הולי בלק"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2023,
+      "language": "he",
+      "genres": [
+        "פנטזיה אורבנית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001165",
+      "title": "ספריית האהבה",
+      "authors": [
+        "שרה מאנינג"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002193",
+      "title": "עד הירח ובחזרה",
+      "authors": [
+        "ארין. קיי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "הפטרונים",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000854",
+      "title": "עדיין לא נפגשנו",
+      "authors": [
+        "סופי קאזנס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002001",
+      "title": "עולם שמימי",
+      "authors": [
+        "אוליביה",
+        "ילדנשטיין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "סדרת מלאכי אליסיום",
+      "series_number": 2,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001035",
+      "title": "עולמה הסודי של שופהולית",
+      "authors": [
+        "סופי קינסלה"
+      ],
+      "publisher": "הכורסא, מודן",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655526325",
+      "title": "עילוי",
+      "authors": [
+        "מארי לו"
+      ],
+      "publisher": "כנרת",
+      "publication_year": 2014,
+      "language": "he",
+      "genres": [
+        "דיסטופיה",
+        "נוער"
+      ],
+      "series": "אגדה",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000120",
+      "title": "על דם ואור",
+      "authors": [
+        "קמילה מונק"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001707",
+      "title": "עסקת חבילה",
+      "authors": [
+        "מייגן קווין"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002421",
+      "title": "פאוורלס",
+      "authors": [
+        "לורן רוברטס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001769",
+      "title": "פגוש אותי באגם",
+      "authors": [
+        "קרלי פורצ'ן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001172",
+      "title": "פה בשביל העוגה",
+      "authors": [
+        "ג'ניפר מיליקין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000564",
+      "title": "פעם אהבת אותי",
+      "authors": [
+        "קורין מייקלס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657732892",
+      "title": "פרויקט הייל מרי",
+      "authors": [
+        "אנדי",
+        "יר"
+      ],
+      "publisher": "הכורסא",
+      "publication_year": 2021,
+      "language": "he",
+      "genres": [
+        "מדע בדיוני"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000175",
+      "title": "פרוסט",
+      "authors": [
+        "סי. אן. קרופורד"
+      ],
+      "publisher": "יהלומים הוצאה לאור",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001837",
+      "title": "פרפר בכפור",
+      "authors": [
+        "סילביה דיי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002773",
+      "title": "פרפר בענבר",
+      "authors": [
+        "קמילה מונק"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 4,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002476",
+      "title": "צייד חסר לב",
+      "authors": [
+        "קריסטן סיקרלי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000168",
+      "title": "ציידת הלילה",
+      "authors": [
+        "ג'אנין פרוסט"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "ארץ־אופל",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000632",
+      "title": "צעדים קטנים של אהבה",
+      "authors": [
+        "קתרין סנטר"
+      ],
+      "publisher": "תכלת",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002117",
+      "title": "קללה",
+      "authors": [
+        "מאריסה מאייר"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "מספרת הסיפורים",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000656",
+      "title": "קללת האקס",
+      "authors": [
+        "ארין סטרלינג"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789654829373",
+      "title": "קללת הטיטאן",
+      "authors": [
+        "ריק ריירדן"
+      ],
+      "publisher": "גרף צעיר",
+      "publication_year": 2009,
+      "language": "he",
+      "genres": [
+        "מיתולוגיה יוונית",
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "פרסי ג'קסון והאולימפיים",
+      "series_number": 3,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002711",
+      "title": "קלרוויאנט",
+      "authors": [
+        "נטלי ציונוב"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000991",
+      "title": "קרב חנויות הספרים",
+      "authors": [
+        "אלי בריידי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001318",
+      "title": "קרוב אלייך",
+      "authors": [
+        "ניסה רנזו"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002131",
+      "title": "קרן שיר",
+      "authors": [
+        "מוירה בופיני"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002292",
+      "title": "קשר לוהט",
+      "authors": [
+        "נאבסה אלן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000335",
+      "title": "ראקלס",
+      "authors": [
+        "לורן רוברטס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002100",
+      "title": "רדופה",
+      "authors": [
+        "פ.ק. קאסט",
+        "קריסטין קאסט"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "בית הלילה",
+      "series_number": 5,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002599",
+      "title": "רוכבי שחקים",
+      "authors": [
+        "דנה זטולובסקי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002315",
+      "title": "רומן קיץ",
+      "authors": [
+        "אמילי הנרי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002704",
+      "title": "רס\"ר הטבעות",
+      "authors": [
+        "דיה מרגין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001202",
+      "title": "רק אל תשכח אותי",
+      "authors": [
+        "מארי מקפרליין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001110",
+      "title": "רק ידידים",
+      "authors": [
+        "אבי חימנז"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001127",
+      "title": "רק לקיץ הזה",
+      "authors": [
+        "אבי חימנז"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001820",
+      "title": "רשימת הבנים",
+      "authors": [
+        "אי. לוקהארט"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "הבנים",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002520",
+      "title": "שבועת שווא",
+      "authors": [
+        "לקסי ראיין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002322",
+      "title": "שוברים את הקרח",
+      "authors": [
+        "האנה גרייס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001615",
+      "title": "שולטת במגרש",
+      "authors": [
+        "קרלה סורנסן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000786",
+      "title": "שח ומט",
+      "authors": [
+        "אלי הייזלווד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001516",
+      "title": "שחק בי שוב",
+      "authors": [
+        "בקה סטיל"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002056",
+      "title": "שחרר אותי",
+      "authors": [
+        "טהרה מאפי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002506",
+      "title": "שיגעון להתאהב בערפד",
+      "authors": [
+        "אורה היין"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "רומנטזי"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000731",
+      "title": "שידוך חלומי",
+      "authors": [
+        "קרטיס סיטנפלד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001158",
+      "title": "שיעורים באהבה",
+      "authors": [
+        "שרה אדמס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001813",
+      "title": "שיעורים בכימיה",
+      "authors": [
+        "בוני גרמוס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000359",
+      "title": "שלטונו של מלך האורורה",
+      "authors": [
+        "נישה ג'יי טולי"
+      ],
+      "publisher": "ספר לכל",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001479",
+      "title": "שמור עלי",
+      "authors": [
+        "מאיה בנקס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655748369",
+      "title": "שני כתרים מפותלים",
+      "authors": [
+        "רייצ'ל גיליג"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2024,
+      "language": "he",
+      "genres": [
+        "פנטזיה גותית",
+        "רומנטזי"
+      ],
+      "series": "קלפי הגורל",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002216",
+      "title": "שניים יכולים לשמור סוד",
+      "authors": [
+        "קארן מ' מקמנוס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002025",
+      "title": "שפת הדרקונים",
+      "authors": [
+        "ס\"פ",
+        "יליאמסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002490",
+      "title": "שפת הדרקונים",
+      "authors": [
+        "ס\"פ",
+        "ויליאמסון"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 1,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657000557",
+      "title": "שקרים הם שפת האהבה שלי",
+      "authors": [
+        "אוליביה סיימונס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657002049",
+      "title": "שרשרת של ברזל",
+      "authors": [
+        "קסנדרה קלייר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "השעות האחרונות",
+      "series_number": 2,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002032",
+      "title": "שרשרת של זהב",
+      "authors": [
+        "קסנדרה קלייר"
+      ],
+      "publisher": "כנרת, זמורה-ביתן, דביר",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "השעות האחרונות",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001523",
+      "title": "תאהב אותי, תעקוב אחרי",
+      "authors": [
+        "לורה בישופ"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "חלק",
+      "series_number": 1,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657000694",
+      "title": "תחת הכישוף שלך",
+      "authors": [
+        "לורה",
+        "וד"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001776",
+      "title": "תמונה אחת של קיץ",
+      "authors": [
+        "קרלי פורצ'ן"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "קומדיה רומנטית"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657001424",
+      "title": "תציל אותי",
+      "authors": [
+        "ג'יום מוסו"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789655174823",
+      "title": "תקוות האולימפוס",
+      "authors": [
+        "ריק ריירדן"
+      ],
+      "publisher": "גרף צעיר",
+      "publication_year": 2010,
+      "language": "he",
+      "genres": [
+        "מיתולוגיה יוונית",
+        "פנטזיה",
+        "נוער"
+      ],
+      "series": "פרסי ג'קסון והאולימפיים",
+      "series_number": 5,
+      "has_cover": false
+    },
+    {
+      "isbn": "9789657002063",
+      "title": "תראה אותי",
+      "authors": [
+        "טהרה מאפי"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": 3,
+      "has_cover": true
+    },
+    {
+      "isbn": "9789657001660",
+      "title": "תראי אותי",
+      "authors": [
+        "ניקולס ספארקס"
+      ],
+      "publisher": "הוצאה לאור ישראלית",
+      "publication_year": 2022,
+      "language": "he",
+      "genres": [
+        "פרוזה"
+      ],
+      "series": "",
+      "series_number": null,
+      "has_cover": false
+    }
+  ]
+}

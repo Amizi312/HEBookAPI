@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>מאגר הספרים הישראלי הפתוח</title>
+<meta name="description" content="API סטטי, חינמי ופתוח של מידע ביבליוגרפי על ספרים שיצאו לאור בישראל.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;900&family=Heebo:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f2f4f0;--surface:#fbfcfa;--ink:#172026;--muted:#5b6770;--line:#cfd6d0;--accent:#1f3a93;--tab:#e8c547;--code-bg:#172026;--code-fg:#e6ecef;--code-key:#e8c547}
+[data-theme="dark"]{--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--code-bg:#0c1114}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--code-bg:#0c1114}}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 Heebo,system-ui,sans-serif;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);transition:background .2s,color .2s}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{padding:18px 0;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{font:900 20px 'Frank Ruhl Libre',serif}
+nav{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+nav a{text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--ink)}
+.theme-btn{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:16px;cursor:pointer;color:var(--ink)}
+.theme-btn:hover{background:var(--surface)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding:56px 0 48px}
+h1{font:900 clamp(38px,6vw,64px)/1.1 'Frank Ruhl Libre',serif;margin:0 0 18px}
+.lead{color:var(--muted);max-width:34em;margin:0 0 24px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:10px 20px;border-radius:6px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:700;cursor:pointer;background:none}
+.btn.primary{background:var(--ink);color:var(--bg)}
+/* catalog card */
+.card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:30px 24px 22px;box-shadow:6px 6px 0 var(--line);min-height:230px}
+.card::before{content:"";position:absolute;top:-12px;inset-inline-start:24px;width:96px;height:22px;background:var(--tab);border-radius:4px 4px 0 0}
+.card .hole{position:absolute;bottom:14px;inset-inline-start:50%;width:14px;height:14px;border-radius:50%;background:var(--bg);border:1px solid var(--line)}
+.card h2{font:900 26px/1.25 'Frank Ruhl Libre',serif;margin:0 0 4px}
+.card .by{color:var(--muted);margin:0 0 14px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 16px;margin:0;font-size:15px}
+.card dt{color:var(--muted)}.card dd{margin:0}
+.card .cov{float:left;width:84px;height:120px;margin:0 16px 8px 0;border:1px solid var(--line);background:var(--bg);object-fit:cover;border-radius:3px}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h3{font:900 30px/1.2 'Frank Ruhl Libre',serif;margin:0 0 16px}
+/* explorer */
+.search{display:flex;gap:10px;margin-bottom:14px}
+.search input{flex:1;font:inherit;padding:11px 14px;border:2px solid var(--ink);border-radius:6px;background:var(--surface);color:var(--ink)}
+.actions-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:10px}
+.export-btns{display:flex;gap:8px}
+.export-btn{font-size:13px;padding:6px 12px;border:1px solid var(--line);border-radius:4px;background:var(--surface);color:var(--ink);cursor:pointer;font-weight:600}
+.export-btn:hover{background:var(--bg);border-color:var(--ink)}
+.list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:6px;background:var(--surface);max-height:650px;overflow-y:auto}
+.list li+li{border-top:1px solid var(--line)}
+.list button{all:unset;box-sizing:border-box;display:flex;width:100%;gap:14px;padding:12px 16px;cursor:pointer;align-items:baseline;flex-wrap:wrap}
+.list button:hover,.list button[aria-expanded=true]{background:var(--bg)}
+.list button:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.t{font-weight:700}.m{color:var(--muted);font-size:15px}
+.detail{padding:0 16px 16px}
+.empty{padding:20px;color:var(--muted)}
+/* code */
+pre{background:var(--code-bg);color:var(--code-fg);padding:16px 18px;border-radius:6px;overflow-x:auto;direction:ltr;text-align:left;font:14px/1.6 ui-monospace,Menlo,Consolas,monospace;margin:8px 0 20px}
+code.i{direction:ltr;unicode-bidi:embed;background:var(--surface);border:1px solid var(--line);padding:1px 6px;border-radius:4px;font-size:.9em}
+.ep{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:baseline;margin-bottom:6px}
+.get{background:var(--tab);color:#172026;font-weight:700;font-size:13px;padding:1px 9px;border-radius:3px;direction:ltr}
+table{border-collapse:collapse;width:100%;font-size:15px;display:block;overflow-x:auto}
+th,td{text-align:start;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td:first-child{direction:ltr;text-align:left;white-space:nowrap;font-family:ui-monospace,Menlo,monospace;font-size:14px}
+footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:15px}
+@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:32px}}
+@media (prefers-reduced-motion:no-preference){.card{animation:drop .5s ease-out both}@keyframes drop{from{opacity:0;transform:translateY(-10px)}}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <span class="brand">📚 מאגר הספרים הישראלי הפתוח</span>
+  <nav>
+    <a href="#explore">חיפוש</a>
+    <a href="#api">שימוש ב-API</a>
+    <a href="#schema">מבנה הנתונים</a>
+    <a href="add.html">הוספת ספר</a>
+    <button class="theme-btn" id="themeBtn" aria-label="שינוי מצב תצוגה (יום/לילה)">🌙</button>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <div>
+      <h1>מידע על ספרים ישראליים, פתוח לכולם</h1>
+      <p class="lead">נתונים ביבליוגרפיים על ספרים שיצאו לאור בישראל, בעברית ובשפות נוספות. בלי מפתח API ובלי הרשמה, בקשת GET פשוטה מספיקה.</p>
+      <div class="btns">
+        <a class="btn primary" href="#api">להתחיל לשלוף נתונים</a>
+        <a class="btn" href="add.html">להוסיף ספר חדש</a>
+      </div>
+    </div>
+    <article class="card" id="card" aria-live="polite">
+      <p class="empty">טוען ספר לדוגמה…</p>
+    </article>
+  </div>
+
+  <section id="explore">
+    <h3>חיפוש במאגר</h3>
+    <div class="search">
+      <input id="q" type="search" placeholder="חיפוש חכם: שם ספר, מחבר, הוצאה, ז'אנר, ISBN או דאנאקוד" aria-label="חיפוש ספר">
+    </div>
+    <div class="actions-row">
+      <p class="m" id="count" role="status" style="margin:0;"></p>
+      <div class="export-btns">
+        <button class="export-btn" id="exportJsonBtn">📥 הורד מאגר מלא (JSON)</button>
+        <button class="export-btn" id="exportCsvBtn">📊 הורד כ-CSV</button>
+      </div>
+    </div>
+    <ul class="list" id="list"></ul>
+  </section>
+
+  <section id="api">
+    <h3>שימוש ב-API</h3>
+    <p>כל הכתובות סטטיות ומוגשות דרך GitHub Pages. התשובות בפורמט JSON, ו-CORS פתוח לכל אתר.</p>
+    <div class="ep"><span class="get">GET</span><code class="i" id="u1"></code></div>
+    <p class="m">רשימה מקוצרת של כל הספרים (ISBN, כותרת, מחברים, הוצאה, שנה, שפה, ז'אנרים).</p>
+    <div class="ep"><span class="get">GET</span><code class="i" id="u2"></code></div>
+    <p class="m">כל הפרטים על ספר אחד לפי ISBN-13, ללא מקפים.</p>
+    <div class="ep"><span class="get">GET</span><code class="i" id="u3"></code></div>
+    <p class="m">תמונת כריכה בפורמט WebP, אם קיימת (בשדה <code class="i">has_cover</code> באינדקס).</p>
+    <pre id="js"></pre>
+    <pre id="py"></pre>
+  </section>
+
+  <section id="schema">
+    <h3>מבנה הנתונים</h3>
+    <table>
+      <thead><tr><th>שדה</th><th>סוג</th><th>תיאור</th></tr></thead>
+      <tbody>
+        <tr><td>isbn *</td><td>מחרוזת</td><td>ISBN-13 ללא מקפים, עם ספרת ביקורת תקינה</td></tr>
+        <tr><td>title *</td><td>מחרוזת</td><td>שם הספר</td></tr>
+        <tr><td>authors *</td><td>מערך</td><td>מחבר אחד לפחות</td></tr>
+        <tr><td>publisher *</td><td>מחרוזת</td><td>שם ההוצאה</td></tr>
+        <tr><td>publication_year *</td><td>מספר</td><td>שנת הוצאה</td></tr>
+        <tr><td>language *</td><td>מחרוזת</td><td>קוד שפה לפי ISO 639-1, למשל he או en</td></tr>
+        <tr><td>danacode</td><td>מחרוזת</td><td>מזהה דאנאקוד בפורמט NNN-NNNN</td></tr>
+        <tr><td>series, series_number</td><td>מחרוזת, מספר</td><td>שם הסדרה ומספר הספר בסדרה</td></tr>
+        <tr><td>original_title, subtitle, translators, pages, genres, summary, cover_url</td><td>שונים</td><td>שדות אופציונליים</td></tr>
+      </tbody>
+    </table>
+    <p class="m">שדות המסומנים ב-* הם חובה.</p>
+  </section>
+
+  <section id="contribute">
+    <h3>תרומה למאגר</h3>
+    <p><a href="add.html">טופס הוספת ספר</a> מיועד לכל מי שרוצה לתרום, כולל סורק ברקוד מהמצלמה ומשיכת פרטים אוטומטית. למי שרגיל ל-GitHub: מוסיפים קובץ <code class="i">books/ISBN.json</code>, פותחים Pull Request, ובדיקה אוטומטית מוודאת שהנתונים תקינים ומעדכנת את האינדקס. פרטים מלאים ב-<a href="https://github.com/" id="gh">מדריך התרומה</a>.</p>
+  </section>
+</main>
+
+<footer><div class="wrap">הנתונים מופצים ברישיון <a href="https://creativecommons.org/licenses/by/4.0/deed.he">CC BY 4.0</a>. אפשר להשתמש בהם בחופשיות, כולל לשימוש מסחרי, בציון המקור.</div></footer>
+
+<script>
+// --- ניהול מצב תצוגה (Dark/Light mode) ---
+const themeBtn = document.getElementById('themeBtn');
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+}
+const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+setTheme(savedTheme);
+themeBtn.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme') || 'light';
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// --- פונקציות עזר ונרמול עברית לחיפוש חכם ---
+function normalizeHebrew(str) {
+  if (!str) return '';
+  return String(str)
+    .toLowerCase()
+    .replace(/["'״׳`־\-]/g, '')
+    .replace(/ך/g, 'כ')
+    .replace(/ם/g, 'מ')
+    .replace(/ן/g, 'נ')
+    .replace(/ף/g, 'פ')
+    .replace(/ץ/g, 'צ')
+    .trim();
+}
+
+const base = new URL('.', location.href).href;
+const $ = id => document.getElementById(id);
+const ISBN = '9789655747683'; // מרטאג כברירת מחדל
+$('u1').textContent = base + 'books.json';
+$('u2').textContent = base + 'books/' + ISBN + '.json';
+$('u3').textContent = base + 'covers/' + ISBN + '.webp';
+$('js').textContent =
+`// JavaScript
+const res = await fetch("${base}books/${ISBN}.json");
+const book = await res.json();
+console.log(book.title, book.authors);`;
+$('py').textContent =
+`# Python
+import requests
+book = requests.get("${base}books/${ISBN}.json").json()
+print(book["title"], book["authors"])`;
+const m = location.hostname.match(/^(.+)\.github\.io$/), p = location.pathname.split('/')[1];
+if (m && p) $('gh').href = `https://github.com/${m[1]}/${p}/blob/main/CONTRIBUTING.md`;
+
+let books = [], pending = [];
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function renderCard(b){
+  const covSrc = b.cover || (b.isbn ? `https://covers.openlibrary.org/b/isbn/${b.isbn}-L.jpg` : '');
+  const cov = covSrc ? `<img class="cov" src="${esc(covSrc)}" alt="כריכת הספר ${esc(b.title)}" onerror="this.style.display='none'">` : '';
+  const rows = [
+    ['סדרה', b.series ? b.series + (b.series_number ? ' ' + b.series_number : '') : ''],
+    ['כותרת מקור', b.original_title],
+    ['מחברים', (b.authors||[]).join(', ')],
+    ['מתרגמים', (b.translators||[]).join(', ')],
+    ['הוצאה', b.publisher],
+    ['שנה', b.publication_year],
+    ['שפה', b.language === 'he' ? 'עברית' : b.language],
+    ['עמודים', b.pages],
+    ['ז\'אנרים', (b.genres||[]).join(', ')],
+    ['ISBN', b.isbn],
+    ['דאנאקוד', b.danacode]
+  ].filter(r => r[1]).map(r => `<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join('');
+  return `${cov}<h2>${esc(b.title)}</h2>${b.subtitle?`<p class="by">${esc(b.subtitle)}</p>`:''}<dl>${rows}</dl>${b.summary?`<p class="m" style="margin-top:12px;">${esc(b.summary)}</p>`:''}<span class="hole"></span>`;
+}
+
+async function full(isbn){
+  const r = await fetch(`books/${isbn}.json`); if(!r.ok) throw 0;
+  const b = await r.json();
+  const idx = books.find(x => x.isbn === isbn);
+  if (idx && idx.has_cover) b.cover = `covers/${isbn}.webp`;
+  else b.cover = `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`;
+  return b;
+}
+
+function draw(){
+  const rawQ = $('q').value.trim();
+  const normQ = normalizeHebrew(rawQ);
+  const all = books.concat(pending);
+
+  const res = all.filter(b => {
+    if (!normQ) return true;
+    const hayRaw = [b.title, b.publisher, b.isbn, b.danacode, b.series, ...(b.authors||[]), ...(b.genres||[])].join(' ');
+    const hayNorm = normalizeHebrew(hayRaw);
+    return hayRaw.toLowerCase().includes(rawQ.toLowerCase()) || hayNorm.includes(normQ);
+  });
+
+  $('count').textContent = `${res.length} מתוך ${all.length} ספרים` + (pending.length ? ` (${pending.length} ממתינים להשלמת פרטים)` : '');
+  $('list').innerHTML = res.length ? res.map(b => b.pending
+    ? `<li><button aria-expanded="false" data-pending="${b.row}"><span class="t">${esc(b.title)}</span><span class="m">${esc((b.authors||[]).join(', '))} · ממתין להשלמת פרטים</span></button><div class="detail" hidden></div></li>`
+    : `<li><button aria-expanded="false" data-isbn="${b.isbn}">
+    <span class="t">${esc(b.title)}</span><span class="m">${esc((b.authors||[]).join(', '))} · ${esc(b.publisher)} · ${b.publication_year}</span></button><div class="detail" hidden></div></li>`).join('')
+    : '<li class="empty">לא נמצאו ספרים התואמים לחיפוש. אפשר לנסות מילת חיפוש אחרת או להוסיף את הספר למאגר.</li>';
+}
+
+$('q').addEventListener('input', draw);
+$('list').addEventListener('click', async e => {
+  const btn = e.target.closest('button'); if(!btn) return;
+  const box = btn.nextElementSibling, open = btn.getAttribute('aria-expanded') === 'true';
+  btn.setAttribute('aria-expanded', !open); box.hidden = open;
+  if (!open && !box.innerHTML) {
+    if (btn.dataset.pending) {
+      const p = pending.find(x => String(x.row) === btn.dataset.pending);
+      box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(p)}<p class="m">הספר ממתין להשלמת פרטים (ISBN, הוצאה ושנה). <a href="add.html">אפשר לעזור ולהוסיף אותם</a>.</p></article>`;
+      return;
+    }
+    try { box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(await full(btn.dataset.isbn))}</article>`; }
+    catch { box.textContent = 'לא הצלחנו לטעון את פרטי הספר. אפשר לנסות שוב.'; }
+  }
+});
+
+// --- ייצוא נתונים ---
+$('exportJsonBtn').addEventListener('click', () => {
+  const blob = new Blob([JSON.stringify({ count: books.length, books }, null, 2)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'hebrew-books.json';
+  a.click();
+});
+
+$('exportCsvBtn').addEventListener('click', () => {
+  const headers = ['ISBN', 'שם הספר', 'מחברים', 'הוצאה לאור', 'שנת הוצאה', 'סדרה', 'מספר בסדרה', 'ז\'אנרים'];
+  const rows = books.map(b => [
+    `"${b.isbn}"`,
+    `"${(b.title||'').replace(/"/g, '""')}"`,
+    `"${(b.authors||[]).join('; ').replace(/"/g, '""')}"`,
+    `"${(b.publisher||'').replace(/"/g, '""')}"`,
+    b.publication_year || '',
+    `"${(b.series||'').replace(/"/g, '""')}"`,
+    b.series_number || '',
+    `"${(b.genres||[]).join('; ').replace(/"/g, '""')}"`
+  ]);
+  const csvContent = '\uFEFF' + [headers.join(','), ...rows.map(r => r.join(','))].join('\r\n');
+  const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'hebrew-books.csv';
+  a.click();
+});
+
+async function showRandomCard() {
+  if (!books || !books.length) return;
+  const rand = books[Math.floor(Math.random() * books.length)];
+  try {
+    const fullBook = await full(rand.isbn);
+    $('card').innerHTML = renderCard(fullBook) + 
+      `<div style="margin-top:14px; text-align:start;">
+        <button id="shuffleBtn" class="btn" style="font-size:13px; padding:6px 14px; border-radius:4px; cursor:pointer;">🎲 ספר אקראי אחר</button>
+      </div>`;
+    $('shuffleBtn').addEventListener('click', showRandomCard);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+(async () => {
+  try {
+    const res = await fetch('books.json');
+    books = (await res.json()).books;
+    try {
+      const have = new Set(books.map(b => b.title.trim()));
+      pending = (await (await fetch('pending/pending.json')).json()).filter(p => !have.has(p.title.trim())).map(p => ({...p, pending: true}));
+    } catch {}
+    draw();
+    await showRandomCard();
+  } catch (err) {
+    $('card').innerHTML = '<p class="empty">לא ניתן לטעון את books.json. אם הקובץ נפתח מהמחשב ישירות, יש להריץ שרת מקומי: python -m http.server</p>';
+    $('count').textContent = '';
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+name: issue-to-pr
+on:
+  issues:
+    types: [opened]
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+jobs:
+  convert:
+    if: startsWith(github.event.issue.title, '[ספר חדש]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: המרת הבקשה לקובץ ספר
+        id: conv
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/issue_to_book.py
+      - name: פתיחת Pull Request
+        id: pr
+        if: success()
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: new-book-${{ steps.conv.outputs.isbn }}
+          title: "ספר חדש: ${{ steps.conv.outputs.isbn }}"
+          commit-message: "feat: הוספת ספר ${{ steps.conv.outputs.isbn }} מבקשה #${{ github.event.issue.number }}"
+          body: "נוצר אוטומטית מבקשה #${{ github.event.issue.number }}. לפני המיזוג כדאי לוודא את הפרטים מול הספר או מקור ביבליוגרפי.\n\nCloses #${{ github.event.issue.number }}"
+          add-paths: books/*.json
+      - name: הודעה למגיש
+        if: success()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh issue comment ${{ github.event.issue.number }} --body "תודה! הספר נשלח לבדיקה של מתנדב ויעלה למאגר אחרי האישור."
+      - name: דיווח על שגיאה
+        if: failure()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          MSG=$(cat issue_error.txt 2>/dev/null || echo "אירעה שגיאה בעיבוד הבקשה.")
+          gh issue comment ${{ github.event.issue.number }} --body "לא הצלחנו להוסיף את הספר: $MSG"
