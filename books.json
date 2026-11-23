@@ -1,5 +1,5 @@
 {
-  "count": 279,
+  "count": 280,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -48,6 +48,20 @@
       "series": "",
       "series_number": 1,
       "has_cover": false
+    },
+    {
+      "id": "f6ffe5c4-99ef-41e5-a9e1-864a04524b43",
+      "title": "אדם",
+      "authors": [
+        "ג'יימי שו"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "3b3c4d7e-987c-4987-9e67-e73b2445d896",
