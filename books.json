@@ -1,5 +1,5 @@
 {
-  "count": 280,
+  "count": 281,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -16,6 +16,20 @@
       "series": "",
       "series_number": null,
       "has_cover": false
+    },
+    {
+      "id": "40069332-1d48-4d74-86e6-e30ed392ed6b",
+      "title": "9 בנובמבר",
+      "authors": [
+        "קולין הובר"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "9ad08b5b-8e9a-4900-8a19-a726b6147952",
