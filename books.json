@@ -1,5 +1,5 @@
 {
-  "count": 275,
+  "count": 274,
   "books": [
     {
       "isbn": "9789657001295",
@@ -13,20 +13,6 @@
       "genres": [
         "פרוזה"
       ],
-      "series": "",
-      "series_number": null,
-      "has_cover": false
-    },
-    {
-      "isbn": "1234678912344",
-      "title": "test",
-      "authors": [
-        "testing"
-      ],
-      "publisher": "",
-      "publication_year": null,
-      "language": "he",
-      "genres": [],
       "series": "",
       "series_number": null,
       "has_cover": false
