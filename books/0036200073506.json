@@ -1,0 +1,17 @@
+{
+  "isbn": "0036200073506",
+  "title": "הקללה של ראיין",
+  "authors": [
+    "חן דפ"
+  ],
+  "publisher": "לונה",
+  "publication_year": 2025,
+  "language": "he",
+  "genres": [
+    "רומנטזי",
+    "רומנטיקה אפלה"
+  ],
+  "series": "מקוללים",
+  "series_number": 1,
+  "cover_url": "https://amizi312.github.io/HEBookAPI/covers/0036200073506.webp"
+}
