@@ -1,5 +1,5 @@
 {
-  "count": 276,
+  "count": 277,
   "books": [
     {
       "isbn": "9789657001295",
@@ -1521,6 +1521,23 @@
       "series": "",
       "series_number": null,
       "has_cover": false
+    },
+    {
+      "isbn": "0036200073506",
+      "title": "הקללה של ראיין",
+      "authors": [
+        "חן דפ"
+      ],
+      "publisher": "לונה",
+      "publication_year": 2025,
+      "language": "he",
+      "genres": [
+        "רומנטזי",
+        "רומנטיקה אפלה"
+      ],
+      "series": "מקוללים",
+      "series_number": 1,
+      "has_cover": true
     },
     {
       "isbn": "9789655171730",
