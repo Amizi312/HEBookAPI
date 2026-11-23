@@ -1,5 +1,5 @@
 {
-  "count": 285,
+  "count": 286,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -3680,6 +3680,20 @@
       "series": "אגדה",
       "series_number": 2,
       "has_cover": false
+    },
+    {
+      "id": "b21905bd-0fc8-4cc4-96f4-fc89991fc710",
+      "title": "עילוי",
+      "authors": [
+        "מרי לו"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "e2ca4897-077d-42f3-bb7a-5d67455c133a",
