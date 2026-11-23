@@ -1,0 +1,9 @@
+{
+  "isbn": "1234678912344",
+  "title": "test",
+  "authors": [
+    "testing"
+  ],
+  "language": "he",
+  "cover_url": "https://amizi312.github.io/HEBookAPI/covers/1234678912344.webp"
+}
