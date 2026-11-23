@@ -1,5 +1,5 @@
 {
-  "count": 283,
+  "count": 282,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -353,20 +353,6 @@
       "series": "",
       "series_number": null,
       "has_cover": false
-    },
-    {
-      "id": "30ae4d1a-544a-4a74-a0eb-edd1ea1bcab9",
-      "title": "אינסטינקט של רוצח",
-      "authors": [
-        "ג'ניפר לין ברנס"
-      ],
-      "publisher": "",
-      "publication_year": null,
-      "language": "he",
-      "genres": [],
-      "series": "",
-      "series_number": null,
-      "has_cover": true
     },
     {
       "id": "337bc656-e3b5-4bab-89e6-1dafdb18c57f",
