@@ -6,7 +6,6 @@
 <title>הוספת ספר למאגר</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@900&family=Heebo:wght@400;500;700&display=swap">
-<script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
 <style>
 :root{--bg:#f2f4f0;--surface:#fbfcfa;--ink:#172026;--muted:#5b6770;--line:#cfd6d0;--accent:#1f3a93;--tab:#e8c547;--err:#a4161a;--ok:#166534;--ok-bg:#f0fdf4}
 [data-theme="dark"]{--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--err:#ff8a80;--ok:#4ade80;--ok-bg:#052e16}
@@ -51,9 +50,6 @@ button:disabled{opacity:.6;cursor:wait}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
 .chip{font-weight:500;font-size:15px;padding:5px 14px;border:2px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink)}
 .chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-#scanner-modal{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:999;display:flex;align-items:center;justify-content:center;padding:20px}
-.scanner-box{background:var(--surface);padding:24px;border-radius:8px;max-width:500px;width:100%;text-align:center}
-#reader{width:100%;margin:16px 0;border-radius:6px;overflow:hidden}
 @media (max-width:600px){.row{grid-template-columns:1fr}.input-with-btn{flex-direction:column}}
 </style>
 </head>
@@ -65,16 +61,9 @@ button:disabled{opacity:.6;cursor:wait}
   </div>
 
   <h1>הוספת ספר למאגר</h1>
-  <p class="lead">ארבעה שדות חובה וקצת פרטים נוספים אם יש לכם. בפלאפון אפשר גם לסרוק את הברקוד מהמצלמה.</p>
+  <p class="lead">שלושה שדות חובה וקצת פרטים נוספים אם יש לכם.</p>
 
   <form id="f" novalidate autocomplete="off">
-    <label for="isbn">ISBN <small>(13 ספרות בגב הספר מתחת לברקוד)</small></label>
-    <div class="input-with-btn">
-      <input id="isbn" class="ltr" inputmode="numeric" autocomplete="off" required placeholder="9789655747683">
-      <button type="button" id="scanBtn" class="action-btn" hidden>📷 סרוק ברקוד</button>
-    </div>
-    <p class="err" id="e-isbn" role="alert"></p>
-
     <label for="title">שם הספר</label>
     <input id="title" required maxlength="200"><p class="err" id="e-title" role="alert"></p>
 
@@ -119,15 +108,6 @@ button:disabled{opacity:.6;cursor:wait}
   </form>
 </div>
 
-<div id="scanner-modal" hidden>
-  <div class="scanner-box">
-    <h3>סריקת ברקוד מהמצלמה</h3>
-    <p style="color:var(--muted); font-size:14px;">כוון את המצלמה לברקוד בגב הספר</p>
-    <div id="reader"></div>
-    <button type="button" id="closeScannerBtn" class="btn" style="margin-top:10px;">ביטול וסגירה</button>
-  </div>
-</div>
-
 <script>
 // כתובת ה-Worker מ-Cloudflare (בלי / בסוף). להחליף אחרי היצירה:
 const API_URL = 'https://hebooksapi.aamizii.workers.dev/';
@@ -147,39 +127,6 @@ setTheme(savedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matche
 themeBtn.addEventListener('click', () => {
   setTheme((document.documentElement.getAttribute('data-theme') || 'light') === 'dark' ? 'light' : 'dark');
 });
-
-// --- כפתור סריקה: רק במכשיר מגע עם מצלמה ---
-const isTouchDevice = window.matchMedia('(pointer:coarse)').matches;
-const hasCamera = !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
-if (isTouchDevice && hasCamera) $('scanBtn').hidden = false;
-
-// --- ISBN ---
-function isbn13Ok(s) {
-  s = s.replace(/[-\s]/g, '');
-  if (!/^\d{13}$/.test(s)) return false;
-  let sum = 0;
-  for (let i = 0; i < 12; i++) sum += parseInt(s[i], 10) * (i % 2 === 0 ? 1 : 3);
-  return (10 - (sum % 10)) % 10 === parseInt(s[12], 10);
-}
-
-function checkIsbn() {
-  const raw = $('isbn').value.replace(/[-\s]/g, '');
-  const err = $('e-isbn');
-  $('isbn').removeAttribute('aria-invalid');
-  if (!raw) { $('isbn').className = 'ltr'; err.textContent = ''; return false; }
-  if (isbn13Ok(raw)) {
-    $('isbn').className = 'ltr is-valid';
-    err.className = 'ok-msg';
-    err.textContent = '✓ מספר ISBN תקין';
-    return true;
-  }
-  $('isbn').className = 'ltr';
-  $('isbn').setAttribute('aria-invalid', 'true');
-  err.className = 'err';
-  err.textContent = raw.length === 13 ? 'ספרת הביקורת שגויה' : `דרושות 13 ספרות (הוזנו ${raw.length})`;
-  return false;
-}
-$('isbn').addEventListener('input', checkIsbn);
 
 // --- תמונת כריכה: הקטנה לפני ההעלאה (השרת ימיר ל-WebP) ---
 let coverBlob = null;
@@ -237,44 +184,6 @@ $('cover').addEventListener('change', async () => {
     $('e-cover').textContent = e.message;
   }
 });
-
-// --- סורק ברקוד ---
-let html5QrcodeScanner = null;
-
-$('scanBtn').addEventListener('click', () => {
-  if (typeof Html5Qrcode === 'undefined') {
-    alert('ספריית הסריקה לא נטענה. בדוק חיבור לאינטרנט ורענן את הדף.');
-    return;
-  }
-  $('scanner-modal').hidden = false;
-  html5QrcodeScanner = new Html5Qrcode("reader");
-  html5QrcodeScanner.start(
-    { facingMode: "environment" },
-    { fps: 10, qrbox: { width: 250, height: 150 } },
-    (decodedText) => {
-      const clean = decodedText.replace(/[-\s]/g, '');
-      if (/^\d{13}$/.test(clean)) {
-        $('isbn').value = clean;
-        checkIsbn();
-        stopScanner();
-      }
-    },
-    () => {}
-  ).catch(() => {
-    alert("לא ניתן לגשת למצלמה. ודא שאישרת הרשאות מצלמה בדפדפן.");
-    stopScanner();
-  });
-});
-
-function stopScanner() {
-  $('scanner-modal').hidden = true;
-  if (html5QrcodeScanner) {
-    const scanner = html5QrcodeScanner;
-    html5QrcodeScanner = null;
-    scanner.stop().then(() => scanner.clear()).catch(() => {});
-  }
-}
-$('closeScannerBtn').addEventListener('click', stopScanner);
 
 // --- ז'אנרים ---
 const MAX_GENRES = 5;
@@ -336,14 +245,6 @@ function buildPayload() {
     if (!firstBad) firstBad = fieldId;
   };
 
-  const isbn = $('isbn').value.replace(/[-\s]/g, '');
-  if (!isbn13Ok(isbn)) {
-    checkIsbn();
-    if (!$('e-isbn').textContent) $('e-isbn').textContent = 'יש להזין ISBN תקין';
-    $('e-isbn').className = 'err';
-    firstBad = 'isbn';
-  }
-
   const title = $('title').value.trim();
   if (!title) fail('e-title', 'שם הספר הוא שדה חובה', 'title');
 
@@ -362,7 +263,7 @@ function buildPayload() {
   if (firstBad) { $(firstBad).focus(); throw new Error('validation'); }
 
   // שדות ריקים פשוט לא נשלחים
-  const book = { isbn, title, authors, language: 'he' };
+  const book = { title, authors, language: 'he' };
   if (selectedGenres.size) book.genres = [...selectedGenres];
   const publisher = $('publisher').value.trim();
   if (publisher) book.publisher = publisher;
@@ -392,9 +293,6 @@ function resetForm() {
   $('e-genres').textContent = '';
   coverBlob = null;
   resetPreview();
-  $('isbn').className = 'ltr';
-  $('isbn').removeAttribute('aria-invalid');
-  $('e-isbn').textContent = '';
 }
 
 // ריענון או חזרה לדף: מנקים את הטופס (הדפדפן משחזר שדות מהביקור הקודם)

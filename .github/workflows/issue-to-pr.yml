@@ -24,9 +24,9 @@ jobs:
         if: success()
         uses: peter-evans/create-pull-request@v6
         with:
-          branch: new-book-${{ steps.conv.outputs.isbn }}
-          title: "ספר חדש: ${{ steps.conv.outputs.isbn }}"
-          commit-message: "feat: הוספת ספר ${{ steps.conv.outputs.isbn }} מבקשה #${{ github.event.issue.number }}"
+          branch: new-book-${{ steps.conv.outputs.id }}
+          title: "ספר חדש: ${{ steps.conv.outputs.id }}"
+          commit-message: "feat: הוספת ספר ${{ steps.conv.outputs.id }} מבקשה #${{ github.event.issue.number }}"
           body: "נוצר אוטומטית מבקשה #${{ github.event.issue.number }}. לפני המיזוג כדאי לוודא את הפרטים מול הספר או מקור ביבליוגרפי.\n\nCloses #${{ github.event.issue.number }}"
           add-paths: books/*.json
       - name: הודעה למגיש

@@ -101,7 +101,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
   <section id="explore">
     <h3>חיפוש במאגר</h3>
     <div class="search">
-      <input id="q" type="search" placeholder="חיפוש חכם: שם ספר, מחבר, הוצאה, ז'אנר, ISBN או דאנאקוד" aria-label="חיפוש ספר">
+      <input id="q" type="search" placeholder="חיפוש חכם: שם ספר, מחבר, הוצאה, ז'אנר או דאנאקוד" aria-label="חיפוש ספר">
     </div>
     <div class="actions-row">
       <p class="m" id="count" role="status" style="margin:0;"></p>
@@ -117,9 +117,9 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
     <h3>שימוש ב-API</h3>
     <p>כל הכתובות סטטיות ומוגשות דרך GitHub Pages. התשובות בפורמט JSON, ו-CORS פתוח לכל אתר.</p>
     <div class="ep"><span class="get">GET</span><code class="i" id="u1"></code></div>
-    <p class="m">רשימה מקוצרת של כל הספרים (ISBN, כותרת, מחברים, הוצאה, שנה, שפה, ז'אנרים).</p>
+    <p class="m">רשימה מקוצרת של כל הספרים (מזהה, כותרת, מחברים, הוצאה, שנה, שפה, ז'אנרים).</p>
     <div class="ep"><span class="get">GET</span><code class="i" id="u2"></code></div>
-    <p class="m">כל הפרטים על ספר אחד לפי ISBN-13, ללא מקפים.</p>
+    <p class="m">כל הפרטים על ספר אחד לפי מזהה הספר.</p>
     <div class="ep"><span class="get">GET</span><code class="i" id="u3"></code></div>
     <p class="m">תמונת כריכה בפורמט WebP, אם קיימת (בשדה <code class="i">has_cover</code> באינדקס).</p>
     <pre id="js"></pre>
@@ -131,7 +131,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
     <table>
       <thead><tr><th>שדה</th><th>סוג</th><th>תיאור</th></tr></thead>
       <tbody>
-        <tr><td>isbn *</td><td>מחרוזת</td><td>ISBN-13 ללא מקפים, עם ספרת ביקורת תקינה</td></tr>
+        <tr><td>id</td><td>UUID</td><td>מזהה ייחודי שנוצר אוטומטית</td></tr>
         <tr><td>title *</td><td>מחרוזת</td><td>שם הספר</td></tr>
         <tr><td>authors *</td><td>מערך</td><td>מחבר אחד לפחות</td></tr>
         <tr><td>publisher *</td><td>מחרוזת</td><td>שם ההוצאה</td></tr>
@@ -147,7 +147,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 
   <section id="contribute">
     <h3>תרומה למאגר</h3>
-    <p><a href="add.html">טופס הוספת ספר</a> מיועד לכל מי שרוצה לתרום, כולל סורק ברקוד מהמצלמה ומשיכת פרטים אוטומטית. למי שרגיל ל-GitHub: מוסיפים קובץ <code class="i">books/ISBN.json</code>, פותחים Pull Request, ובדיקה אוטומטית מוודאת שהנתונים תקינים ומעדכנת את האינדקס. פרטים מלאים ב-<a href="https://github.com/" id="gh">מדריך התרומה</a>.</p>
+    <p><a href="add.html">טופס הוספת ספר</a> מיועד לכל מי שרוצה לתרום. למי שרגיל ל-GitHub: מוסיפים קובץ <code class="i">books/&lt;UUID&gt;.json</code>, פותחים Pull Request, ובדיקה אוטומטית מוודאת שהנתונים תקינים ומעדכנת את האינדקס. פרטים מלאים ב-<a href="https://github.com/" id="gh">מדריך התרומה</a>.</p>
   </section>
 </main>
 
@@ -184,19 +184,19 @@ function normalizeHebrew(str) {
 
 const base = new URL('.', location.href).href;
 const $ = id => document.getElementById(id);
-const ISBN = '9789655747683'; // מרטאג כברירת מחדל
+const BOOK_ID = 'e9e81d61-2aa5-445c-9ae2-74b654415e20';
 $('u1').textContent = base + 'books.json';
-$('u2').textContent = base + 'books/' + ISBN + '.json';
-$('u3').textContent = base + 'covers/' + ISBN + '.webp';
+$('u2').textContent = base + 'books/' + BOOK_ID + '.json';
+$('u3').textContent = base + 'covers/' + BOOK_ID + '.webp';
 $('js').textContent =
 `// JavaScript
-const res = await fetch("${base}books/${ISBN}.json");
+const res = await fetch("${base}books/${BOOK_ID}.json");
 const book = await res.json();
 console.log(book.title, book.authors);`;
 $('py').textContent =
 `# Python
 import requests
-book = requests.get("${base}books/${ISBN}.json").json()
+book = requests.get("${base}books/${BOOK_ID}.json").json()
 print(book["title"], book["authors"])`;
 const m = location.hostname.match(/^(.+)\.github\.io$/), p = location.pathname.split('/')[1];
 if (m && p) $('gh').href = `https://github.com/${m[1]}/${p}/blob/main/CONTRIBUTING.md`;
@@ -205,7 +205,7 @@ let books = [], pending = [];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function renderCard(b){
-  const covSrc = b.cover || (b.isbn ? `https://covers.openlibrary.org/b/isbn/${b.isbn}-L.jpg` : '');
+  const covSrc = b.cover || '';
   const cov = covSrc ? `<img class="cov" src="${esc(covSrc)}" alt="כריכת הספר ${esc(b.title)}" onerror="this.style.display='none'">` : '';
   const rows = [
     ['סדרה', b.series ? b.series + (b.series_number ? ' ' + b.series_number : '') : ''],
@@ -217,18 +217,16 @@ function renderCard(b){
     ['שפה', b.language === 'he' ? 'עברית' : b.language],
     ['עמודים', b.pages],
     ['ז\'אנרים', (b.genres||[]).join(', ')],
-    ['ISBN', b.isbn],
     ['דאנאקוד', b.danacode]
   ].filter(r => r[1]).map(r => `<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join('');
   return `${cov}<h2>${esc(b.title)}</h2>${b.subtitle?`<p class="by">${esc(b.subtitle)}</p>`:''}<dl>${rows}</dl>${b.summary?`<p class="m" style="margin-top:12px;">${esc(b.summary)}</p>`:''}<span class="hole"></span>`;
 }
 
-async function full(isbn){
-  const r = await fetch(`books/${isbn}.json`); if(!r.ok) throw 0;
+async function full(identifier){
+  const r = await fetch(`books/${identifier}.json`); if(!r.ok) throw 0;
   const b = await r.json();
-  const idx = books.find(x => x.isbn === isbn);
-  if (idx && idx.has_cover) b.cover = `covers/${isbn}.webp`;
-  else b.cover = `https://covers.openlibrary.org/b/isbn/${isbn}-L.jpg`;
+  const idx = books.find(x => (x.id || x.isbn) === identifier);
+  if (idx && idx.has_cover) b.cover = `covers/${identifier}.webp`;
   return b;
 }
 
@@ -239,7 +237,7 @@ function draw(){
 
   const res = all.filter(b => {
     if (!normQ) return true;
-    const hayRaw = [b.title, b.publisher, b.isbn, b.danacode, b.series, ...(b.authors||[]), ...(b.genres||[])].join(' ');
+    const hayRaw = [b.title, b.publisher, b.danacode, b.series, ...(b.authors||[]), ...(b.genres||[])].join(' ');
     const hayNorm = normalizeHebrew(hayRaw);
     return hayRaw.toLowerCase().includes(rawQ.toLowerCase()) || hayNorm.includes(normQ);
   });
@@ -247,7 +245,7 @@ function draw(){
   $('count').textContent = `${res.length} מתוך ${all.length} ספרים` + (pending.length ? ` (${pending.length} ממתינים להשלמת פרטים)` : '');
   $('list').innerHTML = res.length ? res.map(b => b.pending
     ? `<li><button aria-expanded="false" data-pending="${b.row}"><span class="t">${esc(b.title)}</span><span class="m">${esc((b.authors||[]).join(', '))} · ממתין להשלמת פרטים</span></button><div class="detail" hidden></div></li>`
-    : `<li><button aria-expanded="false" data-isbn="${b.isbn}">
+    : `<li><button aria-expanded="false" data-id="${b.id || b.isbn}">
     <span class="t">${esc(b.title)}</span><span class="m">${esc((b.authors||[]).join(', '))} · ${esc(b.publisher)} · ${b.publication_year}</span></button><div class="detail" hidden></div></li>`).join('')
     : '<li class="empty">לא נמצאו ספרים התואמים לחיפוש. אפשר לנסות מילת חיפוש אחרת או להוסיף את הספר למאגר.</li>';
 }
@@ -260,10 +258,10 @@ $('list').addEventListener('click', async e => {
   if (!open && !box.innerHTML) {
     if (btn.dataset.pending) {
       const p = pending.find(x => String(x.row) === btn.dataset.pending);
-      box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(p)}<p class="m">הספר ממתין להשלמת פרטים (ISBN, הוצאה ושנה). <a href="add.html">אפשר לעזור ולהוסיף אותם</a>.</p></article>`;
+      box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(p)}<p class="m">הספר ממתין להשלמת פרטים (הוצאה ושנה). <a href="add.html">אפשר לעזור ולהוסיף אותם</a>.</p></article>`;
       return;
     }
-    try { box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(await full(btn.dataset.isbn))}</article>`; }
+    try { box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(await full(btn.dataset.id))}</article>`; }
     catch { box.textContent = 'לא הצלחנו לטעון את פרטי הספר. אפשר לנסות שוב.'; }
   }
 });
@@ -278,9 +276,9 @@ $('exportJsonBtn').addEventListener('click', () => {
 });
 
 $('exportCsvBtn').addEventListener('click', () => {
-  const headers = ['ISBN', 'שם הספר', 'מחברים', 'הוצאה לאור', 'שנת הוצאה', 'סדרה', 'מספר בסדרה', 'ז\'אנרים'];
+  const headers = ['מזהה', 'שם הספר', 'מחברים', 'הוצאה לאור', 'שנת הוצאה', 'סדרה', 'מספר בסדרה', 'ז\'אנרים'];
   const rows = books.map(b => [
-    `"${b.isbn}"`,
+    `"${b.id || b.isbn}"`,
     `"${(b.title||'').replace(/"/g, '""')}"`,
     `"${(b.authors||[]).join('; ').replace(/"/g, '""')}"`,
     `"${(b.publisher||'').replace(/"/g, '""')}"`,
@@ -301,7 +299,7 @@ async function showRandomCard() {
   if (!books || !books.length) return;
   const rand = books[Math.floor(Math.random() * books.length)];
   try {
-    const fullBook = await full(rand.isbn);
+    const fullBook = await full(rand.id || rand.isbn);
     $('card').innerHTML = renderCard(fullBook) + 
       `<div style="margin-top:14px; text-align:start;">
         <button id="shuffleBtn" class="btn" style="font-size:13px; padding:6px 14px; border-radius:4px; cursor:pointer;">🎲 ספר אקראי אחר</button>

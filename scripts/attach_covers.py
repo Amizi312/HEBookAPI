@@ -2,8 +2,8 @@
 """
 סקריפט שממיר ומחבר את תמונות הכריכה מתיקיית covers לקבצי הספרים ול-books.json
 - מזהה כל תמונה לפי שם הספר
-- ממיר את התמונה לפורמט covers/{isbn}.webp אופטימלי
-- מעדכן את books/{isbn}.json ואת books.json עם has_cover = True
+- ממיר את התמונה לפורמט covers/{id}.webp אופטימלי
+- מעדכן את books/{id}.json ואת books.json עם has_cover = True
 """
 
 import os
@@ -59,9 +59,9 @@ def main():
 
         if match:
             book_path, book_data = match
-            isbn = book_data["isbn"]
+            identifier = book_data.get("id") or book_data["isbn"]
             input_path = COVERS_DIR / cf
-            output_webp_path = COVERS_DIR / f"{isbn}.webp"
+            output_webp_path = COVERS_DIR / f"{identifier}.webp"
 
             try:
                 # פתיחה והמרה ל-WebP אופטימלי
@@ -72,11 +72,11 @@ def main():
                     img.save(output_webp_path, "WEBP", quality=85, method=6)
 
                 # עדכון קובץ הספר עם cover_url
-                book_data["cover_url"] = f"covers/{isbn}.webp"
+                book_data["cover_url"] = f"covers/{identifier}.webp"
                 book_path.write_text(json.dumps(book_data, ensure_ascii=False, indent=2) + "\n", encoding='utf-8')
 
                 matched_count += 1
-                print(f"✓ הותאמה כריכה: {cf} -> {book_data['title']} ({isbn}.webp)")
+                print(f"✓ הותאמה כריכה: {cf} -> {book_data['title']} ({identifier}.webp)")
             except Exception as e:
                 print(f"✗ שגיאה בעיבוד {cf}: {e}")
         else:

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """ייבוא רשימת ספרים מ-CSV (עמודות: #, שם הספר, סופר / סופרת, סדרה / חלק) אל pending/pending.json.
-ספרים בלי ISBN לא יכולים להיכנס ל-books/, ולכן הם נשמרים כאן עד שיושלמו (ראו enrich.py)."""
+ספרים מרשימה זו נשמרים ב-pending עד להשלמת הפרטים (ראו enrich.py)."""
 import csv, json, re, sys
 from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent

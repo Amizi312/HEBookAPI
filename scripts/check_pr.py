@@ -14,11 +14,12 @@ if not rows: fail("אין שינויים ב-PR")
 if len(rows) > 2: fail("יותר משני קבצים ב-PR")
 status = {r[-1]: r[0] for r in rows}
 paths = list(status)
-jsons = [p for p in paths if re.fullmatch(r"books/\d{13}\.json", p)]
-covers = [p for p in paths if re.fullmatch(r"covers/\d{13}\.webp", p)]
+uuid_pattern = r"[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}"
+jsons = [p for p in paths if re.fullmatch(rf"books/{uuid_pattern}\.json", p)]
+covers = [p for p in paths if re.fullmatch(rf"covers/{uuid_pattern}\.webp", p)]
 if len(jsons) != 1 or len(jsons) + len(covers) != len(paths): fail("הקבצים ב-PR לא תואמים לתבנית של ספר חדש")
-isbn = Path(jsons[0]).stem
-if covers and Path(covers[0]).stem != isbn: fail("שם קובץ הכריכה לא תואם ל-ISBN")
+identifier = Path(jsons[0]).stem
+if covers and Path(covers[0]).stem != identifier: fail("שם קובץ הכריכה לא תואם למזהה הספר")
 
 if any(status[c] != "A" for c in covers): fail("אסור להחליף או למחוק כריכה קיימת")
 if status[jsons[0]] not in ("A", "M"): fail("סוג שינוי לא מותר בקובץ הספר")
@@ -44,7 +45,7 @@ for k, v in data.items():
         if len(s) > 800: fail(f"טקסט ארוך מדי בשדה {k}")
 if "cover_url" in data and (status[jsons[0]] == "A" or data["cover_url"] != old.get("cover_url")):
     if not covers: fail("יש cover_url בלי קובץ כריכה")
-    if not re.fullmatch(rf"https://[\w.-]+\.github\.io/[\w.-]+/covers/{isbn}\.webp", data["cover_url"]):
+    if not re.fullmatch(rf"https://[\w.-]+\.github\.io/[\w.-]+/covers/{identifier}\.webp", data["cover_url"]):
         fail("cover_url לא מצביע על GitHub Pages של המאגר")
 
 if covers:
@@ -56,4 +57,4 @@ if covers:
             if im.format != "WEBP": fail("הכריכה אינה WebP")
             if im.width > 900 or im.height > 1200: fail("מידות הכריכה גדולות מדי")
     except Exception: fail("קובץ הכריכה לא נפתח")
-print(f"✅ {isbn} עבר את כל הבדיקות")
+print(f"✅ {identifier} עבר את כל הבדיקות")

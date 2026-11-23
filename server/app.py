@@ -1,6 +1,6 @@
 """שירות קבלת ספרים: מקבל טופס + תמונת כריכה, מאמת, דוחס ל-WebP ופותח Pull Request ב-GitHub.
 שום מידע לא נשמר ב-Render. הכל נשמר ב-GitHub ומוגש מ-GitHub Pages."""
-import base64, io, json, os, sys, tempfile, time
+import base64, io, json, os, sys, tempfile, time, uuid
 from collections import defaultdict, deque
 from pathlib import Path
 import httpx
@@ -56,7 +56,7 @@ def merge_book(old: dict, new: dict):
     """ממזג הצעה לספר קיים. ממלא רק שדות ריקים, מאחד ז'אנרים, ושדה מלא שונה הוא התנגשות."""
     merged, added, conflicts = dict(old), [], []
     for k, v in new.items():
-        if k == "isbn" or v in EMPTY: continue
+        if k in ("id", "isbn") or v in EMPTY: continue
         cur = old.get(k)
         if cur in EMPTY: merged[k] = v; added.append(k)
         elif cur == v: continue
@@ -70,14 +70,14 @@ HEADERS = lambda: {"Authorization": f"Bearer {TOKEN}", "Accept": "application/vn
                    "X-GitHub-Api-Version": "2022-11-28"}
 b64 = lambda b: base64.b64encode(b).decode()
 
-async def create_pr(c, branch, isbn, book, webp, sha, kind, note=""):
+async def create_pr(c, branch, identifier, book, webp, sha, kind, note=""):
     r = await c.get(f"/git/ref/heads/{BASE}"); r.raise_for_status()
     r2 = await c.post("/git/refs", json={"ref": f"refs/heads/{branch}", "sha": r.json()["object"]["sha"]})
     if r2.status_code == 422: raise HTTPException(409, "הספר הזה כבר נשלח וממתין לבדיקה.")
     r2.raise_for_status()
     try:
-        files = [(f"books/{isbn}.json", (json.dumps(book, ensure_ascii=False, indent=2) + "\n").encode(), sha)]
-        if webp: files.append((f"covers/{isbn}.webp", webp, None))
+        files = [(f"books/{identifier}.json", (json.dumps(book, ensure_ascii=False, indent=2) + "\n").encode(), sha)]
+        if webp: files.append((f"covers/{identifier}.webp", webp, None))
         for path, content, file_sha in files:
             payload = {"message": f"feat: {kind} {path} מהטופס", "content": b64(content), "branch": branch}
             if file_sha: payload["sha"] = file_sha
@@ -85,27 +85,27 @@ async def create_pr(c, branch, isbn, book, webp, sha, kind, note=""):
         title = " ".join(book["title"].split())[:100]
         body = (f"{kind}. נשלח דרך טופס האתר.{note}"
                 + ("\n\nצורפה תמונת כריכה. המגיש/ה אישר/ה שיש לו/לה זכות להעלות אותה." if webp else ""))
-        r3 = await c.post("/pulls", json={"title": f"{kind}: {title} ({isbn})", "head": branch, "base": BASE, "body": body})
+        r3 = await c.post("/pulls", json={"title": f"{kind}: {title} ({identifier})", "head": branch, "base": BASE, "body": body})
         r3.raise_for_status(); return r3.json()["html_url"]
     except Exception:
         await c.delete(f"/git/refs/heads/{branch}"); raise
 
-async def open_review(c, isbn, title, conflicts, proposal):
-    body = (f"התנגשות בספר {isbn} ({title}). השדות הבאים כבר מלאים במאגר ושונים ממה שנשלח.\n\n"
+async def open_review(c, identifier, title, conflicts, proposal):
+    body = (f"התנגשות בספר {identifier} ({title}). השדות הבאים כבר מלאים במאגר ושונים ממה שנשלח.\n\n"
             f"````json\n{json.dumps(conflicts, ensure_ascii=False, indent=2)}\n````\n\nההצעה המלאה:\n\n"
             f"````json\n{json.dumps(proposal, ensure_ascii=False, indent=2)}\n````\n")
     (await c.post(f"{GH}/repos/{REVIEW_REPO or REPO}/issues",
-                  json={"title": f"[התנגשות] {isbn}", "body": body})).raise_for_status()
+                  json={"title": f"[התנגשות] {identifier}", "body": body})).raise_for_status()
 
-async def process(isbn, book, webp):
+async def process(identifier, book, webp):
     async with httpx.AsyncClient(timeout=30, headers=HEADERS(), base_url=f"{GH}/repos/{REPO}") as c:
-        r = await c.get(f"/contents/books/{isbn}.json", params={"ref": BASE})
+        r = await c.get(f"/contents/books/{identifier}.json", params={"ref": BASE})
         if r.status_code == 404:
-            return {"result": "created", "pr": await create_pr(c, f"web-book-{isbn}", isbn, book, webp, None, "ספר חדש")}
+            return {"result": "created", "pr": await create_pr(c, f"web-book-{identifier}", identifier, book, webp, None, "ספר חדש")}
         r.raise_for_status()
         old, sha = json.loads(base64.b64decode(r.json()["content"]).decode("utf-8")), r.json()["sha"]
         conflicts = []
-        if webp and (await c.get(f"/contents/covers/{isbn}.webp", params={"ref": BASE})).status_code == 200:
+        if webp and (await c.get(f"/contents/covers/{identifier}.webp", params={"ref": BASE})).status_code == 200:
             conflicts.append({"field": "cover", "current": "כבר קיימת כריכה", "proposed": "כריכה חדשה"}); webp = None
         if not webp: book.pop("cover_url", None)
         merged, added, c2 = merge_book(old, book)
@@ -113,10 +113,10 @@ async def process(isbn, book, webp):
         pr, result = None, "nochange"
         if added or webp:
             note = f"\n\nשדות שנוספו: {', '.join(added) or 'כריכה'}."
-            pr = await create_pr(c, f"web-edit-{isbn}-{int(time.time())}", isbn, merged, webp, sha, "השלמת פרטים", note)
+            pr = await create_pr(c, f"web-edit-{identifier}-{int(time.time())}", identifier, merged, webp, sha, "השלמת פרטים", note)
             result = "updated"
         if conflicts:
-            await open_review(c, isbn, old["title"], conflicts, book)
+            await open_review(c, identifier, old["title"], conflicts, book)
             result = "updated_review" if pr else "review"
         return {"result": result, "pr": pr}
 
@@ -137,22 +137,22 @@ async def submit(request: Request, data: str = Form(...), cover_rights: str = Fo
     except Exception:
         raise HTTPException(422, "נתוני הספר לא תקינים.")
     allowed = set(build.REQUIRED) | set(build.OPTIONAL)
-    book = {k: v for k, v in book.items() if k in allowed and k != "cover_url"}
-    isbn = str(book.get("isbn", ""))
-    if not build.isbn13_ok(isbn): raise HTTPException(422, "ISBN-13 לא תקין.")
+    book = {k: v for k, v in book.items() if k in allowed and k not in ("cover_url", "isbn")}
+    identifier = str(book.get("id") or uuid.uuid4())
+    book["id"] = identifier
     webp = None
     if cover is not None and cover.filename:
         if cover_rights != "true": raise HTTPException(422, "יש לאשר שיש לך זכות להעלות את התמונה.")
         raw = await cover.read(MAX_UPLOAD + 1)
         if len(raw) > MAX_UPLOAD: raise HTTPException(413, "הקובץ גדול מדי.")
         webp = process_cover(raw)
-        if PAGES: book["cover_url"] = f"{PAGES}/covers/{isbn}.webp"
+        if PAGES: book["cover_url"] = f"{PAGES}/covers/{identifier}.webp"
     with tempfile.TemporaryDirectory() as d:
-        p = Path(d) / f"{isbn}.json"; p.write_text(json.dumps(book, ensure_ascii=False), encoding="utf-8")
+        p = Path(d) / f"{identifier}.json"; p.write_text(json.dumps(book, ensure_ascii=False), encoding="utf-8")
         _, errs = build.validate(p)
     if errs: raise HTTPException(422, "; ".join(errs))
     try:
-        return {"ok": True, **await process(isbn, book, webp)}
+        return {"ok": True, **await process(identifier, book, webp)}
     except HTTPException: raise
     except httpx.HTTPError:
         raise HTTPException(502, "לא הצלחנו לשמור את הספר כרגע. נסו שוב מאוחר יותר.")
