@@ -1,5 +1,5 @@
 {
-  "count": 278,
+  "count": 279,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -4387,6 +4387,20 @@
       "series": "השעות האחרונות",
       "series_number": 1,
       "has_cover": false
+    },
+    {
+      "id": "d51068d3-7abb-4476-b59c-dd82b1272c94",
+      "title": "תאהב אותי, תעקוב אחרי",
+      "authors": [
+        "לורה בישופ"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "db0d4140-6abc-4d6b-8e46-5c5f9a2e9703",
