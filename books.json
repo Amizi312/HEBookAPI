@@ -1,5 +1,5 @@
 {
-  "count": 284,
+  "count": 285,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -2582,6 +2582,20 @@
       "series": "",
       "series_number": null,
       "has_cover": false
+    },
+    {
+      "id": "104fb281-641e-4849-864b-d9136eb631c4",
+      "title": "לפני שראיתי אותך",
+      "authors": [
+        "אמילי הוטון"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "9549580b-cd06-4d8f-bcc6-be945e6b3933",
