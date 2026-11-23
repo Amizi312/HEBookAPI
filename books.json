@@ -1,5 +1,5 @@
 {
-  "count": 281,
+  "count": 280,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -3590,23 +3590,6 @@
       ],
       "series": "",
       "series_number": null,
-      "has_cover": false
-    },
-    {
-      "id": "6025fe6c-3189-48fc-aa01-75a9d47a1f4b",
-      "title": "עילוי",
-      "authors": [
-        "מארי לו"
-      ],
-      "publisher": "כנרת",
-      "publication_year": 2014,
-      "language": "he",
-      "genres": [
-        "דיסטופיה",
-        "נוער"
-      ],
-      "series": "אגדה",
-      "series_number": 2,
       "has_cover": false
     },
     {
