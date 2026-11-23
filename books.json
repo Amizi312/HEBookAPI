@@ -1,5 +1,5 @@
 {
-  "count": 283,
+  "count": 284,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -475,6 +475,20 @@
       "series": "",
       "series_number": 1,
       "has_cover": false
+    },
+    {
+      "id": "7c6a8dcb-9ebd-40a8-8438-32fee670ef01",
+      "title": "אלוף",
+      "authors": [
+        "מרי לו"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "837f0a10-2778-4214-a308-878b951a35e3",
