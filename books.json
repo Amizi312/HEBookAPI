@@ -1,5 +1,5 @@
 {
-  "count": 280,
+  "count": 281,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -16,6 +16,20 @@
       "series": "",
       "series_number": null,
       "has_cover": false
+    },
+    {
+      "id": "47c78875-1340-4ef4-838f-3add1e2ed7f3",
+      "title": "אגדה",
+      "authors": [
+        "מרי לו"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "115afe2e-f133-4658-9ee8-30f69829a1ef",
