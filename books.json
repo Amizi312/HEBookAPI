@@ -1,5 +1,5 @@
 {
-  "count": 275,
+  "count": 276,
   "books": [
     {
       "isbn": "9789657001295",
@@ -353,6 +353,24 @@
       "series": "",
       "series_number": null,
       "has_cover": false
+    },
+    {
+      "isbn": "0036200069592",
+      "title": "אינסטינקט של רוצח",
+      "authors": [
+        "ג'ינפר לין ברנס"
+      ],
+      "publisher": "ידיעות ספרים",
+      "publication_year": 2026,
+      "language": "he",
+      "genres": [
+        "נוער",
+        "מתח",
+        "פעולה"
+      ],
+      "series": "הטבעיים",
+      "series_number": 2,
+      "has_cover": true
     },
     {
       "isbn": "9789657002247",
