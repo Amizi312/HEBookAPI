@@ -1,0 +1,42 @@
+name: auto-merge-books
+# מיזוג אוטומטי של ספרים חדשים שעוברים את כל הבדיקות (scripts/check_pr.py).
+# כיבוי מהיר: Settings → Secrets and variables → Actions → Variables → AUTO_MERGE=false
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  check-and-merge:
+    if: >-
+      vars.AUTO_MERGE != 'false' &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      (startsWith(github.head_ref, 'web-book-') || startsWith(github.head_ref, 'web-edit-') || startsWith(github.head_ref, 'new-book-'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install pillow
+      - name: בדיקות בטיחות
+        env: { BASE_REF: "origin/${{ github.base_ref }}" }
+        run: python scripts/check_pr.py
+      - name: מיזוג
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh pr merge ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --squash --delete-branch
+      - name: עדכון books.json
+        run: |
+          git fetch origin ${{ github.base_ref }}
+          git checkout -B ${{ github.base_ref }} origin/${{ github.base_ref }}
+          python scripts/build.py
+          if [ -n "$(git status --porcelain books.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add books.json && git commit -m "chore: עדכון אוטומטי של books.json" && git push origin ${{ github.base_ref }}
+          fi
+      - name: הודעה כשצריך בדיקה ידנית
+        if: failure()
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: gh pr comment ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --body "הבקשה לא עברה את הבדיקות האוטומטיות ונשארה לבדיקה ידנית. פרטים בלוג של ה-Action."
