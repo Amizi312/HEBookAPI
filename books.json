@@ -1,5 +1,5 @@
 {
-  "count": 277,
+  "count": 278,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -2674,6 +2674,20 @@
       "series": "",
       "series_number": 1,
       "has_cover": false
+    },
+    {
+      "id": "3da46aff-939f-44ce-885d-17069d10d767",
+      "title": "מוזהבת",
+      "authors": [
+        "רייבן קנדי"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "9e764f4b-b4d2-4c39-a5ac-b906cc0abb22",
