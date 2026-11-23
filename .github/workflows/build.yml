@@ -1,36 +1,65 @@
-name: validate-and-build
+name: validate-build-and-deploy
+
 on:
   pull_request:
     paths: ["books/**", "covers/**", "scripts/**"]
   push:
     branches: [main]
-    paths: ["books/**", "covers/**", "scripts/**"]
+
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+# מונע ביטול של פריסות באמצע — ממתין בתור לסיום הפריסה הפעילה
 concurrency:
-  group: build-${{ github.ref }}
+  group: "pages"
   cancel-in-progress: false
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
-        with: { python-version: "3.12" }
+        with:
+          python-version: "3.12"
+
       - name: המרת כריכות חדשות ל-WebP
         run: |
           pip install pillow
           python scripts/convert_covers.py
-      - name: בדיקת תקינות
+
+      - name: בדיקת תקינות ובניית books.json
         run: python scripts/build.py
-      - name: עדכון books.json והכריכות (רק ב-main)
+
+      - name: שמירת books.json והכריכות המומרות בריפוזיטורי
         if: github.event_name == 'push'
         run: |
           if [ -n "$(git status --porcelain books.json covers)" ]; then
             git config user.name "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add -A books.json covers
-            git commit -m "chore: המרת כריכות ועדכון אוטומטי של books.json"
+            git commit -m "chore: המרת כריכות ועדכון אוטומטי של books.json [skip ci]"
             git pull --rebase origin main
             git push
           fi
+
+      - name: הגדרת Pages
+        if: github.event_name == 'push'
+        uses: actions/configure-pages@v5
+
+      - name: העלאת קבצי האתר לפריסה
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: פריסה ל-GitHub Pages
+        if: github.event_name == 'push'
+        id: deployment
+        uses: actions/deploy-pages@v4
