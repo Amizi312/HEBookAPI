@@ -378,7 +378,7 @@ $('f').addEventListener('submit', async (e) => {
     const payload = { ...book, website: '' };
     if (coverBlob) {
       payload.cover = await blobToBase64(coverBlob);
-      payload.cover_rights = true;
+      payload.cover_rights = "true";
     }
     const res = await fetch(API_URL, {
       method: 'POST',
