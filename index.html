@@ -59,11 +59,12 @@ h3{font:900 30px/1.2 'Frank Ruhl Libre',serif;margin:0 0 16px}
 .detail{padding:0 16px 16px}
 .empty{padding:20px;color:var(--muted)}
 /* code */
-pre{background:var(--code-bg);color:var(--code-fg);padding:16px 18px;border-radius:6px;overflow-x:auto;direction:ltr;text-align:left;font:14px/1.6 ui-monospace,Menlo,Consolas,monospace;margin:8px 0 20px}
-code.i{direction:ltr;unicode-bidi:embed;background:var(--surface);border:1px solid var(--line);padding:1px 6px;border-radius:4px;font-size:.9em}
-.ep{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;align-items:baseline;margin-bottom:6px}
+pre{background:var(--code-bg);color:var(--code-fg);padding:16px 18px;border-radius:6px;overflow-x:auto;direction:ltr;text-align:left;font:14px/1.6 ui-monospace,Menlo,Consolas,monospace;margin:8px 0 20px;max-width:100%}
+code.i{direction:ltr;unicode-bidi:embed;background:var(--surface);border:1px solid var(--line);padding:1px 6px;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}
+.ep{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;align-items:baseline;margin-bottom:6px}
+.ep code.i{min-width:0}
 .get{background:var(--tab);color:#172026;font-weight:700;font-size:13px;padding:1px 9px;border-radius:3px;direction:ltr}
-table{border-collapse:collapse;width:100%;font-size:15px;display:block;overflow-x:auto}
+table{border-collapse:collapse;width:100%;max-width:100%;font-size:15px;display:block;overflow-x:auto}
 th,td{text-align:start;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 td:first-child{direction:ltr;text-align:left;white-space:nowrap;font-family:ui-monospace,Menlo,monospace;font-size:14px}
 /* new books dialog */
