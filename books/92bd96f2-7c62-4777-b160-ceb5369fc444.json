@@ -5,5 +5,14 @@
     "עמיחי מזרחי"
   ],
   "language": "he",
-  "cover_url": "https://amizi312.github.io/HEBookAPI/covers/92bd96f2-7c62-4777-b160-ceb5369fc444.webp"
+  "cover_url": "https://amizi312.github.io/HEBookAPI/covers/92bd96f2-7c62-4777-b160-ceb5369fc444.webp",
+  "publisher": "עמיצ' בע\"מ",
+  "publication_year": 1991,
+  "series": "החיים על פי",
+  "series_number": 1,
+  "summary": "סתם כי בא לי ספר",
+  "genres": [
+    "פנטזיה",
+    "פעולה"
+  ]
 }
