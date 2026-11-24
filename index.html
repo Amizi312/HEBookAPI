@@ -447,23 +447,6 @@ $('newBooksDialog').addEventListener('close', () => {
   }
 });
 
-
-(async () => {
-  try {
-    const res = await fetch('books.json');
-    books = (await res.json()).books;
-    try {
-      const have = new Set(books.map(b => b.title.trim()));
-      pending = (await (await fetch('pending/pending.json')).json()).filter(p => !have.has(p.title.trim())).map(p => ({...p, pending: true}));
-    } catch {}
-    draw();
-    await showRandomCard();
-    maybeShowNewBooks();
-  } catch (err) {
-    $('card').innerHTML = '<p class="empty">לא ניתן לטעון את books.json. אם הקובץ נפתח מהמחשב ישירות, יש להריץ שרת מקומי: python -m http.server</p>';
-    $('count').textContent = '';
-  }
-})();
 </script>
 </body>
 </html>
