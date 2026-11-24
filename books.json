@@ -1,5 +1,5 @@
 {
-  "count": 279,
+  "count": 280,
   "books": [
     {
       "id": "217bc652-7a83-4d0f-b861-ecfa920fed5d",
@@ -1113,6 +1113,20 @@
       "series": "",
       "series_number": null,
       "has_cover": false
+    },
+    {
+      "id": "92bd96f2-7c62-4777-b160-ceb5369fc444",
+      "title": "החיים על פי עמיחי",
+      "authors": [
+        "עמיחי מזרחי"
+      ],
+      "publisher": "",
+      "publication_year": null,
+      "language": "he",
+      "genres": [],
+      "series": "",
+      "series_number": null,
+      "has_cover": true
     },
     {
       "id": "eec12e64-b3cb-49e8-b8eb-8a2094fcbd0b",
