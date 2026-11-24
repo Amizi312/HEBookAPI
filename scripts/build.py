@@ -3,7 +3,7 @@
 שימוש:  python scripts/build.py          (בודק ובונה)
          python scripts/build.py --check  (בודק בלבד; נכשל גם אם books.json לא מעודכן)
 """
-import json, sys, re
+import json, sys, re, subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -37,7 +37,24 @@ def validate(path):
         if "publication_year" in data and not 1400 <= data["publication_year"] <= 2100: errs.append("שנת הוצאה לא סבירה")
     return data, errs
 
+def added_at_for(path):
+    rel = path.relative_to(ROOT).as_posix()
+    try:
+        r = subprocess.run(
+            ["git", "-C", str(ROOT), "log", "--diff-filter=A", "--follow", "-1", "--format=%aI", "--", rel],
+            capture_output=True, text=True, check=False)
+        if r.returncode == 0:
+            s = r.stdout.strip().splitlines()
+            if s: return s[0].strip()
+    except Exception:
+        pass
+    return None
+
 def main():
+    try:
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
     check = "--check" in sys.argv
     books, failed = [], False
     for p in sorted((ROOT / "books").glob("*.json")):
@@ -52,6 +69,7 @@ def main():
                 "language": data["language"], "genres": data.get("genres", []),
                 "series": data.get("series", ""), "series_number": data.get("series_number"),
                 "has_cover": (ROOT / "covers" / f"{identifier}.webp").exists(),
+                "added_at": added_at_for(p),
             })
     if failed: sys.exit(1)
     books.sort(key=lambda b: b["title"])

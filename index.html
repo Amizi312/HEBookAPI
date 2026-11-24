@@ -66,8 +66,63 @@ code.i{direction:ltr;unicode-bidi:embed;background:var(--surface);border:1px sol
 table{border-collapse:collapse;width:100%;font-size:15px;display:block;overflow-x:auto}
 th,td{text-align:start;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 td:first-child{direction:ltr;text-align:left;white-space:nowrap;font-family:ui-monospace,Menlo,monospace;font-size:14px}
+/* new books dialog */
+dialog.new-books{border:1px solid var(--line);border-radius:8px;padding:0;max-width:min(720px,calc(100vw - 24px));width:100%;background:var(--surface);color:var(--ink);box-shadow:0 12px 40px rgba(0,0,0,.25)}
+dialog.new-books::backdrop{background:rgba(23,32,38,.45)}
+.nb-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-bottom:1px solid var(--line)}
+.nb-head h3{margin:0;font:900 24px/1.2 'Frank Ruhl Libre',serif}
+.nb-body{padding:14px 18px;max-height:min(70vh,560px);overflow:auto}
+.nb-list{list-style:none;margin:0;padding:0;border:1px solid var(--line);border-radius:6px}
+.nb-list li+li{border-top:1px solid var(--line)}
+.nb-list .nb-item{display:flex;align-items:center;gap:12px;width:100%;padding:10px 14px;text-align:start}
+.nb-cover{width:42px;height:60px;object-fit:cover;border:1px solid var(--line);border-radius:3px;background:var(--bg);flex:0 0 auto}
+.nb-cover-spacer{width:42px;height:60px;flex:0 0 auto}
+.nb-text{min-width:0;flex:1}
+.nb-list .t{display:block;font-weight:700}
+.nb-list .m{display:block;color:var(--muted);font-size:14px;margin-top:2px}
+.nb-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;padding:14px 18px;border-top:1px solid var(--line);background:var(--bg)}
+.edit-form label{font-weight:700;font-size:14px;margin:0 0 4px;display:block}
+.edit-form input,.edit-form textarea{width:100%;font:inherit;padding:9px 11px;border:2px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.edit-form input:focus,.edit-form textarea:focus{border-color:var(--accent);outline:none}
+.edit-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px}
+.edit-field{min-width:0}
+.edit-wide{grid-column:1 / -1}
+@media (max-width:640px){.edit-grid{grid-template-columns:1fr}.edit-wide{grid-column:auto}}
 footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);font-size:15px}
-@media (max-width:760px){.hero{grid-template-columns:1fr;padding-top:32px}}
+@media (max-width:760px){
+  .wrap{padding:0 16px}
+  .hero{grid-template-columns:1fr;padding:32px 0 28px;gap:24px}
+  header.top .wrap{flex-direction:column;align-items:stretch;gap:10px}
+  nav{gap:8px 14px}
+  nav a{padding:4px 0}
+}
+@media (max-width:600px){
+  .wrap{padding:0 14px}
+  .brand{font-size:18px;line-height:1.3}
+  .hero{padding:22px 0 24px;gap:20px}
+  h1{font-size:clamp(30px,8.5vw,42px)}
+  .lead{margin-bottom:18px}
+  .btns{gap:10px}
+  .btns .btn{flex:1 1 100%;text-align:center}
+  .search input{padding:10px 12px}
+  .actions-row{flex-direction:column;align-items:stretch;gap:10px}
+  .export-btns{width:100%}
+  .export-btn{flex:1 1 0;text-align:center}
+  .list{max-height:70vh}
+  .list button{flex-direction:column;align-items:flex-start;gap:4px;padding:12px 14px}
+  .card{padding:24px 16px 18px}
+  .card .cov{float:none;display:block;margin:0 0 12px 0;width:96px;height:auto}
+  .card dl{grid-template-columns:1fr;gap:2px 0}
+  .card dt{margin-top:8px;font-weight:600}
+  .card dt:first-child{margin-top:0}
+  dialog.new-books{max-width:calc(100vw - 12px);margin:auto 6px}
+  .nb-head,.nb-body,.nb-actions{padding-left:14px;padding-right:14px}
+  .nb-actions{justify-content:stretch}
+  .nb-actions .btn,.nb-actions button{flex:1 1 140px}
+  .nb-actions label{width:100%;margin-inline-end:0 !important}
+  section{padding:30px 0}
+  h3{font-size:26px}
+}
 @media (prefers-reduced-motion:no-preference){.card{animation:drop .5s ease-out both}@keyframes drop{from{opacity:0;transform:translateY(-10px)}}}
 </style>
 </head>
@@ -89,9 +144,8 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
       <h1>מידע על ספרים ישראליים, פתוח לכולם</h1>
       <p class="lead">נתונים ביבליוגרפיים על ספרים שיצאו לאור בישראל, בעברית ובשפות נוספות. בלי מפתח API ובלי הרשמה, בקשת GET פשוטה מספיקה.</p>
       <div class="btns">
-        <a class="btn primary" href="#api">להתחיל לשלוף נתונים</a>
-        <a class="btn" href="add.html">להוסיף ספר חדש</a>
-        <a class="btn" href="ReadList.apk" download>להורדת האפליקציה (APK)</a>
+        <a class="btn primary" href="add.html">להוסיף ספר חדש</a>
+        <a class="btn" href="https://github.com/Amizi312/HEBookAPI/releases/latest/download/ReadList.apk">להורדת האפליקציה (APK)</a>
       </div>
     </div>
     <article class="card" id="card" aria-live="polite">
@@ -148,6 +202,23 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 
 </main>
 
+<dialog id="newBooksDialog" class="new-books" aria-labelledby="newBooksTitle">
+  <div class="nb-head">
+    <h3 id="newBooksTitle">10 הספרים החדשים במאגר</h3>
+    <button type="button" class="theme-btn" id="newBooksCloseX" aria-label="סגירה">✕</button>
+  </div>
+  <div class="nb-body">
+    <ul class="nb-list" id="newBooksList"></ul>
+  </div>
+  <div class="nb-actions">
+    <label class="m" for="newBooksDismissToday" style="display:flex;align-items:center;gap:8px;cursor:pointer;margin-inline-end:auto;">
+      <input type="checkbox" id="newBooksDismissToday">
+      <span>אל תציג שוב היום</span>
+    </label>
+    <button type="button" class="btn primary" id="newBooksClose">סגור</button>
+  </div>
+</dialog>
+
 <footer><div class="wrap">
   <p style="margin:0 0 10px">האתר והמאגר משמשים פלטפורמה לריכוז והנגשה של מידע ביבליוגרפי על ספרים.</p>
   <p style="margin:0">הבהרה: למפעיל המאגר אין זכויות יוצרים על המידע הביבליוגרפי, על תמונות הכריכות או על תכנים אחרים שמקורם בצדדים שלישיים, ולכן אינו יכול להעניק היתר לשימוש מסחרי בתכנים שאינם בבעלותו. כל הזכויות שמורות לבעליהן, והשימוש בתכנים כפוף לרישיונות ולתנאים של בעלי הזכויות.</p>
@@ -199,7 +270,8 @@ import requests
 book = requests.get("${base}books/${BOOK_ID}.json").json()
 print(book["title"], book["authors"])`;
 const m = location.hostname.match(/^(.+)\.github\.io$/), p = location.pathname.split('/')[1];
-if (m && p) $('gh').href = `https://github.com/${m[1]}/${p}/blob/main/CONTRIBUTING.md`;
+const ghEl = $('gh');
+if (ghEl && m && p) ghEl.href = `https://github.com/${m[1]}/${p}/blob/main/CONTRIBUTING.md`;
 
 let books = [], pending = [];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -261,7 +333,11 @@ $('list').addEventListener('click', async e => {
       box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(p)}<p class="m">הספר ממתין להשלמת פרטים (הוצאה ושנה). <a href="add.html">אפשר לעזור ולהוסיף אותם</a>.</p></article>`;
       return;
     }
-    try { box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(await full(btn.dataset.id))}</article>`; }
+    try {
+      const bookId = btn.dataset.id;
+      box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(await full(bookId))}</article>
+        <div class="btns" style="margin-top:10px"><a class="btn" href="add.html?edit=${encodeURIComponent(bookId)}">✏️ עדכון פרטים</a></div>`;
+    }
     catch { box.textContent = 'לא הצלחנו לטעון את פרטי הספר. אפשר לנסות שוב.'; }
   }
 });
@@ -310,6 +386,68 @@ async function showRandomCard() {
   }
 }
 
+const NEW_BOOKS_DISMISS_KEY = 'newBooksDismissedDate';
+const todayKey = () => new Date().toLocaleDateString('en-CA');
+function newestBooks(limit = 10) {
+  return books
+    .filter(b => b && b.added_at)
+    .slice()
+    .sort((a, b) => String(b.added_at).localeCompare(String(a.added_at)))
+    .slice(0, limit);
+}
+function formatAddedDate(iso) {
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return '';
+  return d.toLocaleDateString('he-IL', { year: 'numeric', month: '2-digit', day: '2-digit' });
+}
+function renderNewBooksList(items) {
+  const list = $('newBooksList');
+  if (!items.length) {
+    list.innerHTML = '<li class="empty">אין כרגע נתונים על ספרים חדשים. נסו להריץ שוב את בניית המאגר.</li>';
+    return;
+  }
+  list.innerHTML = items.map(b => {
+    const id = b.id || b.isbn;
+    const added = formatAddedDate(b.added_at);
+    const meta = [esc((b.authors || []).join(', ')), esc(b.publisher), b.publication_year, added ? `נוסף: ${esc(added)}` : ''].filter(Boolean).join(' · ');
+    const cover = b.has_cover
+      ? `<img class="nb-cover" src="covers/${encodeURIComponent(id)}.webp" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
+      : `<span class="nb-cover-spacer" aria-hidden="true"></span>`;
+    return `<li><div class="nb-item">${cover}<div class="nb-text"><span class="t">${esc(b.title)}</span><span class="m">${meta}</span></div></div></li>`;
+  }).join('');
+}
+function openNewBooksDialog() {
+  const dlg = $('newBooksDialog');
+  if (!dlg || typeof dlg.showModal !== 'function') return;
+  const items = newestBooks(10);
+  $('newBooksDismissToday').checked = false;
+  renderNewBooksList(items);
+  if (!dlg.open) dlg.showModal();
+}
+function closeNewBooksDialog() {
+  const dlg = $('newBooksDialog');
+  if (dlg && dlg.open) dlg.close();
+}
+function maybeShowNewBooks() {
+  const items = newestBooks(10);
+  if (!items.length) return;
+  let dismissed = '';
+  try { dismissed = localStorage.getItem(NEW_BOOKS_DISMISS_KEY) || ''; } catch {}
+  if (dismissed === todayKey()) return;
+  openNewBooksDialog();
+}
+
+$('newBooksClose').addEventListener('click', closeNewBooksDialog);
+$('newBooksCloseX').addEventListener('click', closeNewBooksDialog);
+$('newBooksDialog').addEventListener('click', e => { if (e.target === $('newBooksDialog')) closeNewBooksDialog(); });
+$('newBooksDialog').addEventListener('close', () => {
+  if ($('newBooksDismissToday').checked) {
+    try { localStorage.setItem(NEW_BOOKS_DISMISS_KEY, todayKey()); } catch {}
+  }
+});
+
+
 (async () => {
   try {
     const res = await fetch('books.json');
@@ -320,6 +458,7 @@ async function showRandomCard() {
     } catch {}
     draw();
     await showRandomCard();
+    maybeShowNewBooks();
   } catch (err) {
     $('card').innerHTML = '<p class="empty">לא ניתן לטעון את books.json. אם הקובץ נפתח מהמחשב ישירות, יש להריץ שרת מקומי: python -m http.server</p>';
     $('count').textContent = '';

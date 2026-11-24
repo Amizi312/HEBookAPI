@@ -53,11 +53,21 @@ jobs:
         if: github.event_name == 'push'
         uses: actions/configure-pages@v5
 
+      - name: הכנת תיקיית האתר
+        if: github.event_name == 'push'
+        run: |
+          mkdir _site
+          cp index.html add.html books.json _site/
+          cp -r books covers _site/
+          touch _site/.nojekyll
+          echo "קבצים בארטיפקט:" && find _site -type f | wc -l
+          du -sh _site
+
       - name: העלאת קבצי האתר לפריסה
         if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v4
         with:
-          path: "."
+          path: "_site"
 
       - name: פריסה ל-GitHub Pages
         if: github.event_name == 'push'

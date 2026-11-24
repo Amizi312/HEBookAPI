@@ -60,8 +60,8 @@ button:disabled{opacity:.6;cursor:wait}
     <button class="theme-btn" id="themeBtn" aria-label="שינוי מצב תצוגה">🌙</button>
   </div>
 
-  <h1>הוספת ספר למאגר</h1>
-  <p class="lead">שלושה שדות חובה וקצת פרטים נוספים אם יש לכם.</p>
+    <h1 id="pageTitle">הוספת ספר למאגר</h1>
+  <p class="lead" id="pageLead">שלושה שדות חובה וקצת פרטים נוספים אם יש לכם.</p>
 
   <form id="f" novalidate autocomplete="off">
     <label for="title">שם הספר</label>
@@ -75,7 +75,7 @@ button:disabled{opacity:.6;cursor:wait}
       <input id="cover" type="file" accept="image/*">
       <img id="coverPreview" alt="תצוגה מקדימה של הכריכה" hidden>
     </div>
-    <p class="hint">בפלאפון אפשר לצלם את הכריכה או לבחור תמונה מהגלריה.</p>
+    <p class="hint" id="coverHint">בפלאפון אפשר לצלם את הכריכה או לבחור תמונה מהגלריה.</p>
     <p class="err" id="e-cover" role="alert"></p>
 
     <div class="optional">
@@ -113,6 +113,11 @@ button:disabled{opacity:.6;cursor:wait}
 const API_URL = 'https://hebooksapi.aamizii.workers.dev/';
 
 const $ = id => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+const editId = params.get('edit');
+let editMode = !!editId;
+let editBookData = null;
+let hasExistingCover = false;
 
 // --- מצב תצוגה ---
 const themeBtn = $('themeBtn');
@@ -232,8 +237,15 @@ fetch('books.json').then(r => r.ok ? r.json() : Promise.reject()).then(data => {
   const count = {};
   (data.books || []).forEach(b => (b.genres || []).forEach(g => { count[g] = (count[g] || 0) + 1; }));
   const top = Object.keys(count).sort((a, b) => count[b] - count[a]).slice(0, 14);
-  if (top.length) { genreOptions = top; renderGenres(); }
+  if (top.length) {
+    // keep any already-selected genres (e.g. from edit prefill) visible
+    const keep = [...selectedGenres];
+    genreOptions = [...new Set([...top, ...keep])];
+    renderGenres();
+  }
 }).catch(() => {});
+
+initEditMode();
 
 // --- ולידציה ---
 function buildPayload() {
@@ -251,7 +263,7 @@ function buildPayload() {
   const authors = $('authors').value.split(/[,،;\n]/).map(s => s.trim()).filter(Boolean);
   if (!authors.length) fail('e-authors', 'יש להזין לפחות מחבר אחד', 'authors');
 
-  if (!coverBlob) fail('e-cover', 'יש להוסיף תמונת כריכה', 'cover');
+  if (!editMode && !coverBlob) fail('e-cover', 'יש להוסיף תמונת כריכה', 'cover');
 
   const yearRaw = $('year').value.trim();
   let year = null;
@@ -263,7 +275,8 @@ function buildPayload() {
   if (firstBad) { $(firstBad).focus(); throw new Error('validation'); }
 
   // שדות ריקים פשוט לא נשלחים
-  const book = { title, authors, language: 'he' };
+  const book = { title, authors, language: (editBookData && editBookData.language) || 'he' };
+  if (editMode && editId) book.id = editId;
   if (selectedGenres.size) book.genres = [...selectedGenres];
   const publisher = $('publisher').value.trim();
   if (publisher) book.publisher = publisher;
@@ -293,17 +306,61 @@ function resetForm() {
   $('e-genres').textContent = '';
   coverBlob = null;
   resetPreview();
+  if (editMode && editBookData) applyEditBookData(editBookData);
+}
+
+function applyEditBookData(b) {
+  $('title').value = b.title || '';
+  $('authors').value = Array.isArray(b.authors) ? b.authors.join(', ') : '';
+  $('publisher').value = b.publisher || '';
+  $('year').value = b.publication_year ?? '';
+  $('series').value = b.series || '';
+  $('series_number').value = b.series_number ?? '';
+  $('summary').value = b.summary || '';
+  selectedGenres.clear();
+  (b.genres || []).forEach(g => selectedGenres.add(g));
+  // include custom genres in options so chips render
+  (b.genres || []).forEach(g => { if (!genreOptions.includes(g)) genreOptions.push(g); });
+  renderGenres();
+  hasExistingCover = false;
+  resetPreview();
+  // try to show existing cover as preview (not a new upload)
+  const id = b.id || editId;
+  if (id) {
+    const src = `covers/${id}.webp`;
+    const img = $('coverPreview');
+    img.onload = () => { img.hidden = false; hasExistingCover = true; };
+    img.onerror = () => { resetPreview(); hasExistingCover = false; };
+    img.src = src;
+  }
+}
+
+async function initEditMode() {
+  if (!editMode) return;
+  document.title = 'עדכון פרטי ספר';
+  $('pageTitle').textContent = 'עדכון פרטי ספר';
+  $('pageLead').textContent = 'עדכנו את הפרטים ושלחו מיזוג למאגר. אין צורך להעלות כריכה מחדש אם אינה משתנה.';
+  $('coverHint').textContent = 'אפשר לצרף כריכה חדשה רק אם תרצו להחליף (לא חובה בעדכון).';
+  $('submitBtn').textContent = 'שליחת עדכון';
+  try {
+    const r = await fetch(`books/${editId}.json`);
+    if (!r.ok) throw 0;
+    editBookData = await r.json();
+    applyEditBookData(editBookData);
+  } catch {
+    showMsg('לא הצלחנו לטעון את פרטי הספר לעריכה.', false);
+  }
 }
 
 // ריענון או חזרה לדף: מנקים את הטופס (הדפדפן משחזר שדות מהביקור הקודם)
-window.addEventListener('pageshow', () => { resetForm(); $('msg').replaceChildren(); });
+window.addEventListener('pageshow', () => { if (!editMode) { resetForm(); } $('msg').replaceChildren(); });
 
 // --- שליחה לשרת ---
 $('f').addEventListener('submit', async (e) => {
   e.preventDefault();
   $('msg').replaceChildren();
 
-  if ($('website').value) { showMsg('✓ הספר נוסף למאגר!', true); return; } // honeypot
+  if ($('website').value) { showMsg(editMode ? '✓ העדכון נשלח!' : '✓ הספר נוסף למאגר!', true); return; } // honeypot
 
   let book;
   try { book = buildPayload(); }
@@ -318,16 +375,24 @@ $('f').addEventListener('submit', async (e) => {
   btn.disabled = true;
   btn.textContent = '⏳ שולח...';
   try {
-    const cover = await blobToBase64(coverBlob);
+    const payload = { ...book, website: '' };
+    if (coverBlob) {
+      payload.cover = await blobToBase64(coverBlob);
+      payload.cover_rights = true;
+    }
     const res = await fetch(API_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...book, cover, cover_rights: true, website: '' })
+      body: JSON.stringify(payload)
     });
     const out = await res.json().catch(() => ({}));
     if (res.ok) {
-      resetForm();
-      showMsg('✓ הספר נוסף למאגר! הוא יופיע בקטלוג תוך דקה או שתיים.', true);
+      if (editMode) {
+        showMsg('✓ העדכון נשלח! לאחר האישור/המיזוג הפרטים יתעדכנו במאגר.', true);
+      } else {
+        resetForm();
+        showMsg('✓ הספר נוסף למאגר! הוא יופיע בקטלוג תוך דקה או שתיים.', true);
+      }
     } else {
       showMsg(out.message || 'אירעה שגיאה. נסו שוב מאוחר יותר.', false);
     }
@@ -335,7 +400,7 @@ $('f').addEventListener('submit', async (e) => {
     showMsg('לא ניתן להתחבר לשרת. בדקו את החיבור ונסו שוב.', false);
   } finally {
     btn.disabled = false;
-    btn.textContent = 'הוספה למאגר';
+    btn.textContent = editMode ? 'שליחת עדכון' : 'הוספה למאגר';
   }
 });
 </script>
