@@ -273,7 +273,7 @@ const m = location.hostname.match(/^(.+)\.github\.io$/), p = location.pathname.s
 const ghEl = $('gh');
 if (ghEl && m && p) ghEl.href = `https://github.com/${m[1]}/${p}/blob/main/CONTRIBUTING.md`;
 
-let books = [], pending = [];
+let books = [];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 
 function renderCard(b){
@@ -305,19 +305,17 @@ async function full(identifier){
 function draw(){
   const rawQ = $('q').value.trim();
   const normQ = normalizeHebrew(rawQ);
-  const all = books.concat(pending);
 
-  const res = all.filter(b => {
+  const res = books.filter(b => {
     if (!normQ) return true;
     const hayRaw = [b.title, b.publisher, b.danacode, b.series, ...(b.authors||[]), ...(b.genres||[])].join(' ');
     const hayNorm = normalizeHebrew(hayRaw);
     return hayRaw.toLowerCase().includes(rawQ.toLowerCase()) || hayNorm.includes(normQ);
   });
 
-  $('count').textContent = `${res.length} מתוך ${all.length} ספרים` + (pending.length ? ` (${pending.length} ממתינים להשלמת פרטים)` : '');
-  $('list').innerHTML = res.length ? res.map(b => b.pending
-    ? `<li><button aria-expanded="false" data-pending="${b.row}"><span class="t">${esc(b.title)}</span><span class="m">${esc((b.authors||[]).join(', '))} · ממתין להשלמת פרטים</span></button><div class="detail" hidden></div></li>`
-    : `<li><button aria-expanded="false" data-id="${b.id || b.isbn}">
+  $('count').textContent = `${res.length} מתוך ${books.length} ספרים`;
+  $('list').innerHTML = res.length ? res.map(b =>
+    `<li><button aria-expanded="false" data-id="${b.id || b.isbn}">
     <span class="t">${esc(b.title)}</span><span class="m">${esc((b.authors||[]).join(', '))} · ${esc(b.publisher)} · ${b.publication_year}</span></button><div class="detail" hidden></div></li>`).join('')
     : '<li class="empty">לא נמצאו ספרים התואמים לחיפוש. אפשר לנסות מילת חיפוש אחרת או להוסיף את הספר למאגר.</li>';
 }
@@ -328,11 +326,6 @@ $('list').addEventListener('click', async e => {
   const box = btn.nextElementSibling, open = btn.getAttribute('aria-expanded') === 'true';
   btn.setAttribute('aria-expanded', !open); box.hidden = open;
   if (!open && !box.innerHTML) {
-    if (btn.dataset.pending) {
-      const p = pending.find(x => String(x.row) === btn.dataset.pending);
-      box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(p)}<p class="m">הספר ממתין להשלמת פרטים (הוצאה ושנה). <a href="add.html">אפשר לעזור ולהוסיף אותם</a>.</p></article>`;
-      return;
-    }
     try {
       const bookId = btn.dataset.id;
       box.innerHTML = `<article class="card" style="box-shadow:none;margin-top:14px">${renderCard(await full(bookId))}</article>
@@ -376,7 +369,7 @@ async function showRandomCard() {
   const rand = books[Math.floor(Math.random() * books.length)];
   try {
     const fullBook = await full(rand.id || rand.isbn);
-    $('card').innerHTML = renderCard(fullBook) + 
+    $('card').innerHTML = renderCard(fullBook) +
       `<div style="margin-top:14px; text-align:start;">
         <button id="shuffleBtn" class="btn" style="font-size:13px; padding:6px 14px; border-radius:4px; cursor:pointer;">🎲 ספר אקראי אחר</button>
       </div>`;
@@ -447,6 +440,18 @@ $('newBooksDialog').addEventListener('close', () => {
   }
 });
 
+(async () => {
+  try {
+    const res = await fetch('books.json');
+    books = (await res.json()).books;
+    draw();
+    await showRandomCard();
+    maybeShowNewBooks();
+  } catch (err) {
+    $('card').innerHTML = '<p class="empty">לא ניתן לטעון את books.json. אם הקובץ נפתח מהמחשב ישירות, יש להריץ שרת מקומי: python -m http.server</p>';
+    $('count').textContent = '';
+  }
+})();
 </script>
 </body>
 </html>
