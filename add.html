@@ -389,6 +389,7 @@ $('f').addEventListener('submit', async (e) => {
     if (res.ok) {
       if (editMode) {
         showMsg('✓ העדכון נשלח! לאחר האישור/המיזוג הפרטים יתעדכנו במאגר.', true);
+        setTimeout(() => { location.href = 'index.html'; }, 2000);
       } else {
         resetForm();
         showMsg('✓ הספר נוסף למאגר! הוא יופיע בקטלוג תוך דקה או שתיים.', true);
