@@ -64,7 +64,8 @@ code.i{direction:ltr;unicode-bidi:embed;background:var(--surface);border:1px sol
 .ep{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;align-items:baseline;margin-bottom:6px}
 .ep code.i{min-width:0}
 .get{background:var(--tab);color:#172026;font-weight:700;font-size:13px;padding:1px 9px;border-radius:3px;direction:ltr}
-table{border-collapse:collapse;width:100%;max-width:100%;font-size:15px;display:block;overflow-x:auto}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 12px}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
 th,td{text-align:start;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 td:first-child{direction:ltr;text-align:left;white-space:nowrap;font-family:ui-monospace,Menlo,monospace;font-size:14px}
 /* new books dialog */
@@ -184,20 +185,28 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 
   <section id="schema">
     <h3>מבנה הנתונים</h3>
-    <table>
-      <thead><tr><th>שדה</th><th>סוג</th><th>תיאור</th></tr></thead>
-      <tbody>
-        <tr><td>id</td><td>UUID</td><td>מזהה ייחודי שנוצר אוטומטית</td></tr>
-        <tr><td>title *</td><td>מחרוזת</td><td>שם הספר</td></tr>
-        <tr><td>authors *</td><td>מערך</td><td>מחבר אחד לפחות</td></tr>
-        <tr><td>publisher *</td><td>מחרוזת</td><td>שם ההוצאה</td></tr>
-        <tr><td>publication_year *</td><td>מספר</td><td>שנת הוצאה</td></tr>
-        <tr><td>language *</td><td>מחרוזת</td><td>קוד שפה לפי ISO 639-1, למשל he או en</td></tr>
-        <tr><td>danacode</td><td>מחרוזת</td><td>מזהה דאנאקוד בפורמט NNN-NNNN</td></tr>
-        <tr><td>series, series_number</td><td>מחרוזת, מספר</td><td>שם הסדרה ומספר הספר בסדרה</td></tr>
-        <tr><td>original_title, subtitle, translators, pages, genres, summary, cover_url</td><td>שונים</td><td>שדות אופציונליים</td></tr>
-      </tbody>
-    </table>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>שדה</th><th>סוג</th><th>תיאור</th></tr></thead>
+        <tbody>
+          <tr><td>id</td><td>UUID</td><td>מזהה ייחודי שנוצר אוטומטית</td></tr>
+          <tr><td>title *</td><td>מחרוזת</td><td>שם הספר</td></tr>
+          <tr><td>authors *</td><td>מערך</td><td>מחבר אחד לפחות</td></tr>
+          <tr><td>publisher *</td><td>מחרוזת</td><td>שם ההוצאה</td></tr>
+          <tr><td>publication_year *</td><td>מספר</td><td>שנת הוצאה</td></tr>
+          <tr><td>language *</td><td>מחרוזת</td><td>קוד שפה לפי ISO 639-1, למשל he או en</td></tr>
+          <tr><td>danacode</td><td>מחרוזת</td><td>מזהה דאנאקוד בפורמט NNN-NNNN</td></tr>
+          <tr><td>series, series_number</td><td>מחרוזת, מספר</td><td>שם הסדרה ומספר הספר בסדרה</td></tr>
+          <tr><td>original_title</td><td>מחרוזת</td><td>שם הספר בשפת המקור</td></tr>
+          <tr><td>subtitle</td><td>מחרוזת</td><td>כותרת משנה</td></tr>
+          <tr><td>translators</td><td>מערך</td><td>שמות המתרגמים</td></tr>
+          <tr><td>pages</td><td>מספר</td><td>מספר עמודים</td></tr>
+          <tr><td>genres</td><td>מערך</td><td>ז׳אנרים</td></tr>
+          <tr><td>summary</td><td>מחרוזת</td><td>תקציר הספר</td></tr>
+          <tr><td>cover_url</td><td>מחרוזת</td><td>כתובת או נתיב לתמונת כריכה</td></tr>
+        </tbody>
+      </table>
+    </div>
     <p class="m">שדות המסומנים ב-* הם חובה.</p>
   </section>
 
