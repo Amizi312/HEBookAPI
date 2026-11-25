@@ -21,8 +21,8 @@ a{color:var(--accent)}
 .hero-banner{position:relative;min-height:320px;display:flex;align-items:center;justify-content:center;text-align:center;padding:56px 20px;background:url('siteHeader.jpeg') center/cover no-repeat;color:#fff}
 .hero-banner::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,20,24,.45) 0%,rgba(15,20,24,.55) 100%)}
 .hero-banner-inner{position:relative;max-width:900px}
-.hero-banner .theme-btn{position:absolute;top:14px;inset-inline-start:14px;z-index:1;width:42px;height:42px;padding:0;border-color:rgba(255,255,255,.65);border-radius:50%;background:rgba(15,20,24,.45);color:#fff}
-.hero-banner .theme-btn:hover{background:rgba(15,20,24,.7)}
+.hero-banner .theme-btn{position:absolute;top:14px;inset-inline-start:14px;z-index:1;display:flex;align-items:center;gap:7px;padding:0 12px;border-color:rgba(255,255,255,.8);border-radius:999px;background:rgba(255,255,255,.94);color:#172026;box-shadow:0 2px 8px rgba(0,0,0,.18);font:500 14px/1 Heebo,system-ui,sans-serif;white-space:nowrap}
+.hero-banner .theme-btn:hover{background:#fff}
 .hero-banner h1{margin:0 0 14px;font:900 clamp(42px,7vw,76px)/1.1 'Frank Ruhl Libre',serif;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35)}
 .hero-banner .hero-sub{margin:0;font-size:clamp(22px,3.2vw,38px);font-weight:700;line-height:1.3}
 .hero-banner .hero-desc{margin:10px 0 0;font-size:clamp(16px,2vw,22px);opacity:.95}
@@ -144,7 +144,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
     <p class="hero-sub">קראת ספר? אהבת?</p>
     <p class="hero-desc">זה המקום לשתף כדי שגם אחרים יהנו ממנו</p>
   </div>
-  <button class="theme-btn" id="themeBtn" aria-label="שינוי מצב תצוגה (יום/לילה)">🌙</button>
+  <button class="theme-btn" id="themeBtn" aria-label="מעבר למצב לילה"><span id="themeIcon" aria-hidden="true">🌙</span><span id="themeLabel">לילה</span></button>
 </header>
 
 <nav class="site-nav" aria-label="ניווט ראשי">
@@ -256,7 +256,9 @@ const themeBtn = document.getElementById('themeBtn');
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
-  themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
+  document.getElementById('themeIcon').textContent = theme === 'dark' ? '☀️' : '🌙';
+  document.getElementById('themeLabel').textContent = theme === 'dark' ? 'יום' : 'לילה';
+  themeBtn.setAttribute('aria-label', `מעבר למצב ${theme === 'dark' ? 'יום' : 'לילה'}`);
 }
 const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 setTheme(savedTheme);
