@@ -54,7 +54,7 @@ jobs:
         if: github.event_name == 'push'
         run: |
           mkdir _site
-          cp index.html add.html books.json _site/
+          cp index.html add.html books.json siteHeader.jpeg _site/
           cp -r books covers _site/
           touch _site/.nojekyll
 
