@@ -40,6 +40,7 @@ h1,.hero-title{font:900 clamp(38px,6vw,64px)/1.1 'Frank Ruhl Libre',serif;margin
 .btn.primary{background:var(--ink);color:var(--bg)}
 .hero-title{line-height:1.06;letter-spacing:-.02em}
 .hero-title .title-highlight{display:block;color:var(--title-accent)}
+.random-book-title{margin:0 0 8px;color:var(--muted);font:700 18px/1.3 Heebo,system-ui,sans-serif}
 /* catalog card */
 .card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:30px 24px 22px;box-shadow:6px 6px 0 var(--line);min-height:230px}
 .card::before{content:"";position:absolute;top:-12px;inset-inline-start:24px;width:96px;height:22px;background:var(--tab);border-radius:4px 4px 0 0}
@@ -112,6 +113,7 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
   .list button{flex-direction:column;align-items:flex-start;gap:4px;padding:12px 14px}
   .card{padding:24px 16px 18px}
   .card .cov{float:none;display:block;margin:0 0 12px 0;width:96px;height:auto}
+  #card .cov{float:left;margin:0 16px 8px 0;width:120px;height:180px}
   .card dl{grid-template-columns:1fr;gap:2px 0}
   .card dt{margin-top:8px;font-weight:600}
   .card dt:first-child{margin-top:0}
@@ -146,9 +148,12 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
         <a class="btn app-download-btn" href="https://drive.google.com/drive/folders/1vYypmcdbbZfbPt5AC8uykdSp6qDCgqbm?usp=sharing"><span>להורדת האפליקציה</span><span class="btn-platforms" role="img" aria-label="גרסאות Windows ו-Android"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#f25022" d="M1 3.5 10.5 2v9H1z"/><path fill="#7fba00" d="M12 1.8 23 0v11H12z"/><path fill="#00a4ef" d="M1 12.5h9.5v9L1 20z"/><path fill="#ffb900" d="M12 12.5h11V24l-11-1.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="#3ddc84"><path d="M6.5 9a5.5 5.5 0 0 1 11 0z"/><rect x="5.5" y="9" width="13" height="8" rx="1.7"/><path d="M3.3 10.3a1 1 0 0 1 2 0v4.8a1 1 0 0 1-2 0zm15.4 0a1 1 0 0 1 2 0v4.8a1 1 0 0 1-2 0zM7 16h2v4a1 1 0 0 1-2 0zm8 0h2v4a1 1 0 0 1-2 0z"/></g><path d="m8 4 1.5 2M16 4l-1.5 2" stroke="#3ddc84" stroke-linecap="round" stroke-width="1.4"/><g fill="#fff"><circle cx="9.5" cy="7.5" r=".6"/><circle cx="14.5" cy="7.5" r=".6"/></g></svg></span></a>
       </div>
     </div>
-    <article class="card" id="card" aria-live="polite">
-      <p class="empty">טוען ספר לדוגמה…</p>
-    </article>
+    <div class="random-book">
+      <h3 class="random-book-title">ספר אקראי</h3>
+      <article class="card" id="card" aria-live="polite">
+        <p class="empty">טוען ספר לדוגמה…</p>
+      </article>
+    </div>
   </div>
 
   <section id="explore">
