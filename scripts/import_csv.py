@@ -32,5 +32,5 @@ with open(src, encoding="utf-8-sig", newline="") as f:
 (ROOT / "pending" / "pending.json").write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 print(f"{len(out)} ספרים נשמרו ב-pending/pending.json")
 print("כותרות כפולות:", {t: r for t, r in seen.items() if len(r) > 1} or "אין")
-print("שורות עם כמה מחברים:", [(b["row"], b["authors"]) for b in out if len(b["authors"]) > 1])
+print("שורות עם כמה מחבר/ת:", [(b["row"], b["authors"]) for b in out if len(b["authors"]) > 1])
 print("שורות בלי מחבר:", [b["row"] for b in out if not b["authors"][0]] or "אין")

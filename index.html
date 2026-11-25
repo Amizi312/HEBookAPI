@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>מאגר ספרים שיתופי</title>
-<meta name="description" content="API סטטי, חינמי ופתוח של מידע ביבליוגרפי על ספרים שיצאו לאור בישראל.">
+<meta name="description" content="מידע ביבליוגרפי על ספרים שיצאו לאור בישראל ואפליקציה לניהול ספרייה דיגיטלית בעברית.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📚</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;900&family=Heebo:wght@400;500;700&display=swap">
 <style>
-:root{--bg:#f2f4f0;--surface:#fbfcfa;--ink:#172026;--muted:#5b6770;--line:#cfd6d0;--accent:#1f3a93;--tab:#e8c547;--code-bg:#172026;--code-fg:#e6ecef;--code-key:#e8c547}
-[data-theme="dark"]{--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--code-bg:#0c1114}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--code-bg:#0c1114}}
+:root{--bg:#f2f4f0;--surface:#fbfcfa;--ink:#172026;--muted:#5b6770;--line:#cfd6d0;--accent:#1f3a93;--title-accent:#7d293b;--tab:#e8c547;--code-bg:#172026;--code-fg:#e6ecef;--code-key:#e8c547}
+[data-theme="dark"]{--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--title-accent:#d48b98;--code-bg:#0c1114}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12181c;--surface:#1a2227;--ink:#e8eded;--muted:#9aa7ad;--line:#2d383e;--accent:#8fa8ff;--title-accent:#d48b98;--code-bg:#0c1114}}
 *{box-sizing:border-box}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 Heebo,system-ui,sans-serif;padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px);transition:background .2s,color .2s}
@@ -23,30 +23,34 @@ a{color:var(--accent)}
 .hero-banner-inner{position:relative;max-width:900px}
 .hero-banner .theme-btn{position:absolute;top:14px;inset-inline-start:14px;z-index:1;display:flex;align-items:center;gap:7px;padding:0 12px;border-color:rgba(255,255,255,.8);border-radius:999px;background:rgba(255,255,255,.94);color:#172026;box-shadow:0 2px 8px rgba(0,0,0,.18);font:500 14px/1 Heebo,system-ui,sans-serif;white-space:nowrap}
 .hero-banner .theme-btn:hover{background:#fff}
-.hero-banner h1{margin:0 0 14px;font:900 clamp(42px,7vw,76px)/1.1 'Frank Ruhl Libre',serif;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35)}
-.hero-banner .hero-sub{margin:0;font-size:clamp(22px,3.2vw,38px);font-weight:700;line-height:1.3}
-.hero-banner .hero-desc{margin:10px 0 0;font-size:clamp(16px,2vw,22px);opacity:.95}
-.site-nav{background:var(--surface);border-bottom:1px solid var(--line)}
-.site-nav .wrap{display:flex;justify-content:center;align-items:center;gap:28px;flex-wrap:wrap;padding:14px 20px}
-.site-nav a{text-decoration:none;color:var(--muted);font-weight:500;font-size:17px}
-.site-nav a:hover{color:var(--ink)}
+.hero-banner h1{margin:0 0 15px;font:900 clamp(42px,7vw,76px)/1.1 'Frank Ruhl Libre',serif;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.35)}
+.hero-banner .hero-sub{margin:0 0 15px;font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.3}
+.hero-banner .hero-desc{margin:0 0 15px;font:400 clamp(20px,2.2vw,28px)/1.3 Heebo,system-ui,sans-serif;opacity:.95}
 .theme-btn{background:none;border:1px solid var(--line);border-radius:6px;padding:6px 10px;font-size:16px;cursor:pointer;color:var(--ink)}
 .theme-btn:hover{background:var(--bg)}
-.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center;padding:56px 0 48px}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:start;padding:56px 0 48px}
 h1,.hero-title{font:900 clamp(38px,6vw,64px)/1.1 'Frank Ruhl Libre',serif;margin:0 0 18px}
 .lead{color:var(--muted);max-width:34em;margin:0 0 24px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
+.btns .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn-emoji{font-size:19px;line-height:1}
+.btn-platforms{display:inline-flex;align-items:center;gap:8px;direction:ltr}
+.btn-platforms svg{display:block;width:20px;height:20px;flex:0 0 auto}
 .btn{display:inline-block;padding:10px 20px;border-radius:6px;border:2px solid var(--ink);color:var(--ink);text-decoration:none;font-weight:700;cursor:pointer;background:none}
 .btn.primary{background:var(--ink);color:var(--bg)}
+.hero-title{line-height:1.06;letter-spacing:-.02em}
+.hero-title .title-highlight{display:block;color:var(--title-accent)}
 /* catalog card */
 .card{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:30px 24px 22px;box-shadow:6px 6px 0 var(--line);min-height:230px}
 .card::before{content:"";position:absolute;top:-12px;inset-inline-start:24px;width:96px;height:22px;background:var(--tab);border-radius:4px 4px 0 0}
+#card::before{display:none}
 .card .hole{position:absolute;bottom:14px;inset-inline-start:50%;width:14px;height:14px;border-radius:50%;background:var(--bg);border:1px solid var(--line)}
 .card h2{font:900 26px/1.25 'Frank Ruhl Libre',serif;margin:0 0 4px}
 .card .by{color:var(--muted);margin:0 0 14px}
 .card dl{display:grid;grid-template-columns:auto 1fr;gap:2px 16px;margin:0;font-size:15px}
 .card dt{color:var(--muted)}.card dd{margin:0}
 .card .cov{float:left;width:84px;height:120px;margin:0 16px 8px 0;border:1px solid var(--line);background:var(--bg);object-fit:cover;border-radius:3px}
+#card .cov{width:120px;height:180px}
 section{padding:40px 0;border-top:1px solid var(--line)}
 h3{font:900 30px/1.2 'Frank Ruhl Libre',serif;margin:0 0 16px}
 /* explorer */
@@ -64,16 +68,6 @@ h3{font:900 30px/1.2 'Frank Ruhl Libre',serif;margin:0 0 16px}
 .t{font-weight:700}.m{color:var(--muted);font-size:15px}
 .detail{padding:0 16px 16px}
 .empty{padding:20px;color:var(--muted)}
-/* code */
-pre{background:var(--code-bg);color:var(--code-fg);padding:16px 18px;border-radius:6px;overflow-x:auto;direction:ltr;text-align:left;font:14px/1.6 ui-monospace,Menlo,Consolas,monospace;margin:8px 0 20px;max-width:100%}
-code.i{direction:ltr;unicode-bidi:embed;background:var(--surface);border:1px solid var(--line);padding:1px 6px;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}
-.ep{display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;align-items:baseline;margin-bottom:6px}
-.ep code.i{min-width:0}
-.get{background:var(--tab);color:#172026;font-weight:700;font-size:13px;padding:1px 9px;border-radius:3px;direction:ltr}
-.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 12px}
-table{border-collapse:collapse;width:100%;min-width:520px;font-size:15px}
-th,td{text-align:start;padding:8px 12px;border-bottom:1px solid var(--line);vertical-align:top}
-td:first-child{direction:ltr;text-align:left;white-space:nowrap;font-family:ui-monospace,Menlo,monospace;font-size:14px}
 /* new books dialog */
 dialog.new-books{border:1px solid var(--line);border-radius:8px;padding:0;max-width:min(720px,calc(100vw - 24px));width:100%;background:var(--surface);color:var(--ink);box-shadow:0 12px 40px rgba(0,0,0,.25)}
 dialog.new-books::backdrop{background:rgba(23,32,38,.45)}
@@ -101,15 +95,10 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
   .wrap{padding:0 16px}
   .hero{grid-template-columns:1fr;padding:32px 0 28px;gap:24px}
   .hero-banner{min-height:260px;padding:44px 16px}
-  .site-nav .wrap{gap:10px 18px;padding:12px 16px}
 }
 @media (max-width:600px){
   .wrap{padding:0 14px}
   .hero-banner{min-height:220px;padding:36px 14px}
-  .hero-banner .hero-sub{font-size:22px}
-  .hero-banner .hero-desc{font-size:15px}
-  .site-nav .wrap{gap:8px 14px}
-  .site-nav a{font-size:15px}
   .hero{padding:22px 0 24px;gap:20px}
   h1,.hero-title{font-size:clamp(30px,8.5vw,42px)}
   .lead{margin-bottom:18px}
@@ -141,29 +130,20 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
 <header class="hero-banner">
   <div class="hero-banner-inner">
     <h1>מאגר ספרים שיתופי</h1>
-    <p class="hero-sub">קראת ספר? אהבת?</p>
-    <p class="hero-desc">זה המקום לשתף כדי שגם אחרים יהנו ממנו</p>
+    <h2 class="hero-sub">קראת ספר? אהבת?</h2>
+    <h3 class="hero-desc">זה המקום לשתף כדי שגם אחרים יהנו ממנו</h3>
   </div>
   <button class="theme-btn" id="themeBtn" aria-label="מעבר למצב לילה"><span id="themeIcon" aria-hidden="true">🌙</span><span id="themeLabel">לילה</span></button>
 </header>
 
-<nav class="site-nav" aria-label="ניווט ראשי">
-  <div class="wrap">
-    <a href="add.html">הוספת ספר</a>
-    <a href="#schema">מבנה הנתונים</a>
-    <a href="#api">שימוש ב-API</a>
-    <a href="#explore">חיפוש</a>
-  </div>
-</nav>
-
 <main class="wrap">
   <div class="hero">
     <div>
-      <h2 class="hero-title">מידע על ספרים ישראליים, פתוח לכולם</h2>
-      <p class="lead">נתונים ביבליוגרפיים על ספרים שיצאו לאור בישראל, בעברית ובשפות נוספות. בלי מפתח API ובלי הרשמה, בקשת GET פשוטה מספיקה.</p>
+      <h2 class="hero-title"><span>מידע על ספרים</span><span class="title-highlight">פתוח לכולם</span></h2>
+      <p class="lead">נתונים ביבליוגרפיים על ספרים.<br>קיימת אפליקציה ייעודית ליצירת ספרייה דיגיטלית של הספרים שיש לכם בבית, עם תמיכה בעברית. באפליקציה תוכלו להוסיף ספרים, לסמן מה קראתם ומה אתם קוראים, ולנהל רשימת משאלות (Wishlist).</p>
       <div class="btns">
-        <a class="btn primary" href="add.html">להוסיף ספר חדש</a>
-        <a class="btn" href="https://github.com/Amizi312/HEBookAPI/releases/latest/download/ReadList.apk">להורדת האפליקציה (APK)</a>
+        <a class="btn primary" href="add.html"><span class="btn-emoji" aria-hidden="true">📖➕</span><span>להוסיף ספר חדש</span></a>
+        <a class="btn app-download-btn" href="https://drive.google.com/drive/folders/1vYypmcdbbZfbPt5AC8uykdSp6qDCgqbm?usp=sharing"><span>להורדת האפליקציה</span><span class="btn-platforms" role="img" aria-label="גרסאות Windows ו-Android"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#f25022" d="M1 3.5 10.5 2v9H1z"/><path fill="#7fba00" d="M12 1.8 23 0v11H12z"/><path fill="#00a4ef" d="M1 12.5h9.5v9L1 20z"/><path fill="#ffb900" d="M12 12.5h11V24l-11-1.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="#3ddc84"><path d="M6.5 9a5.5 5.5 0 0 1 11 0z"/><rect x="5.5" y="9" width="13" height="8" rx="1.7"/><path d="M3.3 10.3a1 1 0 0 1 2 0v4.8a1 1 0 0 1-2 0zm15.4 0a1 1 0 0 1 2 0v4.8a1 1 0 0 1-2 0zM7 16h2v4a1 1 0 0 1-2 0zm8 0h2v4a1 1 0 0 1-2 0z"/></g><path d="m8 4 1.5 2M16 4l-1.5 2" stroke="#3ddc84" stroke-linecap="round" stroke-width="1.4"/><g fill="#fff"><circle cx="9.5" cy="7.5" r=".6"/><circle cx="14.5" cy="7.5" r=".6"/></g></svg></span></a>
       </div>
     </div>
     <article class="card" id="card" aria-live="polite">
@@ -184,46 +164,6 @@ footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted);f
       </div>
     </div>
     <ul class="list" id="list"></ul>
-  </section>
-
-  <section id="api">
-    <h3>שימוש ב-API</h3>
-    <p>כל הכתובות סטטיות ומוגשות דרך GitHub Pages. התשובות בפורמט JSON, ו-CORS פתוח לכל אתר.</p>
-    <div class="ep"><span class="get">GET</span><code class="i" id="u1"></code></div>
-    <p class="m">רשימה מקוצרת של כל הספרים (מזהה, כותרת, מחברים, הוצאה, שנה, שפה, ז'אנרים).</p>
-    <div class="ep"><span class="get">GET</span><code class="i" id="u2"></code></div>
-    <p class="m">כל הפרטים על ספר אחד לפי מזהה הספר.</p>
-    <div class="ep"><span class="get">GET</span><code class="i" id="u3"></code></div>
-    <p class="m">תמונת כריכה בפורמט WebP, אם קיימת (בשדה <code class="i">has_cover</code> באינדקס).</p>
-    <pre id="js"></pre>
-    <pre id="py"></pre>
-  </section>
-
-  <section id="schema">
-    <h3>מבנה הנתונים</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>שדה</th><th>סוג</th><th>תיאור</th></tr></thead>
-        <tbody>
-          <tr><td>id</td><td>UUID</td><td>מזהה ייחודי שנוצר אוטומטית</td></tr>
-          <tr><td>title *</td><td>מחרוזת</td><td>שם הספר</td></tr>
-          <tr><td>authors *</td><td>מערך</td><td>מחבר אחד לפחות</td></tr>
-          <tr><td>publisher *</td><td>מחרוזת</td><td>שם ההוצאה</td></tr>
-          <tr><td>publication_year *</td><td>מספר</td><td>שנת הוצאה</td></tr>
-          <tr><td>language *</td><td>מחרוזת</td><td>קוד שפה לפי ISO 639-1, למשל he או en</td></tr>
-          <tr><td>danacode</td><td>מחרוזת</td><td>מזהה דאנאקוד בפורמט NNN-NNNN</td></tr>
-          <tr><td>series, series_number</td><td>מחרוזת, מספר</td><td>שם הסדרה ומספר הספר בסדרה</td></tr>
-          <tr><td>original_title</td><td>מחרוזת</td><td>שם הספר בשפת המקור</td></tr>
-          <tr><td>subtitle</td><td>מחרוזת</td><td>כותרת משנה</td></tr>
-          <tr><td>translators</td><td>מערך</td><td>שמות המתרגמים</td></tr>
-          <tr><td>pages</td><td>מספר</td><td>מספר עמודים</td></tr>
-          <tr><td>genres</td><td>מערך</td><td>ז׳אנרים</td></tr>
-          <tr><td>summary</td><td>מחרוזת</td><td>תקציר הספר</td></tr>
-          <tr><td>cover_url</td><td>מחרוזת</td><td>כתובת או נתיב לתמונת כריכה</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="m">שדות המסומנים ב-* הם חובה.</p>
   </section>
 
 </main>
@@ -281,25 +221,7 @@ function normalizeHebrew(str) {
     .trim();
 }
 
-const base = new URL('.', location.href).href;
 const $ = id => document.getElementById(id);
-const BOOK_ID = 'e9e81d61-2aa5-445c-9ae2-74b654415e20';
-$('u1').textContent = base + 'books.json';
-$('u2').textContent = base + 'books/' + BOOK_ID + '.json';
-$('u3').textContent = base + 'covers/' + BOOK_ID + '.webp';
-$('js').textContent =
-`// JavaScript
-const res = await fetch("${base}books/${BOOK_ID}.json");
-const book = await res.json();
-console.log(book.title, book.authors);`;
-$('py').textContent =
-`# Python
-import requests
-book = requests.get("${base}books/${BOOK_ID}.json").json()
-print(book["title"], book["authors"])`;
-const m = location.hostname.match(/^(.+)\.github\.io$/), p = location.pathname.split('/')[1];
-const ghEl = $('gh');
-if (ghEl && m && p) ghEl.href = `https://github.com/${m[1]}/${p}/blob/main/CONTRIBUTING.md`;
 
 let books = [];
 const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -310,7 +232,7 @@ function renderCard(b){
   const rows = [
     ['סדרה', b.series ? b.series + (b.series_number ? ' ' + b.series_number : '') : ''],
     ['כותרת מקור', b.original_title],
-    ['מחברים', (b.authors||[]).join(', ')],
+    ['מחבר/ת', (b.authors||[]).join(', ')],
     ['מתרגמים', (b.translators||[]).join(', ')],
     ['הוצאה', b.publisher],
     ['שנה', b.publication_year],
@@ -373,7 +295,7 @@ $('exportJsonBtn').addEventListener('click', () => {
 });
 
 $('exportCsvBtn').addEventListener('click', () => {
-  const headers = ['מזהה', 'שם הספר', 'מחברים', 'הוצאה לאור', 'שנת הוצאה', 'סדרה', 'מספר בסדרה', 'ז\'אנרים'];
+  const headers = ['מזהה', 'שם הספר', 'מחבר/ת', 'הוצאה לאור', 'שנת הוצאה', 'סדרה', 'מספר בסדרה', 'ז\'אנרים'];
   const rows = books.map(b => [
     `"${b.id || b.isbn}"`,
     `"${(b.title||'').replace(/"/g, '""')}"`,
