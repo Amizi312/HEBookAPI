@@ -16,7 +16,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "47c78875-1340-4ef4-838f-3add1e2ed7f3",
@@ -35,7 +35,7 @@
       "series": "אגדה",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-23T23:07:03+02:00"
     },
     {
       "id": "115afe2e-f133-4658-9ee8-30f69829a1ef",
@@ -53,7 +53,7 @@
       "series": "מייהם",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "3b3c4d7e-987c-4987-9e67-e73b2445d896",
@@ -70,7 +70,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "fdf60a19-6524-489a-8b96-c126423f9301",
@@ -87,7 +87,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d4a6b5d9-3b0b-4b7f-b1d7-e01b1f2d3dc1",
@@ -104,7 +104,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d4085d9e-b613-4944-8fef-e4e02843216d",
@@ -121,7 +121,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9a79a081-84e7-4060-84aa-3adbe6624510",
@@ -138,7 +138,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5b86cb7a-d91f-4022-ac01-544e22b8d321",
@@ -155,7 +155,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "a9ab0a9a-521b-4637-bc46-0f9a2227caef",
@@ -172,7 +172,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "dd22e462-1d0b-4a4f-9570-218d3123b9ca",
@@ -190,7 +190,7 @@
       "series": "סדרת מלאכי אליסיום",
       "series_number": 3,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7152bd63-4d82-4cf1-adfe-fba3e1c8aa7a",
@@ -207,7 +207,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1f075972-2b3a-45e8-8747-892f2cf18e7f",
@@ -224,7 +224,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "53cbc45f-9b3a-4cfc-a10e-35bbbfa4162a",
@@ -241,7 +241,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b4f2d005-88b6-47c0-b8c6-6109c77486a0",
@@ -258,7 +258,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "fbaafbdc-98b3-4a7e-bd3d-653b96524a56",
@@ -275,7 +275,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "52b43246-b628-4aac-8c36-6a7c9952f36e",
@@ -292,7 +292,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "3e91c36f-6ff7-4b78-8e62-7ca1d930de18",
@@ -309,7 +309,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8bfb51ca-b078-45ff-8e6d-29f4f3d9e05b",
@@ -326,7 +326,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "936b23a9-3d90-470a-925d-00c2d194173c",
@@ -343,7 +343,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d66f1425-2c45-403d-a4cf-1accc62f7ebf",
@@ -360,7 +360,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "14e856c1-c435-433c-806b-f4b28be9b435",
@@ -377,7 +377,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "337bc656-e3b5-4bab-89e6-1dafdb18c57f",
@@ -396,7 +396,7 @@
       "series": "הטבעיים",
       "series_number": 2,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-23T17:59:22+02:00"
     },
     {
       "id": "efb35899-2545-49a1-957d-5d6dcda92356",
@@ -413,7 +413,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6e43a9d3-bc8c-4126-a262-9254fe1f3ad7",
@@ -430,7 +430,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "489f491a-775d-4817-9e33-4f76e4f3d617",
@@ -447,7 +447,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "837f0a10-2778-4214-a308-878b951a35e3",
@@ -466,7 +466,7 @@
       "series": "אגדה",
       "series_number": 3,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6fce4673-c227-4e65-a047-4a8f23a2eb7e",
@@ -483,7 +483,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c49a800d-18b6-4bd0-afba-b34206e10a9e",
@@ -500,7 +500,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "3008df51-3ff0-4374-8f16-f8accf2dde62",
@@ -517,7 +517,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c9de406c-9cfc-43ed-a393-a809c47bc228",
@@ -534,7 +534,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "065d1c19-be41-411b-a41e-981728f51870",
@@ -551,7 +551,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b9beab3c-ba9e-47e0-b645-82c3901770e2",
@@ -568,7 +568,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e1ee1c78-4987-478a-9f90-33a1033f0e30",
@@ -585,7 +585,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "3c0299dd-d463-4918-a913-1a13e9bcfae4",
@@ -602,7 +602,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7a9b0b74-7b12-49b5-b0fd-048a822b7cb0",
@@ -619,7 +619,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0028d9eb-0a27-44bd-91fe-974408707818",
@@ -636,7 +636,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ac238252-9be5-4e14-a1ab-bbde1f091350",
@@ -653,7 +653,7 @@
       "series": "עיר החרמש",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "393c4159-6df9-4f9b-8cf6-387c6fd8abf6",
@@ -670,7 +670,7 @@
       "series": "עיר החרמש",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "52f4386c-84d1-456f-8e85-78fec4c4d808",
@@ -688,7 +688,7 @@
       "series": "אלכס שטרן",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "401b0447-2450-45a2-983d-f4774a381170",
@@ -705,7 +705,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e8e2accb-b14f-498e-a3c8-38b2592c7d96",
@@ -722,7 +722,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "94bf11cb-b694-46f0-905f-276ade2a6e49",
@@ -739,7 +739,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9d74035d-3bd8-4e90-aeb3-39722ea50476",
@@ -756,7 +756,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c7ca5031-a7f6-40f1-95ec-b9d32a7bc772",
@@ -773,7 +773,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9c9fd27d-a132-464f-adc9-837c4b5d2f12",
@@ -790,7 +790,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "428932e6-43d2-4442-b392-d1dd4429c6be",
@@ -808,7 +808,7 @@
       "series": "בת העשן והעצם",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "848df107-bbdd-45db-b466-7eefa898d462",
@@ -825,7 +825,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "055ed6dd-fa70-4258-9eb7-2aa8b53bf6cf",
@@ -843,7 +843,7 @@
       "series": "גורל חקוק בדם",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "573ab57d-defd-4d94-8fec-09f650d8e73d",
@@ -860,7 +860,7 @@
       "series": "",
       "series_number": 3,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "13b2d90c-1897-4703-9013-a70b373e2b82",
@@ -877,7 +877,7 @@
       "series": "",
       "series_number": 3,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c092de01-0962-4818-b65e-1e8b62477e69",
@@ -896,7 +896,7 @@
       "series": "פרסי ג'קסון והאולימפיים",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "363a8d42-5323-41dc-adfb-20186fcfe3e2",
@@ -913,7 +913,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e1a30b09-a244-443d-af21-fd575e3d9b63",
@@ -930,7 +930,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ae1795df-71ac-47e8-b156-dcbc4a319cc5",
@@ -948,7 +948,7 @@
       "series": "דם ואפר",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e50e3c4e-9fa2-43ab-b72a-7609e0d1659c",
@@ -965,7 +965,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "4c09d335-4646-467e-81e1-0517e62912c5",
@@ -982,7 +982,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "599943b0-4603-446e-a2f3-bc285fc1ae90",
@@ -999,7 +999,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e227c928-5916-43dd-b21b-fb11c16e6c12",
@@ -1016,7 +1016,7 @@
       "series": "דרימלנד",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "30c5183b-38be-486c-a7a0-6aa5efb0586c",
@@ -1033,7 +1033,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "07abc1ce-1f07-498e-87e7-0cdbd16b5fb8",
@@ -1051,7 +1051,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9d6e3113-6d57-456f-9e98-a905d1489876",
@@ -1068,7 +1068,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "270f3f95-f002-4e37-bf31-3fd0ea840836",
@@ -1085,7 +1085,7 @@
       "series": "חלק",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9071fa88-a9b3-42a9-b2af-114ddae6eb5c",
@@ -1102,7 +1102,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5f119bbc-9aad-4d60-ba6d-21522d73f80c",
@@ -1119,7 +1119,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e97db0b5-33de-4a2d-939e-237fdcd1e9cf",
@@ -1136,7 +1136,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b9625317-f935-42e4-a8fa-74d7036996f3",
@@ -1153,7 +1153,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e773f283-323a-46a1-bc24-64c48f7c2f6f",
@@ -1170,7 +1170,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0cc85649-af79-41d8-929d-22ccd7c2d8e4",
@@ -1187,7 +1187,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "eec12e64-b3cb-49e8-b8eb-8a2094fcbd0b",
@@ -1204,7 +1204,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "f42fa38d-654e-437d-8e97-67891f103c30",
@@ -1221,7 +1221,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "f766ac83-841f-429f-93af-2cf95375aa70",
@@ -1238,7 +1238,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "95e8b08b-7936-498e-b72b-ccb8a592a8f6",
@@ -1255,7 +1255,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "12700fee-b0c3-4aa9-bc93-e7df006b6327",
@@ -1273,7 +1273,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "260564f6-9b7f-473b-93a7-5e5e8edee319",
@@ -1290,7 +1290,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ee50947b-8e80-471d-8861-d9d0769970eb",
@@ -1307,7 +1307,7 @@
       "series": "",
       "series_number": 4,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "eba0c27b-52ee-41fd-90fa-201fcce05ff0",
@@ -1325,7 +1325,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "37e82da3-35a5-4a7f-b120-23f942aa4cbd",
@@ -1342,7 +1342,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c49ba519-6d1c-4ffa-a3f0-8ed366b615f0",
@@ -1359,7 +1359,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "33796e7d-89ac-4214-b47e-02b954474ac5",
@@ -1377,7 +1377,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "67b22afb-dcc0-4ba4-aa82-261434fa9a88",
@@ -1394,7 +1394,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d37214be-a333-4c9a-8dec-aec5dacb071a",
@@ -1411,7 +1411,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0582e7ec-66b3-46ca-a4d5-d5cda5d4c7e2",
@@ -1429,7 +1429,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "a7b25204-1438-436e-83e5-fcf465707391",
@@ -1446,7 +1446,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "48692e8e-9613-4fd2-90ec-9a563e870cfc",
@@ -1464,7 +1464,7 @@
       "series": "כתר הניקסיה",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "fe95abdc-bc35-4f23-ba7b-821fef01f574",
@@ -1481,7 +1481,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "67949dce-f043-4c5a-8f09-d963e8cce15e",
@@ -1498,7 +1498,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "47fcb968-4e7c-4361-9880-edc11838c7e8",
@@ -1515,7 +1515,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8524733d-de7a-401f-96a7-433400232c82",
@@ -1532,7 +1532,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5398a3a3-3255-49dd-acc0-feba85812d65",
@@ -1549,7 +1549,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d681ed01-9e19-4c25-9699-e32ebf3639e0",
@@ -1566,7 +1566,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "13aa97a1-ff76-4797-b776-4064f8438750",
@@ -1584,7 +1584,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "95e6aa29-7e82-4666-80a4-ea458b603181",
@@ -1601,7 +1601,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "aeb94d98-bc47-492b-9a3c-06fef79f29e7",
@@ -1618,7 +1618,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "cf9ef351-bced-4ab3-ac3e-4a84f57ee572",
@@ -1636,7 +1636,7 @@
       "series": "מקוללים",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-23T18:07:17+02:00"
     },
     {
       "id": "c384b44d-87ce-4254-b81b-9806cfe18170",
@@ -1655,7 +1655,7 @@
       "series": "פרסי ג'קסון והאולימפיים",
       "series_number": 4,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6b806700-c52e-439d-84c6-ac0d15dc9185",
@@ -1672,7 +1672,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0247eba3-0a31-4775-8f8e-cd206a7d820e",
@@ -1689,7 +1689,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "66b70754-5683-4cb0-9f07-bb2f89ea9673",
@@ -1706,7 +1706,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b55a75c7-b03a-4e2a-b4c7-d47e0c298c0b",
@@ -1723,7 +1723,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "17375cb2-1cd5-4806-abfd-8e510eac7d50",
@@ -1740,7 +1740,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "bb7f8e12-b213-4f88-90cc-e02553e9a7d4",
@@ -1757,7 +1757,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "23e72986-bcc5-4599-a0da-c40707ff0a40",
@@ -1774,7 +1774,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7256812b-c7ee-48d6-b4f1-3d55b2cb6249",
@@ -1791,7 +1791,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "11859d85-4160-4629-8366-a3c3327acaae",
@@ -1808,7 +1808,7 @@
       "series": "בנות בלינגר",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ec73a19d-832b-4910-a0dd-feb9c0252f6c",
@@ -1825,7 +1825,7 @@
       "series": "מספרת הסיפורים",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "17078ec6-ac3b-45a6-88da-2e5dc5f47729",
@@ -1842,7 +1842,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7770b19c-5932-4d73-8625-e353bddbb4ba",
@@ -1860,7 +1860,7 @@
       "series": "זמ\"ק",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e6430e89-520b-40cf-9c46-1d756c03e483",
@@ -1877,7 +1877,7 @@
       "series": "",
       "series_number": 4,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "bd4c324e-772b-4c20-85a7-629ba60e22b8",
@@ -1894,7 +1894,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "a60e3db8-787e-4c90-9ea7-052740981b20",
@@ -1911,7 +1911,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c74633dc-70f4-4aef-9584-9838dc7b101d",
@@ -1928,7 +1928,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "a60235a7-bc10-4f07-8f39-6f1b0fe77b70",
@@ -1945,7 +1945,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "fdb11b33-09a1-4af2-86a5-4b233d5c8bba",
@@ -1963,7 +1963,7 @@
       "series": "קלפי הגורל",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "3ea338e4-d1b9-4e7a-ac5e-9b79bdafec62",
@@ -1980,7 +1980,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8f58890e-6f1c-45ca-bd41-50cb195ed247",
@@ -1997,7 +1997,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6eb6765d-7d12-4934-84e3-333436a74a5e",
@@ -2014,7 +2014,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "07a44857-a0f4-49cc-aec7-dd6c0f1d3134",
@@ -2031,7 +2031,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1a29500b-5d95-409e-8de4-e5a71860f886",
@@ -2048,7 +2048,7 @@
       "series": "",
       "series_number": 6,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6d5759d8-5f1c-477d-a4d2-5a17169fd9f0",
@@ -2065,7 +2065,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9a91a7e8-3175-4998-b976-85e34ad35826",
@@ -2082,7 +2082,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "24a71ba8-6ff2-4a4d-b575-cd25bf6ac324",
@@ -2101,7 +2101,7 @@
       "series": "מגיסטריום",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5e01ac9d-ef6c-423e-bf94-efdc7f6ff757",
@@ -2118,7 +2118,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "fc5490cc-b289-4950-806f-b8b2d40f30b7",
@@ -2135,7 +2135,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c2523937-cf17-46c3-a9f9-379a9dfd73e6",
@@ -2153,7 +2153,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "dbf546fd-60d7-42a7-a269-34b1b355d360",
@@ -2170,7 +2170,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ff6cebb9-1112-4485-84bf-6575338a9448",
@@ -2189,7 +2189,7 @@
       "series": "פרסי ג'קסון והאולימפיים",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "bb4f5386-32d2-44d7-8942-66e15a2e07af",
@@ -2206,7 +2206,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1aa5d6b8-467c-4c2f-903d-59a77fc71c88",
@@ -2223,7 +2223,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "4df8c278-4cd9-4ac3-8af0-d6600dc96070",
@@ -2240,7 +2240,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "13302e79-d748-49b2-bf2c-16ffe5f58e0e",
@@ -2257,7 +2257,7 @@
       "series": "ספר 4.",
       "series_number": 5,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d45e24af-8593-4b27-8518-afc71c2185af",
@@ -2274,7 +2274,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "dc19863b-a7ad-4198-b8bb-70c2d80b3c76",
@@ -2291,7 +2291,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "edd3e963-c2b9-4fbe-8600-cacd3aca0b26",
@@ -2308,7 +2308,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "3da28ec4-13e0-4f86-8e1e-c65a8db64ae2",
@@ -2325,7 +2325,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "cbf1aea1-e6d4-4b7b-be85-df09f986fe12",
@@ -2342,7 +2342,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "f367dc30-a2b2-4673-ad43-74501c207195",
@@ -2359,7 +2359,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "69e9e012-c358-4b9f-93df-3b2fc4df8771",
@@ -2376,7 +2376,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ecbc3a1d-6a2e-4b4f-9291-17558e79ad6d",
@@ -2393,7 +2393,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "610d819e-2225-4e14-9dad-f2502960f934",
@@ -2410,7 +2410,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7c177c53-3f36-40be-9edc-6498e8b6b217",
@@ -2427,7 +2427,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "61494db3-204a-4168-b792-209e967d26cb",
@@ -2444,7 +2444,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "3333f657-4df9-4351-b449-649c3d15f731",
@@ -2461,7 +2461,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d6367160-1025-4dd8-a460-98fd7ef9a4e0",
@@ -2478,7 +2478,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "04240c23-6c18-4c4b-bc45-d3c1604da265",
@@ -2495,7 +2495,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "eaf13c76-7500-48aa-98c9-3832953ed9e1",
@@ -2513,7 +2513,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "bcf3c6f8-41aa-46ec-8392-13ef5d6e1aff",
@@ -2530,7 +2530,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "298b5441-04e6-469f-b277-7338ae827f43",
@@ -2547,7 +2547,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1d32cdc4-50f4-46d2-b5c6-4deb36966334",
@@ -2565,7 +2565,7 @@
       "series": "לייטלארק",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9008164f-be6e-4e39-9bc1-0637a68f66dd",
@@ -2582,7 +2582,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "41169e6f-e3d9-4309-895c-d3eb989c009c",
@@ -2600,7 +2600,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b075ac27-31b2-407c-9544-7d81bb23d672",
@@ -2618,7 +2618,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "20e623cd-d1f3-4462-959c-f55661416e96",
@@ -2636,7 +2636,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5d6a9476-f311-43ab-95a0-8b79f1ced9c6",
@@ -2653,7 +2653,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7f69c48c-353f-4f10-b3d7-c380f814cae4",
@@ -2670,7 +2670,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9549580b-cd06-4d8f-bcc6-be945e6b3933",
@@ -2687,7 +2687,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-23T17:51:30+02:00"
     },
     {
       "id": "6e544a30-437a-43dc-9b41-2b096bff5cea",
@@ -2704,7 +2704,7 @@
       "series": "",
       "series_number": 3,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7df41101-1080-4deb-9991-5b6edfa0ac1d",
@@ -2721,7 +2721,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b6388ab2-cb1f-4a02-a2de-cefd0b512da5",
@@ -2738,7 +2738,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0944628e-67b9-44fa-9607-dca1c89264ed",
@@ -2755,7 +2755,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "a27b6c47-cf44-461a-bdc7-f9cd852d68c9",
@@ -2772,7 +2772,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c5a9ec70-e7bb-4075-9068-992a47e5df8c",
@@ -2789,7 +2789,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "547d168d-c85d-4ae9-b836-201994aea348",
@@ -2808,7 +2808,7 @@
       "series": "מגיסטריום",
       "series_number": 5,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "85e6be64-1063-4d69-a2e3-f3df53f2d230",
@@ -2825,7 +2825,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ba68aba8-f1cf-4dba-bd75-f95e5082dccc",
@@ -2842,7 +2842,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9e764f4b-b4d2-4c39-a5ac-b906cc0abb22",
@@ -2860,7 +2860,7 @@
       "series": "מוזהבת",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "4b3634df-b976-4369-9435-18c437f5a21b",
@@ -2877,7 +2877,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "16480de8-81ef-40cc-a93c-2f64b4ec54c5",
@@ -2894,7 +2894,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ead26cda-b722-4425-82e0-05ca57d85df2",
@@ -2911,7 +2911,7 @@
       "series": "שלישיית הכתר",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b12aa7b7-cfab-4d43-81c3-8ba257c8bb5b",
@@ -2928,7 +2928,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "308f59a7-b9ca-4cee-99d6-51921466305c",
@@ -2945,7 +2945,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "00dc172c-7781-4b03-ba0e-0b1068a50ed7",
@@ -2962,7 +2962,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "f69d55e6-6496-4f02-b6e0-20fc9d5fcb6c",
@@ -2979,7 +2979,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "92190b2e-246b-4531-8108-8857da1d91a3",
@@ -2996,7 +2996,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "62cf2152-85de-4195-8f55-68ac143f64dd",
@@ -3014,7 +3014,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "a5088b31-5d75-418d-a905-7102befb407e",
@@ -3031,7 +3031,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b15150fe-ccb4-4a36-8202-185cf3cf73d7",
@@ -3048,7 +3048,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8a81bc7a-28bc-4b95-a2b3-7c7488fcd52f",
@@ -3065,7 +3065,7 @@
       "series": "",
       "series_number": 3,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8e8924e3-0388-4ef7-b2ae-fdec12f649c7",
@@ -3082,7 +3082,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "dd351c0f-b71d-4b46-a057-ba11620635ae",
@@ -3099,7 +3099,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1f853bfe-dbb3-469a-babf-2d46bb7314d7",
@@ -3118,7 +3118,7 @@
       "series": "מגיסטריום",
       "series_number": 4,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8be3dc4a-f065-4a0f-864d-e5b3fc849fbb",
@@ -3137,7 +3137,7 @@
       "series": "מגיסטריום",
       "series_number": 3,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6638973f-1279-4840-8ff9-ab85ded33a07",
@@ -3155,7 +3155,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ebb3d025-0138-4fb4-a4d6-732b2ff25838",
@@ -3172,7 +3172,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e9e81d61-2aa5-445c-9ae2-74b654415e20",
@@ -3190,7 +3190,7 @@
       "series": "עולמו של אראגון",
       "series_number": 5,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b9fe9cd6-e8e7-4ba4-9fef-6a0333f2f020",
@@ -3207,7 +3207,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "f0e77a00-0aae-45e0-a6aa-d5827203058a",
@@ -3224,7 +3224,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ca1ad6e6-a432-4a12-be64-4d7f2a85a54a",
@@ -3241,7 +3241,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "37f2c2ba-dccb-4e1e-abe9-214de97d9b54",
@@ -3258,7 +3258,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "965dccdd-8d8e-4025-8bf5-f40bcc6e3cc9",
@@ -3275,7 +3275,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "653e3f15-a758-4bdd-a2ab-783b8a011bac",
@@ -3292,7 +3292,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1f454dcb-f116-44cb-b6e1-44107f3254e9",
@@ -3309,7 +3309,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "14271904-a208-4ac9-b2a2-3f461c933dab",
@@ -3326,7 +3326,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "288f9241-0e60-47c2-85d8-42314fa4a279",
@@ -3343,7 +3343,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e2f53bef-c400-43de-99e6-49d0138ce8e6",
@@ -3361,7 +3361,7 @@
       "series": "סדרת מלאכי אליסיום",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0eb2b4ae-d507-4f15-b047-a5433552cce8",
@@ -3378,7 +3378,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "30ddb936-9b40-4e3b-8e04-8dde7b182c8c",
@@ -3395,7 +3395,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b3eee8db-9cad-48d3-83dc-676f28d9499c",
@@ -3412,7 +3412,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0e2cd19c-7b42-4638-92df-bf1a938b2428",
@@ -3429,7 +3429,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6c975d6b-1816-4236-96a7-969c55dda7f8",
@@ -3446,7 +3446,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8cdc36d2-15b0-4d5c-8620-8d97e1fdf279",
@@ -3463,7 +3463,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "2700ef03-ff14-4e3f-be21-938a1a6daa2c",
@@ -3481,7 +3481,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ee9a7e91-8dab-4eda-95db-ca2a3a0b692f",
@@ -3498,7 +3498,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c52d764f-23a1-4b2f-9837-64c1538eb708",
@@ -3515,7 +3515,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6bb6106a-3503-492d-a97a-68f86f8e90c8",
@@ -3532,7 +3532,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8957fd99-8c32-4b17-84b7-a4d1107abc6b",
@@ -3549,7 +3549,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "327b1a73-c53d-4d8a-9312-4f3a8b5eb1ee",
@@ -3566,7 +3566,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ce6475fb-6d66-43c2-b4be-27c5143bbd15",
@@ -3583,7 +3583,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "37c50a6a-a96d-441e-96ab-363b440e1378",
@@ -3600,7 +3600,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "eb740ff7-3b9b-4010-a129-c160e2dc8628",
@@ -3617,7 +3617,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1294fe53-bc27-48ba-90e0-31bcd8efa744",
@@ -3634,7 +3634,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "49fbf2d9-6bfe-4e45-91ef-262e921f6768",
@@ -3651,7 +3651,7 @@
       "series": "",
       "series_number": 4,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "06293dcd-21cd-4921-a933-4849aed8e49c",
@@ -3668,7 +3668,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d7f0e646-e931-49c9-a79d-295a290ab03b",
@@ -3685,7 +3685,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ee9c02ef-8b98-41c2-b2ae-def15004688b",
@@ -3702,7 +3702,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "057f962a-d42f-4da4-9e3b-89ceaa348b06",
@@ -3719,7 +3719,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "76ff6390-553f-4a38-a234-9612864b9873",
@@ -3736,7 +3736,7 @@
       "series": "הפטרונים",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5a682398-29db-4d16-b465-84ebeca9b39b",
@@ -3753,7 +3753,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e7cf6bfe-07c4-4526-97f0-7feed52910c1",
@@ -3771,7 +3771,7 @@
       "series": "סדרת מלאכי אליסיום",
       "series_number": 2,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e9272cf3-0e31-4291-bbbe-f25cae7b373d",
@@ -3788,7 +3788,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b21905bd-0fc8-4cc4-96f4-fc89991fc710",
@@ -3803,7 +3803,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-23T22:21:36+02:00"
     },
     {
       "id": "e2ca4897-077d-42f3-bb7a-5d67455c133a",
@@ -3820,7 +3820,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "225a106d-36e6-4613-88b2-c5c23e62b7de",
@@ -3837,7 +3837,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ec0f6092-d023-4aee-91b1-343df0c4c510",
@@ -3854,7 +3854,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9691c23c-aeed-4a6b-8f38-e1c19308281f",
@@ -3871,7 +3871,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "b9fc76aa-5f5d-488c-ab8e-75410cfb8b71",
@@ -3888,7 +3888,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d72759f3-c0a1-4d53-a478-e150589c23a1",
@@ -3905,7 +3905,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "8825378f-1868-4ec1-a84e-83f120f17205",
@@ -3923,7 +3923,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "30a3ce7a-d3b2-4473-9b24-7f9e35abb8dc",
@@ -3940,7 +3940,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ec3ae330-5256-4438-a2f1-d946ae68c4fe",
@@ -3957,7 +3957,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "746ef5c5-323a-43bc-a472-70a96876f02c",
@@ -3974,7 +3974,7 @@
       "series": "",
       "series_number": 4,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0e9e506d-baf6-463f-bab0-eb62f521c52a",
@@ -3991,7 +3991,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "10a754c5-bd8f-434a-9a89-80ae8af7ffa9",
@@ -4008,7 +4008,7 @@
       "series": "ארץ־אופל",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5fd5f782-e318-466b-8c01-7db95c301eb3",
@@ -4025,7 +4025,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0c3f3c0b-e737-4c60-8736-2835c4b1819d",
@@ -4042,7 +4042,7 @@
       "series": "מספרת הסיפורים",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "9067467b-fdc6-4f8a-a57c-ad536a81df68",
@@ -4059,7 +4059,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "f4e7edf6-c6ff-449e-9871-3bafcb8b1869",
@@ -4078,7 +4078,7 @@
       "series": "פרסי ג'קסון והאולימפיים",
       "series_number": 3,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "fabec65e-f65b-4963-b0f7-8b56eb94f021",
@@ -4095,7 +4095,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "47e6f350-8426-4aaf-951e-c4703c15376d",
@@ -4112,7 +4112,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d616f1cb-f60c-4574-9a0e-aac52ee890c5",
@@ -4129,7 +4129,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "f2dc8c24-22d6-4c21-8c4e-d248db30eb67",
@@ -4146,7 +4146,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "664843cd-f834-40a7-b8ff-f78d92936b41",
@@ -4163,7 +4163,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "542adc83-58fc-485b-b74f-6136d0aab10e",
@@ -4180,7 +4180,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "7e842601-c713-4031-b45f-765d3f1a555a",
@@ -4198,7 +4198,7 @@
       "series": "בית הלילה",
       "series_number": 5,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "6d547088-9f28-41ea-b70f-73b404a73459",
@@ -4215,7 +4215,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "c98ad252-6af6-47a2-8b6e-9a4779a0fbf8",
@@ -4232,7 +4232,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "66351ec8-113f-4b79-8319-c6e5d359dad4",
@@ -4249,7 +4249,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "1c041e33-dcd1-451d-8aee-f820e46bb7fc",
@@ -4266,7 +4266,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "92a84f20-fdbb-4fc0-b660-b215b327cd9e",
@@ -4283,7 +4283,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "e3f2f37f-f108-4f31-8585-67851021ffc9",
@@ -4300,7 +4300,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "469d7b9e-d8f5-4fd6-a124-796790e87377",
@@ -4317,7 +4317,7 @@
       "series": "הבנים",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "479619f9-8ffc-4b8c-866a-38de6f91009c",
@@ -4334,7 +4334,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ac3fc023-90c5-45e6-a50c-58eb6364f313",
@@ -4351,7 +4351,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "cc047bce-bda1-4d66-8c7f-fc296bad35a4",
@@ -4368,7 +4368,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5ad2ed05-04d3-487f-bc56-aa8596302978",
@@ -4385,7 +4385,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d3af81f9-617a-4253-aef6-36bb82ed9338",
@@ -4402,7 +4402,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "cb8d7fb2-0fef-4298-8106-00d11fea8236",
@@ -4419,7 +4419,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ad63588a-ee30-4632-8412-e60544825abe",
@@ -4436,7 +4436,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "86fef9c1-0d23-4a71-ac08-7d183d12b88b",
@@ -4453,7 +4453,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d54e5e46-b32d-4f28-b7c1-65b673a18f44",
@@ -4470,7 +4470,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "51c3aa73-6a16-4397-a889-fcd7e8e346f3",
@@ -4487,7 +4487,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "694d0d48-6e21-4f34-94ec-f76f62379953",
@@ -4504,7 +4504,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "ea07f9e4-8044-4ca1-864a-1e66ca7742e7",
@@ -4521,7 +4521,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "18399c60-0516-442c-80dc-b6171db8d9fc",
@@ -4539,7 +4539,7 @@
       "series": "קלפי הגורל",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "a54de318-441e-494b-9433-d3abb81e476f",
@@ -4556,7 +4556,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "0ddea84b-9246-4d76-b440-7b450b3f07d3",
@@ -4574,7 +4574,7 @@
       "series": "",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "583a3b4d-fe7f-4817-9d44-2177b086e784",
@@ -4592,7 +4592,7 @@
       "series": "",
       "series_number": 1,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "36404858-86a2-463e-bc14-6151ffede503",
@@ -4609,7 +4609,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "26112f4a-8286-48a1-bc1e-7474adeafb12",
@@ -4626,7 +4626,7 @@
       "series": "השעות האחרונות",
       "series_number": 2,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "900b1d2c-1e5e-43f9-83c9-b57cbfd104f2",
@@ -4643,7 +4643,7 @@
       "series": "השעות האחרונות",
       "series_number": 1,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "d51068d3-7abb-4476-b59c-dd82b1272c94",
@@ -4658,7 +4658,7 @@
       "series": "",
       "series_number": null,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-23T22:18:18+02:00"
     },
     {
       "id": "434d35a6-e1e8-4319-b008-e0ed4859d732",
@@ -4676,7 +4676,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "868a8317-0dff-4b22-9fc5-6b12b634d37e",
@@ -4693,7 +4693,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "09f4e059-b0ad-407d-8590-8d67b12787b9",
@@ -4710,7 +4710,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "5a649802-d5d1-491e-82b6-17a2d3115376",
@@ -4729,7 +4729,7 @@
       "series": "פרסי ג'קסון והאולימפיים",
       "series_number": 5,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "997b4da2-8530-4fa6-8bff-192a6e0d343a",
@@ -4746,7 +4746,7 @@
       "series": "",
       "series_number": 3,
       "has_cover": true,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     },
     {
       "id": "86241445-15d0-4a54-b6c6-ec31d3f8dd8f",
@@ -4763,7 +4763,7 @@
       "series": "",
       "series_number": null,
       "has_cover": false,
-      "added_at": "2026-11-27T12:38:46+02:00"
+      "added_at": "2026-11-22T18:19:23+02:00"
     }
   ]
 }
