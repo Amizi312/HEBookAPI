@@ -341,7 +341,11 @@ function newestBooks(limit = 10) {
   return books
     .filter(b => b && b.added_at)
     .slice()
-    .sort((a, b) => String(b.added_at).localeCompare(String(a.added_at)))
+    .sort((a, b) => {
+      const dateDiff = String(b.added_at).localeCompare(String(a.added_at));
+      if (dateDiff) return dateDiff;
+      return String(a.title || '').localeCompare(String(b.title || ''), 'he');
+    })
     .slice(0, limit);
 }
 function formatAddedDate(iso) {
@@ -398,7 +402,7 @@ $('newBooksDialog').addEventListener('close', () => {
 
 (async () => {
   try {
-    const res = await fetch('books.json');
+    const res = await fetch(`books.json?v=${Date.now()}`, { cache: 'no-store' });
     books = (await res.json()).books;
     draw();
     await showRandomCard();
